@@ -1,0 +1,35 @@
+﻿<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">Propuesta</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label class="col-sm-2 col-sm-2 control-label">Sucursal - Almacén</label>
+                    <div class="col-sm-10">
+                        @Html.DropDownList("SucursalAlmacenes", new SelectList(ViewBag.listaSucursalAlmacenes, "COD_SUCURSAL", "NOMBRE_SUCURSAL"), new { @class = "form-control", multiple = "multiple" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-2 col-sm-2 control-label">Fecha Inicio</label>
+                    <div class="col-sm-10 datepicker">
+                        <input id="FechaInicio" type="text" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 col-sm-2 control-label">Fecha Fin</label>
+                    <div class="col-sm-10 datepicker">
+                        <input id="FechaFin" type="text" class="form-control">
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar (Esc)</button>
+                <button id="btnGrabar" type="button" class="btn btn-primary">Generar</button>
+            </div>
+        </div>
+    </div>
+</div>

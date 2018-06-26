@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DB_A3CA54_segu101274ModelStoreContainer" CdmEntityContainer="DB_A3CA54_segu101274Entities">
+    <FunctionImportMapping FunctionImportName="GCPS_SP_APIPlanificacionxEspecialista" FunctionName="DB_A3CA54_segu101274Model.Store.GCPS_SP_APIPlanificacionxEspecialista">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB_A3CA54_segu101274Model.GCPS_SP_APIPlanificacionxEspecialista_Result">
+          <ScalarProperty Name="IdPlanificacion" ColumnName="IdPlanificacion" />
+          <ScalarProperty Name="NumeroPlanificacion" ColumnName="NumeroPlanificacion" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GCPS_SP_APISucursalesxPlanificacion" FunctionName="DB_A3CA54_segu101274Model.Store.GCPS_SP_APISucursalesxPlanificacion">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB_A3CA54_segu101274Model.GCPS_SP_APISucursalesxPlanificacion_Result">
+          <ScalarProperty Name="COD_SUCURSAL" ColumnName="COD_SUCURSAL" />
+          <ScalarProperty Name="NOMBRE_SUCURSAL" ColumnName="NOMBRE_SUCURSAL" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GCPS_SP_APIAreasxSucursal" FunctionName="DB_A3CA54_segu101274Model.Store.GCPS_SP_APIAreasxSucursal">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB_A3CA54_segu101274Model.GCPS_SP_APIAreasxSucursal_Result">
+          <ScalarProperty Name="IdAreaSucursal" ColumnName="IdAreaSucursal" />
+          <ScalarProperty Name="IdArea" ColumnName="IdArea" />
+          <ScalarProperty Name="DescripcionArea" ColumnName="DescripcionArea" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GCPS_SP_APIAreaSucursalDistancia" FunctionName="DB_A3CA54_segu101274Model.Store.GCPS_SP_APIAreaSucursalDistancia">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB_A3CA54_segu101274Model.GCPS_SP_APIAreaSucursalDistancia_Result">
+          <ScalarProperty Name="IdGondolaSucursal" ColumnName="IdGondolaSucursal" />
+          <ScalarProperty Name="IdAreaSucursal" ColumnName="IdAreaSucursal" />
+          <ScalarProperty Name="DescripcionArea" ColumnName="DescripcionArea" />
+          <ScalarProperty Name="DescripcionGondola" ColumnName="DescripcionGondola" />
+          <ScalarProperty Name="COD_PRODUCTO" ColumnName="COD_PRODUCTO" />
+          <ScalarProperty Name="NOMBRE_PRODUCTO" ColumnName="NOMBRE_PRODUCTO" />
+          <ScalarProperty Name="DistanciaGondola" ColumnName="DistanciaGondola" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GCPS_SP_APIESPECIALISTALOGIN" FunctionName="DB_A3CA54_segu101274Model.Store.GCPS_SP_APIESPECIALISTALOGIN">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB_A3CA54_segu101274Model.GCPS_SP_APIESPECIALISTALOGIN_Result">
+          <ScalarProperty Name="IdEspecialista" ColumnName="IdEspecialista" />
+          <ScalarProperty Name="NombreEspecialista" ColumnName="NombreEspecialista" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Usuario" ColumnName="Usuario" />
+          <ScalarProperty Name="PWD" ColumnName="PWD" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GCPS_SP_APIProductoxCodigoBarra" FunctionName="DB_A3CA54_segu101274Model.Store.GCPS_SP_APIProductoxCodigoBarra">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB_A3CA54_segu101274Model.GCPS_SP_APIProductoxCodigoBarra_Result">
+          <ScalarProperty Name="COD_PRODUCTO" ColumnName="COD_PRODUCTO" />
+          <ScalarProperty Name="CODIGOBARRAS" ColumnName="CODIGOBARRAS" />
+          <ScalarProperty Name="PRECIO_PRODUCTO" ColumnName="PRECIO_PRODUCTO" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GCPS_SP_APIProductoObservacionxProducto" FunctionName="DB_A3CA54_segu101274Model.Store.GCPS_SP_APIProductoObservacionxProducto">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB_A3CA54_segu101274Model.GCPS_SP_APIProductoObservacionxProducto_Result">
+          <ScalarProperty Name="COD_PRODUCTO" ColumnName="COD_PRODUCTO" />
+          <ScalarProperty Name="IdObservacion" ColumnName="IdObservacion" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GCPS_SP_APIPlanificacionDetalleIns" FunctionName="DB_A3CA54_segu101274Model.Store.GCPS_SP_APIPlanificacionDetalleIns">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB_A3CA54_segu101274Model.GCPS_SP_APIPlanificacionDetalleIns_Result">
+          <ScalarProperty Name="Respuesta" ColumnName="Respuesta" />
+          <ScalarProperty Name="Mensaje" ColumnName="Mensaje" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GCPS_SP_APIPlanificacionDetallexIdPlanificacion" FunctionName="DB_A3CA54_segu101274Model.Store.GCPS_SP_APIPlanificacionDetallexIdPlanificacion">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB_A3CA54_segu101274Model.GCPS_SP_APIPlanificacionDetallexIdPlanificacion_Result">
+          <ScalarProperty Name="COD_PRODUCTO" ColumnName="COD_PRODUCTO" />
+          <ScalarProperty Name="NOMBRE_PRODUCTO" ColumnName="NOMBRE_PRODUCTO" />
+          <ScalarProperty Name="CODIGOBARRAS" ColumnName="CODIGOBARRAS" />
+          <ScalarProperty Name="CNTPLAN_PRODUCTO" ColumnName="CNTPLAN_PRODUCTO" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

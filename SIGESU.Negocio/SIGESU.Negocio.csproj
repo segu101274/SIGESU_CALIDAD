@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{45E0A822-5E07-49A8-BC35-C3E239087639}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SIGESU.Negocio</RootNamespace>
+    <AssemblyName>SIGESU.Negocio</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AutoMapper\AutoMapperWebConfigurationB.cs" />
+    <Compile Include="BL\EquipmentBL.cs" />
+    <Compile Include="BL\EquipmentPruebaBL.cs" />
+    <Compile Include="BL\LeveyJenningsBL.cs" />
+    <Compile Include="BL\ObservacionBL.cs" />
+    <Compile Include="BL\PlanificacionDetalleBL.cs" />
+    <Compile Include="BL\PlanificacionLaboratorioBL.cs" />
+    <Compile Include="BL\ReporteBL.cs" />
+    <Compile Include="BL\ServidorBL.cs" />
+    <Compile Include="BL\SucursalAlmacenBL.cs" />
+    <Compile Include="BL\EspecialistaBL.cs" />
+    <Compile Include="BL\LaboratorioBL.cs" />
+    <Compile Include="BL\PlanificacionBL.cs" />
+    <Compile Include="BL\ProductoBL.cs" />
+    <Compile Include="BL\SucursalService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SIGESU.Datos\SIGESU.Datos.csproj">
+      <Project>{2142effc-6d39-46e4-a918-ac0f47be1f08}</Project>
+      <Name>SIGESU.Datos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SIGESU.Entidades\SIGESU.Entidades.csproj">
+      <Project>{a8a4b130-decd-4994-aba4-55efc2e64a66}</Project>
+      <Name>SIGESU.Entidades</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SIGESU.Helpers\SIGESU.Helpers.csproj">
+      <Project>{5009d507-cabc-478b-ae3a-cef4f5482779}</Project>
+      <Name>SIGESU.Helpers</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

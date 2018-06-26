@@ -1,0 +1,671 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Dashboard">
+    <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
+
+    <title>DASHGUM - Bootstrap Admin Template</title>
+
+    <style>
+        .context-menu-abc {
+            border: 1px solid gray;
+            padding: 5px;
+        }
+
+        /* used for all items */
+        .context-menu-item {
+            min-height: 18px;
+            background-repeat: no-repeat;
+            background-position: 4px 4px;
+        }
+            /* all custom icons */
+            .context-menu-item.context-menu-icon-edit {
+                background-image: url("/assets/img/edit.png");
+            }
+
+            .context-menu-item.context-menu-icon-delete {
+                background-image: url("/assets/img/delete.png");
+            }
+    </style>
+
+
+    <script type="text/javascript">
+
+        $(function () {
+
+            var oPlanificacionHistorico;
+
+            var oPlanificacion = $("#dtPlanificacion").dataTable(
+                {
+                    "ajax":
+                    {
+                        "url": "/Planificacion/listarPlanificacion",
+                        "type": "get",
+                        "datatype": "json",
+                        "data": {FechaInicio: "20171201" , FechaFin: "20180701"},
+                        "dataSrc": ""
+                    }
+                    , "columns": [
+                        { "data": "NumeroPlanificacion", "autoWidth": true },
+                        { "data": "NombreProducto", "autoWidth": true },
+                        { "data": "Fabricante", "autoWidth": true },
+                        { "data": "DescripcionFamilia", "autoWidth": true },
+                        { "data": "FechaInicioWithFormat", "autoWidth": true },
+                        { "data": "Estado", "autoWidth": true },
+                        { "data": "IdPlanificacion", "autoWidth": true },
+                        { "data": "IdProducto", "autoWidth": true },
+                        { "data": "FechaInicio", "autoWidth": true },
+                        { "data": "FechaFin", "autoWidth": true },
+                        { "data": "Remuestreo", "autoWidth": true },
+                        { "data": "Observacion", "autoWidth": true },
+                        { "data": "IdEspecialista", "autoWidth": true },
+                        { "data": "IdLaboratorio", "autoWidth": true },
+                        { "data": "IdPlanificacionOrigen", "autoWidth": true },
+                        { "data": "NombreEspecialista", "autoWidth": true },
+                        { "data": "NombreLaboratorio", "autoWidth": true }
+                    ],
+                    "columnDefs": [
+
+                        { "targets": [6], "visible": false, "searchable": false },
+                        { "targets": [7], "visible": false, "searchable": false },
+                        { "targets": [8], "visible": false, "searchable": false },
+                        { "targets": [9], "visible": false, "searchable": false },
+                        { "targets": [10], "visible": false, "searchable": false },
+                        { "targets": [11], "visible": false, "searchable": false },
+                        { "targets": [12], "visible": false, "searchable": false },
+                        { "targets": [13], "visible": false, "searchable": false },
+                        { "targets": [14], "visible": false, "searchable": false },
+                        { "targets": [15], "visible": false, "searchable": false },
+                        { "targets": [16], "visible": false, "searchable": false }
+                    ],
+                    "language":
+                    {
+                        "url": "/assets/languages/español.js"
+                    }
+                });
+
+            var oPlanificacionHistorico = $("#dtPlanificacionHistorico").DataTable(
+                {
+                    "destroy": true,
+                    "language":
+                    {
+                        "url": "/assets/languages/español.js"
+                    },
+                    "bFilter": false,
+                    "columnDefs": [
+                                 { "targets": [5], "visible": false, "searchable": false },
+                                 { "targets": [6], "visible": false, "searchable": false },
+                                 { "targets": [7], "visible": false, "searchable": false },
+                                 { "targets": [8], "visible": false, "searchable": false },
+                                 { "targets": [9], "visible": false, "searchable": false },
+                                 { "targets": [10], "visible": false, "searchable": false },
+                                 { "targets": [11], "visible": false, "searchable": false },
+                                 { "targets": [12], "visible": false, "searchable": false },
+                                 { "targets": [13], "visible": false, "searchable": false },
+                                 { "targets": [14], "visible": false, "searchable": false },
+                                 { "targets": [15], "visible": false, "searchable": false },
+                                 { "targets": [16], "visible": false, "searchable": false }
+                    ]
+                });
+
+            $("#dtPlanificacion").contextMenu({
+                selector: 'tr',
+                callback: function (key, options) {
+                    var index = $(this).index();
+                    var aData = oPlanificacion.fnGetData(this);
+                    var id = aData['IdPlanificacion'];
+                    var mensaje;
+                    var estado;
+
+                    if (key == "aprobar") {
+                        estado = "1";
+                        //actualizarTarifa(index, aData);
+                        AprobarPlanificacion(id, estado);
+                    }
+
+                    if (key == "desaprobar") {
+                        estado = "3";
+                        AnularPlanificacion(id, estado);
+                    }
+
+                    if (key == "editar")
+                    {
+                        EditarPlanificacion(id);
+                    }
+                },
+                items:
+                {
+                    "aprobar": { name: "Aprobar", icon: "aprobar" },
+                    "desaprobar": { name: "Anular", icon: "delete" },
+                    "editar": {name: "Modificar", icon: "edit" }
+                }
+
+            });
+
+            $("#dtPlanificacionHistorico").contextMenu({
+                selector: 'tr',
+                callback: function (key, options) {
+                    debugger;
+                    var index = $(this).index();
+                    var aData = oPlanificacionHistorico.data(this);
+                    var id = aData[0][6];
+                    var mensaje;
+                    var estado;
+
+                    if (key == "sel") {
+
+                        ObtenerHistorico(id);
+                    }
+
+                },
+                items:
+                {
+                    "sel": { name: "Seleccionar", icon: "aprobar" },
+                }
+            });
+
+            function ObtenerHistorico(IdPlanificacion)
+            {
+                $('#myModalHistorico').modal('hide');
+
+                $.ajax(
+                {
+                  type: "POST",
+                  url: "/Planificacion/ListarPlanificacionxIdPlanificacion",
+                  contentType: "application/json; charset=utf-8",
+                  dataType: "json",
+                  data: JSON.stringify({ 'IdPlanificacion': IdPlanificacion }),
+                  success: function (d) {
+                      $("#IdPlanificacionOrigen").val(d.IdPlanificacion);
+                      $("#Productos").val(d.IdProducto);
+                      $("#Fabricante").val(d.Fabricante);
+                      $("#Tipo").val(d.DescripcionFamilia);
+                      $("#DescripcionFamilia").val(d.DescripcionFamilia);
+                      $("#NombreCertificado").val(d.NombreCertificado);
+                      $("#NombreComposicion").val(d.NombreComposicion);
+                      $("#FechaInicio").val(d.FechaInicioWithFormat);
+                      $("#Laboratorios").val(d.IdLaboratorio);
+                      $("#Especialistas").val(d.IdEspecialista);
+                      debugger;
+                      var data = d.IdSucursalAlmacen;
+                      var dataarray = data.split(",");
+
+                      $("#SucursalAlmacenes").val(dataarray);
+                      $("#SucursalAlmacenes").multiselect("refresh");
+                  },
+                  error: function () {
+                      sweetAlert("Oops...", "Ocurrió un error interno, comunicarse con el administrador de sistema", "error");
+                  }
+                });
+            }
+
+            function EditarPlanificacion(IdPlanificacion)
+            {
+                $('#myModal').modal('show');
+                
+                $('.modal-title').text("Actualizar Planificación");
+
+                $.ajax(
+              {
+                  type: "POST",
+                  url: "/Planificacion/ListarPlanificacionxIdPlanificacion",
+                  contentType: "application/json; charset=utf-8",
+                  dataType: "json",
+                  data: JSON.stringify({ 'IdPlanificacion': IdPlanificacion }),
+                  success: function (d) {
+                      $("#IdPlanificacion").val(d.IdPlanificacion);
+                      $("#IdPlanificacionOrigen").val(d.IdPlanificacionOrigen);
+                      $("#NumeroPlanificacion").val(d.NumeroPlanificacion);
+                      $("#Productos").val(d.IdProducto);
+                      $("#Fabricante").val(d.Fabricante);
+                      $("#Tipo").val(d.DescripcionFamilia);
+                      $("#DescripcionFamilia").val(d.DescripcionFamilia);
+                      $("#NombreCertificado").val(d.NombreCertificado);
+                      $("#NombreComposicion").val(d.NombreComposicion);
+                      $("#FechaInicio").val(d.FechaInicioWithFormat);
+                      $("#Laboratorios").val(d.IdLaboratorio);
+                      $("#Especialistas").val(d.IdEspecialista);
+                      debugger;
+                      var data = d.IdSucursalAlmacen;
+                      var dataarray = data.split(",");
+
+                      $("#SucursalAlmacenes").val(dataarray);
+                      $("#SucursalAlmacenes").multiselect("refresh");
+                  },
+                  error: function () {
+                      sweetAlert("Oops...", "Ocurrió un error interno, comunicarse con el administrador de sistema", "error");
+                  }
+              });
+            }
+
+            function AprobarPlanificacion(IdPlanificacion, NumeroEstado)
+            {
+                swal({
+                    title: "¿Está seguro Aprobar el siguiente Plan de Calidad?",
+                    text: "No hay vuelta atrás..al menos que tengas un backup",
+                    type: "warning",
+                    showCancelButton: true,
+                    confirmButtonColor: "#DD6B55",
+                    confirmButtonText: "Sí",
+                    cancelButtonText: "Cancelar",
+                    closeOnConfirm: false,
+                    closeOnCancel: true
+                },
+                function (isConfirm) {
+                    if (isConfirm) {
+                        $.ajax(
+                       {
+                           type: "POST",
+                           url: "/Planificacion/PlanificacionActAprobado",
+                           contentType: "application/json; charset=utf-8",
+                           dataType: "json",
+                           data: JSON.stringify({ 'IdPlanificacion': IdPlanificacion, 'NumeroEstado': NumeroEstado }),
+                           success: function (respuesta) {
+                               if (respuesta.Estado == 1) {
+                                   swal("Genial!", "Plan aprobado satisfactoriamente", "success");
+                                   RefreshTable('#dtPlanificacion');
+                               } else {
+                                   sweetAlert("Oops...", respuesta.Mensaje, "error");
+                               }
+                           },
+                           error: function () {
+                               sweetAlert("Oops...", "Ocurrió un error interno, comunicarse con el administrador de sistema", "error");
+                           }
+                       });
+                    } else {
+
+                    }
+                });
+            }
+
+            function AnularPlanificacion(IdPlanificacion, NumeroEstado) {
+                swal({
+                    title: "¿Está seguro Anular el siguiente Plan de Calidad?",
+                    text: "No hay vuelta atrás..al menos que tengas un backup",
+                    type: "warning",
+                    showCancelButton: true,
+                    confirmButtonColor: "#DD6B55",
+                    confirmButtonText: "Sí",
+                    cancelButtonText: "Cancelar",
+                    closeOnConfirm: false,
+                    closeOnCancel: true
+                },
+                function (isConfirm) {
+                    if (isConfirm) {
+                        swal({
+                            title: "Anular plan de calidad",
+                            text: "Ingresar el motivo de anulación",
+                            type: "input",
+                            showCancelButton: true,
+                            closeOnConfirm: false,
+                            inputPlaceholder: "Motivo"
+                        }, function (inputValue) {
+                            if (inputValue === false) return false;
+                            if (inputValue === "") {
+                                swal.showInputError("Debes ingresar el motivo de anulación");
+                                return false
+                            }
+                            $.ajax(
+                            {
+                                type: "POST",
+                                url: "/Planificacion/PlanificacionActAnulado",
+                                contentType: "application/json; charset=utf-8",
+                                dataType: "json",
+                                data: JSON.stringify({ 'IdPlanificacion': IdPlanificacion, 'NumeroEstado': NumeroEstado, 'obs': inputValue }),
+                                success: function (respuesta) {
+                                    if (respuesta.Estado == 1) {
+                                        swal("Genial!", "Plan anulado satisfactoriamente", "success");
+                                        RefreshTable('#dtPlanificacion');
+                                    } else {
+                                        sweetAlert("Oops...", respuesta.Mensaje, "error");
+                                    }
+                                },
+                                error: function () {
+                                    sweetAlert("Oops...", "Ocurrió un error interno, comunicarse con el administrador de sistema", "error");
+                                }
+                            });
+                        });
+
+
+                    } else {
+
+                    }
+                });
+            }
+
+            $('#dtPlanificacion tbody').on('click', 'tr', function () {
+                if ($(this).hasClass('selected')) {
+                    $(this).removeClass('selected');
+                }
+                else {
+                    oPlanificacion.$('tr.selected').removeClass('selected');
+                    $(this).addClass('selected');
+                }
+            });
+
+            $('#dtPlanificacionHistorico tbody').on('click', 'tr', function () {
+                if ($(this).hasClass('selected')) {
+                    $(this).removeClass('selected');
+                }
+                else {
+                    oPlanificacionHistorico.$('tr.selected').removeClass('selected');
+                    $(this).addClass('selected');
+                }
+            });
+
+            function LimpiarCampos()
+            {
+                $("#IdPlanificacion").val("");
+                $("#Fabricante").val("");
+                $("#Tipo").val("");
+                $("#DescripcionFamilia").val("");
+                $("#NombreCertificado").val("");
+                $("#NombreComposicion").val("");
+                $("#FechaInicio").val("");
+                $("#SucursalAlmacenes").multiselect("deselectAll", false).multiselect("refresh");
+                $("#IdPlanificacionOrigen").val("");
+            }
+
+            $('#btnAgregar').click(function () {
+                $('.modal-title').text("Nueva Planificación");
+                LimpiarCampos();
+                $.ajax(
+                   {
+                       type: "GET",
+                       url: "/Planificacion/PlanificacionCorrelativo",
+                       contentType: "application/json; charset=utf-8",
+                       dataType: "json",
+                       success: function (d) {
+                           debugger;
+                           $("#NumeroPlanificacion").val(d);
+                       },
+                       error: function () {
+                           sweetAlert("Oops...", "Ocurrió un error interno, comunicarse con el administrador de sistema", "error");
+                       }
+                   });
+            });
+
+            $("#btnHistoricoBuscar").click(function () {
+                oPlanificacionHistorico.clear();
+
+                $.ajax(
+                  {
+                      type: "POST",
+                      url: "/Planificacion/listarPlanificacionHistorico",
+                      contentType: "application/json; charset=utf-8",
+                      dataType: "json",
+                      data: JSON.stringify({ 'FechaInicio': $("#FechaInicioBusqueda").val(), 'FechaFin': $("#FechaFinBusqueda").val() }),
+                      success: function (response) {
+                          for (i in response) {
+                              oPlanificacionHistorico.row.add([
+                               response[i].NumeroPlanificacion,
+                               response[i].NombreProducto,
+                               response[i].Fabricante,
+                               response[i].DescripcionFamilia,
+                               response[i].FechaInicioWithFormat,
+                               response[i].Estado,
+                               response[i].IdPlanificacion,
+                               response[i].IdProducto,
+                               response[i].FechaInicio,
+                               response[i].FechaFin,
+                               response[i].Remuestreo,
+                               response[i].Observacion,
+                               response[i].IdEspecialista,
+                               response[i].IdLaboratorio,
+                               response[i].IdPlanificacionOrigen,
+                               response[i].NombreEspecialista,
+                               response[i].NombreLaboratorio
+                              ]).draw(false);
+                          }
+                      },
+                      error: function () {
+                          sweetAlert("Oops...", "Ocurrió un error interno, comunicarse con el administrador de sistema", "error");
+                      }
+                  });
+            });
+
+            $("#Productos").on('change', function () {
+                $.ajax(
+                   {
+                       type: "GET",
+                       url: "/Planificacion/getProductoAtributo",
+                       contentType: "application/json; charset=utf-8",
+                       dataType: "json",
+                       data: { IdProducto: this.value },
+                       success: function (d) {
+                           $("#Fabricante").val(d.Fabricante);
+                           $("#DescripcionFamilia").val(d.DescripcionFamilia);
+                           $("#Tipo").val(d.DescripcionFamilia);
+                           $("#NombreCertificado").val(d.NombreCertificado);
+                           $("#NombreComposicion").val(d.NombreComposicion);
+                       },
+                       error: function () {
+                           sweetAlert("Oops...", "Ocurrió un error interno, comunicarse con el administrador de sistema", "error");
+                       }
+                   });
+            });
+
+            $("#FechaInicio").datepicker({
+                format: 'dd/mm/yyyy'
+            });
+
+            $("#FechaInicioBusqueda").datepicker({
+                format: 'dd/mm/yyyy'
+            });
+
+            $("#FechaFinBusqueda").datepicker({
+                format: 'dd/mm/yyyy'
+            });
+
+            $('#FechaInicio').on('changeDate', function(ev){
+                $(this).datepicker('hide');
+            });
+
+            $('#FechaInicioBusqueda').on('changeDate', function (ev) {
+                $(this).datepicker('hide');
+            });
+
+            $('#FechaFinBusqueda').on('changeDate', function (ev) {
+                $(this).datepicker('hide');
+            });
+
+            $("#SucursalAlmacenes").multiselect({ numberDisplayed: 1 });
+
+            $("#btnGrabar").click(function () {
+
+                var arrPlanificacionSucursalAlmacen = [];
+
+                var valores = $("#SucursalAlmacenes").val() + '';
+                var array = valores.split(",");
+                var arrayLength = array.length;
+
+                for (var i = 0; i < arrayLength; i++)
+                {
+                    arrPlanificacionSucursalAlmacen.push({ 'IdSucursalAlmacen': array[i] });
+                }
+
+                var FechaInicio = $("#FechaInicio").val();
+                
+                var dateParts = FechaInicio.split("/");
+
+                var FechaPlanificacion = new Date(dateParts[2], dateParts[1] - 1, dateParts[0]);
+
+                var IdPlanificacion = $("#IdPlanificacion").val();
+                var IdPlanificacionOrigen;
+
+                if ($("#IdPlanificacionOrigen").val() == "") { IdPlanificacionOrigen = 0 } else { IdPlanificacionOrigen = $("#IdPlanificacionOrigen").val(); }
+              
+                var parametros = 
+                {
+                    IdPlanificacion: $("#IdPlanificacion").val(),
+                    NumeroPlanificacion: $("#NumeroPlanificacion").val(),
+                    IdProducto: $("#Productos").val(),
+                    FechaInicio: FechaPlanificacion,
+                    FechaFin: FechaPlanificacion,
+                    Remuestreo: 0,
+                    Observacion: '',
+                    Estado: 0,
+                    IdEspecialista: $("#Especialistas").val(),
+                    IdLaboratorio: $("#Laboratorios").val(),
+                    IdSucursalAlmacen: $("#SucursalAlmacenes").val() + '',
+                    ListaPlanificacionSucursalAlmacen: arrPlanificacionSucursalAlmacen,
+                    IdPlanificacionOrigen: IdPlanificacionOrigen
+                };
+
+                swal({
+                    title: "¿Estás seguro de grabar el siguiente Plan de Calidad?",
+                    text: "No hay vuelta atrás..al menos que tengas un backup",
+                    type: "warning",
+                    showCancelButton: true,
+                    confirmButtonColor: "#DD6B55",
+                    confirmButtonText: "Sí",
+                    cancelButtonText: "Cancelar",
+                    closeOnConfirm: false,
+                    closeOnCancel: true
+                },
+                function (isConfirm) {
+                    if (isConfirm) {
+                        if (IdPlanificacion == "") {
+                            $.ajax(
+                           {
+                               type: "POST",
+                               url: "/Planificacion/PlanificacionIns",
+                               contentType: "application/json; charset=utf-8",
+                               dataType: "json",
+                               data: JSON.stringify({ 'entidadPlanificacion': parametros }),
+                               success: function (respuesta) {
+                                   if (respuesta.Estado == 1) {
+                                       swal("Buena Chulls!", respuesta.Mensaje, "success");
+                                       //Limpiar
+                                       LimpiarCampos();
+                                       //Refrescar Datatable
+                                       RefreshTable('#dtPlanificacion');
+                                       $('#myModal').modal('toggle');
+                                   } else {
+                                       sweetAlert("Oops...", respuesta.Mensaje, "error");
+                                   }
+                               },
+                               error: function () {
+                                   sweetAlert("Oops...", "Ocurrió un error interno, comunicarse con el administrador de sistema", "error");
+                               }
+                           });
+                        } else {
+                            $.ajax(
+                           {
+                               type: "POST",
+                               url: "/Planificacion/PlanificacionAct",
+                               contentType: "application/json; charset=utf-8",
+                               dataType: "json",
+                               data: JSON.stringify({ 'entidadPlanificacion': parametros }),
+                               success: function (respuesta) {
+                                   if (respuesta.Estado == 1) {
+                                       swal("Buena Chulls!", respuesta.Mensaje, "success");
+                                       //Limpiar
+                                       LimpiarCampos();
+                                       //Refrescar Datatable
+                                       RefreshTable('#dtPlanificacion');
+                                       $('#myModal').modal('toggle');
+                                   } else {
+                                       sweetAlert("Oops...", respuesta.Mensaje, "error");
+                                   }
+                               },
+                               error: function () {
+                                   sweetAlert("Oops...", "Ocurrió un error interno, comunicarse con el administrador de sistema", "error");
+                               }
+                           });
+                        }
+                    } else {
+
+                    }
+                });
+
+            });
+
+            function RefreshTable(tableId) {
+                $(tableId).DataTable().ajax.reload();
+            }
+
+        });
+
+    </script>
+
+</head>
+
+<body>
+
+    <section id="container">
+        <!-- **********************************************************************************************************************************************************
+        TOP BAR CONTENT & NOTIFICATIONS
+        *********************************************************************************************************************************************************** -->
+        <!--header start-->
+        @Html.Partial("~/Views/Shared/Header.cshtml")
+        <!--header end-->
+        <!-- **********************************************************************************************************************************************************
+        MAIN SIDEBAR MENU
+        *********************************************************************************************************************************************************** -->
+        <!--sidebar start-->
+        @Html.Partial("~/Views/Shared/Menu.cshtml")
+        <!--sidebar end-->
+        <!-- **********************************************************************************************************************************************************
+        MAIN CONTENT
+        *********************************************************************************************************************************************************** -->
+        <!--main content start-->
+        <section id="main-content">
+            <section class="wrapper">
+                <h3><i class="fa fa-angle-right"></i>Planificación de Producto</h3>
+
+                <!-- BASIC FORM ELELEMNTS -->
+                <div class="row mt">
+                    <div class="col-lg-12">
+                        <div class="form-panel">
+                            <h4 class="mb"><i class="fa fa-angle-right"></i> Planificaciones</h4>
+                            <form class="form-horizontal style-form" method="get">
+                                <div class="form-group">
+                                    <div class="col-sm-10">
+                                        <button id="btnAgregar" type="button" class="btn btn-theme" data-toggle="modal" data-target="#myModal">Nuevo Plan</button>
+                                    </div>
+                                </div>
+                                <table id="dtPlanificacion" class="display" width="100%">
+                                    <thead>
+                                        <tr>
+                                            <th>Número Plan</th>
+                                            <th>Producto</th>
+                                            <th>Fabricante</th>
+                                            <th>Categoria</th>
+                                            <th>FechaEjecucion</th>
+                                            <th>Estado</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody></tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <th>Número Plan</th>
+                                            <th>Producto</th>
+                                            <th>Fabricante</th>
+                                            <th>Categoria</th>
+                                            <th>FechaEjecucion</th>
+                                            <th>Estado</th>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                                @Html.Partial("~/Views/Planificacion/ModalPlanificacion.cshtml")
+                                @Html.Partial("~/Views/Planificacion/ModalBuscarHistorico.cshtml")
+                            </form>
+                        </div>
+                    </div><!-- col-lg-12-->
+                </div><!-- /row -->
+
+            </section><! --/wrapper -->
+        </section><!-- /MAIN CONTENT -->
+        <!--main content end-->
+
+    </section>
+</body>
+</html>

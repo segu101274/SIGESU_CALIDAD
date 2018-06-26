@@ -1,0 +1,4 @@
+D:\Git\SIGESU\SIGESU.Helpers\bin\Release\SIGESU.Helpers.dll
+D:\Git\SIGESU\SIGESU.Helpers\bin\Release\SIGESU.Helpers.pdb
+D:\Git\SIGESU\SIGESU.Helpers\obj\Release\SIGESU.Helpers.dll
+D:\Git\SIGESU\SIGESU.Helpers\obj\Release\SIGESU.Helpers.pdb

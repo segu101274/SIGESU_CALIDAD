@@ -1,0 +1,1 @@
+D:\Git\SIGESU\SIGESU.Web\obj\Release\SIGESU.Web.csprojResolveAssemblyReference.cache

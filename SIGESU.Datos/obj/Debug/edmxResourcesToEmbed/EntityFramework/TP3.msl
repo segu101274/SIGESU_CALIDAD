@@ -1,0 +1,290 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TP3UPCModelStoreContainer" CdmEntityContainer="TP3UPCEntities">
+    <FunctionImportMapping FunctionImportName="GCPS_FN_SplitString" FunctionName="TP3UPCModel.Store.GCPS_FN_SplitString" />
+    <FunctionImportMapping FunctionImportName="GCPS_SP_EspecialistaSelTodo" FunctionName="TP3UPCModel.Store.GCPS_SP_EspecialistaSelTodo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TP3UPCModel.GCPS_SP_EspecialistaSelTodo_Result">
+          <ScalarProperty Name="IdEspecialista" ColumnName="IdEspecialista" />
+          <ScalarProperty Name="NombreEspecialista" ColumnName="NombreEspecialista" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GCPS_SP_LaboratorioSelTodo" FunctionName="TP3UPCModel.Store.GCPS_SP_LaboratorioSelTodo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TP3UPCModel.GCPS_SP_LaboratorioSelTodo_Result">
+          <ScalarProperty Name="IdLaboratorio" ColumnName="IdLaboratorio" />
+          <ScalarProperty Name="NombreLaboratorio" ColumnName="NombreLaboratorio" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GCPS_SP_PlanificacionDetalleAct" FunctionName="TP3UPCModel.Store.GCPS_SP_PlanificacionDetalleAct">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TP3UPCModel.GCPS_SP_PlanificacionDetalleAct_Result">
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Mensaje" ColumnName="Mensaje" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GCPS_SP_PlanificacionDetalleSel" FunctionName="TP3UPCModel.Store.GCPS_SP_PlanificacionDetalleSel">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TP3UPCModel.GCPS_SP_PlanificacionDetalleSel_Result">
+          <ScalarProperty Name="IdPlanificacionDetalle" ColumnName="IdPlanificacionDetalle" />
+          <ScalarProperty Name="IdPrueba" ColumnName="IdPrueba" />
+          <ScalarProperty Name="COD_PRODUCTO" ColumnName="COD_PRODUCTO" />
+          <ScalarProperty Name="Resultado" ColumnName="Resultado" />
+          <ScalarProperty Name="RangoInferior" ColumnName="RangoInferior" />
+          <ScalarProperty Name="RangoSuperior" ColumnName="RangoSuperior" />
+          <ScalarProperty Name="FechaCheckin" ColumnName="FechaCheckin" />
+          <ScalarProperty Name="FechaEdicion" ColumnName="FechaEdicion" />
+          <ScalarProperty Name="FechaIngreso" ColumnName="FechaIngreso" />
+          <ScalarProperty Name="FechaValidacion" ColumnName="FechaValidacion" />
+          <ScalarProperty Name="FechaImpresion" ColumnName="FechaImpresion" />
+          <ScalarProperty Name="IdPlanificacion" ColumnName="IdPlanificacion" />
+          <ScalarProperty Name="NumeroPlanificacion" ColumnName="NumeroPlanificacion" />
+          <ScalarProperty Name="FechaInicio" ColumnName="FechaInicio" />
+          <ScalarProperty Name="NOMBRE_PRODUCTO" ColumnName="NOMBRE_PRODUCTO" />
+          <ScalarProperty Name="NombrePrueba" ColumnName="NombrePrueba" />
+          <ScalarProperty Name="NombreLaboratorio" ColumnName="NombreLaboratorio" />
+          <ScalarProperty Name="NombreEspecialista" ColumnName="NombreEspecialista" />
+          <ScalarProperty Name="EstadoResultado" ColumnName="EstadoResultado" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GCPS_SP_ProductoSelAtributosxIdProducto" FunctionName="TP3UPCModel.Store.GCPS_SP_ProductoSelAtributosxIdProducto">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TP3UPCModel.GCPS_SP_ProductoSelAtributosxIdProducto_Result">
+          <ScalarProperty Name="COD_PRODUCTO" ColumnName="COD_PRODUCTO" />
+          <ScalarProperty Name="NOMBRE_PRODUCTO" ColumnName="NOMBRE_PRODUCTO" />
+          <ScalarProperty Name="NOMBRE_CATEGORIA" ColumnName="NOMBRE_CATEGORIA" />
+          <ScalarProperty Name="NOMBRE_MARCA" ColumnName="NOMBRE_MARCA" />
+          <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+          <ScalarProperty Name="NombreComposicion" ColumnName="NombreComposicion" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GCPS_SP_ServidorSel" FunctionName="TP3UPCModel.Store.GCPS_SP_ServidorSel">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TP3UPCModel.GCPS_SP_ServidorSel_Result">
+          <ScalarProperty Name="FechaHoraActual" ColumnName="FechaHoraActual" />
+          <ScalarProperty Name="NombreServidor" ColumnName="NombreServidor" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GCPS_SP_ProductoSelTodo" FunctionName="TP3UPCModel.Store.GCPS_SP_ProductoSelTodo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TP3UPCModel.GCPS_SP_ProductoSelTodo_Result">
+          <ScalarProperty Name="PRODUCTOID" ColumnName="PRODUCTOID" />
+          <ScalarProperty Name="COD_PRODUCTO" ColumnName="COD_PRODUCTO" />
+          <ScalarProperty Name="NOMBRE_PRODUCTO" ColumnName="NOMBRE_PRODUCTO" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GCPS_SP_SucursalSelTodo" FunctionName="TP3UPCModel.Store.GCPS_SP_SucursalSelTodo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TP3UPCModel.GCPS_SP_SucursalSelTodo_Result">
+          <ScalarProperty Name="SUCURSALID" ColumnName="SUCURSALID" />
+          <ScalarProperty Name="COD_SUCURSAL" ColumnName="COD_SUCURSAL" />
+          <ScalarProperty Name="NOMBRE_SUCURSAL" ColumnName="NOMBRE_SUCURSAL" />
+          <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GCPS_SP_ProductoEnPlanificacionSel" FunctionName="TP3UPCModel.Store.GCPS_SP_ProductoEnPlanificacionSel">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TP3UPCModel.GCPS_SP_ProductoEnPlanificacionSel_Result">
+          <ScalarProperty Name="COD_PRODUCTO" ColumnName="COD_PRODUCTO" />
+          <ScalarProperty Name="TOTALFALLAS" ColumnName="TOTALFALLAS" />
+          <ScalarProperty Name="TOTALPLANES" ColumnName="TOTALPLANES" />
+          <ScalarProperty Name="PORCENTAJE" ColumnName="PORCENTAJE" />
+          <ScalarProperty Name="TIPOPLAN" ColumnName="TIPOPLAN" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="GCPS_PLANIFICACION">
+      <EntityTypeMapping TypeName="TP3UPCModel.GCPS_PLANIFICACION">
+        <MappingFragment StoreEntitySet="GCPS_PLANIFICACION">
+          <ScalarProperty Name="EsJustificado" ColumnName="EsJustificado" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+          <ScalarProperty Name="Observacion" ColumnName="Observacion" />
+          <ScalarProperty Name="TipoUrgencia" ColumnName="TipoUrgencia" />
+          <ScalarProperty Name="TipoPlanificacion" ColumnName="TipoPlanificacion" />
+          <ScalarProperty Name="FechaFin" ColumnName="FechaFin" />
+          <ScalarProperty Name="FechaInicio" ColumnName="FechaInicio" />
+          <ScalarProperty Name="NumeroPlanificacion" ColumnName="NumeroPlanificacion" />
+          <ScalarProperty Name="IdPlanificacionOrigen" ColumnName="IdPlanificacionOrigen" />
+          <ScalarProperty Name="IdLaboratorio" ColumnName="IdLaboratorio" />
+          <ScalarProperty Name="IdEspecialista" ColumnName="IdEspecialista" />
+          <ScalarProperty Name="IdPlanificacion" ColumnName="IdPlanificacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="GCPS_SP_PlanificacionIns" FunctionName="TP3UPCModel.Store.GCPS_SP_PlanificacionIns">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TP3UPCModel.GCPS_SP_PlanificacionIns_Result">
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Mensaje" ColumnName="Mensaje" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GCPS_SP_PlanificacionSel" FunctionName="TP3UPCModel.Store.GCPS_SP_PlanificacionSel">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TP3UPCModel.GCPS_SP_PlanificacionSel_Result">
+          <ScalarProperty Name="IdPlanificacion" ColumnName="IdPlanificacion" />
+          <ScalarProperty Name="NumeroPlanificacion" ColumnName="NumeroPlanificacion" />
+          <ScalarProperty Name="FechaInicio" ColumnName="FechaInicio" />
+          <ScalarProperty Name="FechaFin" ColumnName="FechaFin" />
+          <ScalarProperty Name="TipoPlanificacion" ColumnName="TipoPlanificacion" />
+          <ScalarProperty Name="Observacion" ColumnName="Observacion" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="IdEspecialista" ColumnName="IdEspecialista" />
+          <ScalarProperty Name="IdLaboratorio" ColumnName="IdLaboratorio" />
+          <ScalarProperty Name="IdPlanificacionOrigen" ColumnName="IdPlanificacionOrigen" />
+          <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+          <ScalarProperty Name="NombreEspecialista" ColumnName="NombreEspecialista" />
+          <ScalarProperty Name="NombreLaboratorio" ColumnName="NombreLaboratorio" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GCPS_SP_PlanificacionSelDetalle" FunctionName="TP3UPCModel.Store.GCPS_SP_PlanificacionSelDetalle">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TP3UPCModel.GCPS_SP_PlanificacionSelDetalle_Result">
+          <ScalarProperty Name="COD_PRODUCTO" ColumnName="COD_PRODUCTO" />
+          <ScalarProperty Name="NOMBRE_PRODUCTO" ColumnName="NOMBRE_PRODUCTO" />
+          <ScalarProperty Name="NOMBRE_CATEGORIA" ColumnName="NOMBRE_CATEGORIA" />
+          <ScalarProperty Name="NOMBRE_MARCA" ColumnName="NOMBRE_MARCA" />
+          <ScalarProperty Name="NombreComposicion" ColumnName="NombreComposicion" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GCPS_SP_PlanificionSelxIdPlanificacion" FunctionName="TP3UPCModel.Store.GCPS_SP_PlanificionSelxIdPlanificacion">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TP3UPCModel.GCPS_SP_PlanificionSelxIdPlanificacion_Result">
+          <ScalarProperty Name="IdPlanificacion" ColumnName="IdPlanificacion" />
+          <ScalarProperty Name="NumeroPlanificacion" ColumnName="NumeroPlanificacion" />
+          <ScalarProperty Name="FechaInicio" ColumnName="FechaInicio" />
+          <ScalarProperty Name="FechaFin" ColumnName="FechaFin" />
+          <ScalarProperty Name="TipoPlanificacion" ColumnName="TipoPlanificacion" />
+          <ScalarProperty Name="Observacion" ColumnName="Observacion" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="IdEspecialista" ColumnName="IdEspecialista" />
+          <ScalarProperty Name="IdLaboratorio" ColumnName="IdLaboratorio" />
+          <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+          <ScalarProperty Name="COD_SUCURSAL" ColumnName="COD_SUCURSAL" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GCPS_SP_PlanificacionAct" FunctionName="TP3UPCModel.Store.GCPS_SP_PlanificacionAct">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TP3UPCModel.GCPS_SP_PlanificacionAct_Result">
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Mensaje" ColumnName="Mensaje" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GCPS_SP_PlanificacionLaboratorioSel" FunctionName="TP3UPCModel.Store.GCPS_SP_PlanificacionLaboratorioSel">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TP3UPCModel.GCPS_SP_PlanificacionLaboratorioSel_Result">
+          <ScalarProperty Name="IdPlanificacionDetalle" ColumnName="IdPlanificacionDetalle" />
+          <ScalarProperty Name="IdPrueba" ColumnName="IdPrueba" />
+          <ScalarProperty Name="COD_PRODUCTO" ColumnName="COD_PRODUCTO" />
+          <ScalarProperty Name="Resultado" ColumnName="Resultado" />
+          <ScalarProperty Name="RangoInferior" ColumnName="RangoInferior" />
+          <ScalarProperty Name="RangoSuperior" ColumnName="RangoSuperior" />
+          <ScalarProperty Name="FechaCheckin" ColumnName="FechaCheckin" />
+          <ScalarProperty Name="FechaEdicion" ColumnName="FechaEdicion" />
+          <ScalarProperty Name="FechaIngreso" ColumnName="FechaIngreso" />
+          <ScalarProperty Name="FechaValidacion" ColumnName="FechaValidacion" />
+          <ScalarProperty Name="FechaImpresion" ColumnName="FechaImpresion" />
+          <ScalarProperty Name="IdPlanificacion" ColumnName="IdPlanificacion" />
+          <ScalarProperty Name="NumeroPlanificacion" ColumnName="NumeroPlanificacion" />
+          <ScalarProperty Name="FechaInicio" ColumnName="FechaInicio" />
+          <ScalarProperty Name="NOMBRE_PRODUCTO" ColumnName="NOMBRE_PRODUCTO" />
+          <ScalarProperty Name="NombrePrueba" ColumnName="NombrePrueba" />
+          <ScalarProperty Name="NombreLaboratorio" ColumnName="NombreLaboratorio" />
+          <ScalarProperty Name="NombreEspecialista" ColumnName="NombreEspecialista" />
+          <ScalarProperty Name="EstadoResultado" ColumnName="EstadoResultado" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GCPS_SP_PlanificacionDetalleSelxIdPlanificacionDetalle" FunctionName="TP3UPCModel.Store.GCPS_SP_PlanificacionDetalleSelxIdPlanificacionDetalle">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TP3UPCModel.GCPS_SP_PlanificacionDetalleSelxIdPlanificacionDetalle_Result">
+          <ScalarProperty Name="IdPlanificacionDetalle" ColumnName="IdPlanificacionDetalle" />
+          <ScalarProperty Name="IdPrueba" ColumnName="IdPrueba" />
+          <ScalarProperty Name="COD_PRODUCTO" ColumnName="COD_PRODUCTO" />
+          <ScalarProperty Name="Resultado" ColumnName="Resultado" />
+          <ScalarProperty Name="RangoInferior" ColumnName="RangoInferior" />
+          <ScalarProperty Name="RangoSuperior" ColumnName="RangoSuperior" />
+          <ScalarProperty Name="FechaCheckin" ColumnName="FechaCheckin" />
+          <ScalarProperty Name="FechaEdicion" ColumnName="FechaEdicion" />
+          <ScalarProperty Name="FechaIngreso" ColumnName="FechaIngreso" />
+          <ScalarProperty Name="FechaValidacion" ColumnName="FechaValidacion" />
+          <ScalarProperty Name="FechaImpresion" ColumnName="FechaImpresion" />
+          <ScalarProperty Name="IdPlanificacion" ColumnName="IdPlanificacion" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GCPS_SP_PlanificacionDetalleActxCheckin" FunctionName="TP3UPCModel.Store.GCPS_SP_PlanificacionDetalleActxCheckin">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TP3UPCModel.GCPS_SP_PlanificacionDetalleActxCheckin_Result">
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Mensaje" ColumnName="Mensaje" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GCPS_SP_EquipmentSel" FunctionName="TP3UPCModel.Store.GCPS_SP_EquipmentSel">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TP3UPCModel.GCPS_SP_EquipmentSel_Result">
+          <ScalarProperty Name="IdEquipment" ColumnName="IdEquipment" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="DescripcionLaboratorio" ColumnName="DescripcionLaboratorio" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="TIPO" ColumnName="TIPO" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GCPS_SP_QC_LEVEY_JENNINGS" FunctionName="TP3UPCModel.Store.GCPS_SP_QC_LEVEY_JENNINGS">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TP3UPCModel.GCPS_SP_QC_LEVEY_JENNINGS_Result">
+          <ScalarProperty Name="FechaResultado" ColumnName="FechaResultado" />
+          <ScalarProperty Name="Resultado" ColumnName="Resultado" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GCPS_SP_QCEquipmentPruebaSelxIdEquipment" FunctionName="TP3UPCModel.Store.GCPS_SP_QCEquipmentPruebaSelxIdEquipment">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TP3UPCModel.GCPS_SP_QCEquipmentPruebaSelxIdEquipment_Result">
+          <ScalarProperty Name="IdEqPru" ColumnName="IdEqPru" />
+          <ScalarProperty Name="IdEquipment" ColumnName="IdEquipment" />
+          <ScalarProperty Name="IdPrueba" ColumnName="IdPrueba" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="NombrePrueba" ColumnName="NombrePrueba" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GCPS_SP_ReporteCampo" FunctionName="TP3UPCModel.Store.GCPS_SP_ReporteCampo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TP3UPCModel.GCPS_SP_ReporteCampo_Result">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="y" ColumnName="y" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GCPS_SP_ObservacionesSugerenciasSel" FunctionName="TP3UPCModel.Store.GCPS_SP_ObservacionesSugerenciasSel">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TP3UPCModel.GCPS_SP_ObservacionesSugerenciasSel_Result">
+          <ScalarProperty Name="IdObservacionSugerencia" ColumnName="IdObservacionSugerencia" />
+          <ScalarProperty Name="IdObservacion" ColumnName="IdObservacion" />
+          <ScalarProperty Name="PorcentajeMin" ColumnName="PorcentajeMin" />
+          <ScalarProperty Name="PorcentajeMax" ColumnName="PorcentajeMax" />
+          <ScalarProperty Name="Sugerencia" ColumnName="Sugerencia" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

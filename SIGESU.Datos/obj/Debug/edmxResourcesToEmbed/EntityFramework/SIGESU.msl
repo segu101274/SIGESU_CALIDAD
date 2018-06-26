@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SIGESUModelStoreContainer" CdmEntityContainer="SIGESUEntities">
+    <FunctionImportMapping FunctionImportName="SIGESU_PlanificacionSel" FunctionName="SIGESUModel.Store.SIGESU_PlanificacionSel">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SIGESUModel.SIGESU_PlanificacionSel_Result">
+          <ScalarProperty Name="IdPlanificacion" ColumnName="IdPlanificacion" />
+          <ScalarProperty Name="NumeroPlanificacion" ColumnName="NumeroPlanificacion" />
+          <ScalarProperty Name="IdProducto" ColumnName="IdProducto" />
+          <ScalarProperty Name="FechaInicio" ColumnName="FechaInicio" />
+          <ScalarProperty Name="FechaFin" ColumnName="FechaFin" />
+          <ScalarProperty Name="Remuestreo" ColumnName="Remuestreo" />
+          <ScalarProperty Name="Observacion" ColumnName="Observacion" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="IdEspecialista" ColumnName="IdEspecialista" />
+          <ScalarProperty Name="IdLaboratorio" ColumnName="IdLaboratorio" />
+          <ScalarProperty Name="IdPlanificacionOrigen" ColumnName="IdPlanificacionOrigen" />
+          <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+          <ScalarProperty Name="NombreProducto" ColumnName="NombreProducto" />
+          <ScalarProperty Name="Fabricante" ColumnName="Fabricante" />
+          <ScalarProperty Name="DescripcionFamilia" ColumnName="DescripcionFamilia" />
+          <ScalarProperty Name="NombreEspecialista" ColumnName="NombreEspecialista" />
+          <ScalarProperty Name="NombreLaboratorio" ColumnName="NombreLaboratorio" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SIGESU_ProductoSelTodo" FunctionName="SIGESUModel.Store.SIGESU_ProductoSelTodo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SIGESUModel.SIGESU_ProductoSelTodo_Result">
+          <ScalarProperty Name="IdProducto" ColumnName="IdProducto" />
+          <ScalarProperty Name="NombreProducto" ColumnName="NombreProducto" />
+          <ScalarProperty Name="Familia" ColumnName="Familia" />
+          <ScalarProperty Name="Fabricante" ColumnName="Fabricante" />
+          <ScalarProperty Name="IdProductoFamilia" ColumnName="IdProductoFamilia" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SIGESU_EspecialistaSelTodo" FunctionName="SIGESUModel.Store.SIGESU_EspecialistaSelTodo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SIGESUModel.SIGESU_EspecialistaSelTodo_Result">
+          <ScalarProperty Name="IdEspecialista" ColumnName="IdEspecialista" />
+          <ScalarProperty Name="NombreEspecialista" ColumnName="NombreEspecialista" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SIGESU_LaboratorioSelTodo" FunctionName="SIGESUModel.Store.SIGESU_LaboratorioSelTodo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SIGESUModel.SIGESU_LaboratorioSelTodo_Result">
+          <ScalarProperty Name="IdLaboratorio" ColumnName="IdLaboratorio" />
+          <ScalarProperty Name="NombreLaboratorio" ColumnName="NombreLaboratorio" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SIGESU_ProductoSelAtributosxIdProducto" FunctionName="SIGESUModel.Store.SIGESU_ProductoSelAtributosxIdProducto">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SIGESUModel.SIGESU_ProductoSelAtributosxIdProducto_Result">
+          <ScalarProperty Name="IdProducto" ColumnName="IdProducto" />
+          <ScalarProperty Name="NombreProducto" ColumnName="NombreProducto" />
+          <ScalarProperty Name="Familia" ColumnName="Familia" />
+          <ScalarProperty Name="Fabricante" ColumnName="Fabricante" />
+          <ScalarProperty Name="IdProductoFamilia" ColumnName="IdProductoFamilia" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="NombreCertificado" ColumnName="NombreCertificado" />
+          <ScalarProperty Name="NombreComposicion" ColumnName="NombreComposicion" />
+          <ScalarProperty Name="DescripcionFamilia" ColumnName="DescripcionFamilia" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SIGESU_SucursalAlmacenSelTodo" FunctionName="SIGESUModel.Store.SIGESU_SucursalAlmacenSelTodo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SIGESUModel.SIGESU_SucursalAlmacenSelTodo_Result">
+          <ScalarProperty Name="IdSucursalAlmacen" ColumnName="IdSucursalAlmacen" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SIGESU_PlanificacionIns" FunctionName="SIGESUModel.Store.SIGESU_PlanificacionIns">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SIGESUModel.SIGESU_PlanificacionIns_Result">
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Mensaje" ColumnName="Mensaje" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SIGESU_PlanificacionSelUltimoGenerado" FunctionName="SIGESUModel.Store.SIGESU_PlanificacionSelUltimoGenerado">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SIGESUModel.SIGESU_PlanificacionSelUltimoGenerado_Result">
+          <ScalarProperty Name="IdPlanificacion" ColumnName="IdPlanificacion" />
+          <ScalarProperty Name="NumeroPlanificacion" ColumnName="NumeroPlanificacion" />
+          <ScalarProperty Name="IdProducto" ColumnName="IdProducto" />
+          <ScalarProperty Name="FechaInicio" ColumnName="FechaInicio" />
+          <ScalarProperty Name="FechaFin" ColumnName="FechaFin" />
+          <ScalarProperty Name="Remuestreo" ColumnName="Remuestreo" />
+          <ScalarProperty Name="Observacion" ColumnName="Observacion" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="IdEspecialista" ColumnName="IdEspecialista" />
+          <ScalarProperty Name="IdLaboratorio" ColumnName="IdLaboratorio" />
+          <ScalarProperty Name="IdPlanificacionOrigen" ColumnName="IdPlanificacionOrigen" />
+          <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SIGESU_ServidorSel" FunctionName="SIGESUModel.Store.SIGESU_ServidorSel">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SIGESUModel.SIGESU_ServidorSel_Result">
+          <ScalarProperty Name="FechaHoraActual" ColumnName="FechaHoraActual" />
+          <ScalarProperty Name="NombreServidor" ColumnName="NombreServidor" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SIGESU_PlanificacionSelxIdPlanificacion" FunctionName="SIGESUModel.Store.SIGESU_PlanificacionSelxIdPlanificacion">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SIGESUModel.SIGESU_PlanificacionSelxIdPlanificacion_Result">
+          <ScalarProperty Name="IdPlanificacion" ColumnName="IdPlanificacion" />
+          <ScalarProperty Name="NumeroPlanificacion" ColumnName="NumeroPlanificacion" />
+          <ScalarProperty Name="IdProducto" ColumnName="IdProducto" />
+          <ScalarProperty Name="FechaInicio" ColumnName="FechaInicio" />
+          <ScalarProperty Name="FechaFin" ColumnName="FechaFin" />
+          <ScalarProperty Name="Remuestreo" ColumnName="Remuestreo" />
+          <ScalarProperty Name="Observacion" ColumnName="Observacion" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="IdEspecialista" ColumnName="IdEspecialista" />
+          <ScalarProperty Name="IdLaboratorio" ColumnName="IdLaboratorio" />
+          <ScalarProperty Name="IdPlanificacionOrigen" ColumnName="IdPlanificacionOrigen" />
+          <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+          <ScalarProperty Name="IdSucursalAlmacen" ColumnName="IdSucursalAlmacen" />
+          <ScalarProperty Name="NombreComposicion" ColumnName="NombreComposicion" />
+          <ScalarProperty Name="Fabricante" ColumnName="Fabricante" />
+          <ScalarProperty Name="DescripcionFamilia" ColumnName="DescripcionFamilia" />
+          <ScalarProperty Name="NombreCertificado" ColumnName="NombreCertificado" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SIGESU_PlanificacionAct" FunctionName="SIGESUModel.Store.SIGESU_PlanificacionAct">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SIGESUModel.SIGESU_PlanificacionAct_Result">
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Mensaje" ColumnName="Mensaje" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SIGESU_PlanificacionLaboratorioAct" FunctionName="SIGESUModel.Store.SIGESU_PlanificacionLaboratorioAct">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SIGESUModel.SIGESU_PlanificacionLaboratorioAct_Result">
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Mensaje" ColumnName="Mensaje" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SIGESU_PlanificacionLaboratorioSelxIdPlanificacionLaboratorio" FunctionName="SIGESUModel.Store.SIGESU_PlanificacionLaboratorioSelxIdPlanificacionLaboratorio">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SIGESUModel.SIGESU_PlanificacionLaboratorioSelxIdPlanificacionLaboratorio_Result">
+          <ScalarProperty Name="IdPlanificacionLaboratorio" ColumnName="IdPlanificacionLaboratorio" />
+          <ScalarProperty Name="IdPrueba" ColumnName="IdPrueba" />
+          <ScalarProperty Name="IdEstudio" ColumnName="IdEstudio" />
+          <ScalarProperty Name="NumeroVeces" ColumnName="NumeroVeces" />
+          <ScalarProperty Name="Resultado" ColumnName="Resultado" />
+          <ScalarProperty Name="ResultadoAdverso" ColumnName="ResultadoAdverso" />
+          <ScalarProperty Name="RangoInferior" ColumnName="RangoInferior" />
+          <ScalarProperty Name="RangoSuperior" ColumnName="RangoSuperior" />
+          <ScalarProperty Name="FechaCheckin" ColumnName="FechaCheckin" />
+          <ScalarProperty Name="FechaeEdicion" ColumnName="FechaeEdicion" />
+          <ScalarProperty Name="FechaIngreso" ColumnName="FechaIngreso" />
+          <ScalarProperty Name="FechaValidacion" ColumnName="FechaValidacion" />
+          <ScalarProperty Name="FechaImpresion" ColumnName="FechaImpresion" />
+          <ScalarProperty Name="AplicaRemuestreo" ColumnName="AplicaRemuestreo" />
+          <ScalarProperty Name="IdPlanificacion" ColumnName="IdPlanificacion" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SIGESU_PlanificacionLaboratorioActxIdPlanificacion" FunctionName="SIGESUModel.Store.SIGESU_PlanificacionLaboratorioActxIdPlanificacion">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SIGESUModel.SIGESU_PlanificacionLaboratorioActxIdPlanificacion_Result">
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Mensaje" ColumnName="Mensaje" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SIGESU_PlanificacionLaboratorioIns" FunctionName="SIGESUModel.Store.SIGESU_PlanificacionLaboratorioIns">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SIGESUModel.SIGESU_PlanificacionLaboratorioIns_Result">
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Mensaje" ColumnName="Mensaje" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SIGESU_PlanificacionLaboratorioSel" FunctionName="SIGESUModel.Store.SIGESU_PlanificacionLaboratorioSel">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SIGESUModel.SIGESU_PlanificacionLaboratorioSel_Result">
+          <ScalarProperty Name="IdPlanificacionLaboratorio" ColumnName="IdPlanificacionLaboratorio" />
+          <ScalarProperty Name="IdPrueba" ColumnName="IdPrueba" />
+          <ScalarProperty Name="IdEstudio" ColumnName="IdEstudio" />
+          <ScalarProperty Name="NumeroVeces" ColumnName="NumeroVeces" />
+          <ScalarProperty Name="Resultado" ColumnName="Resultado" />
+          <ScalarProperty Name="ResultadoAdverso" ColumnName="ResultadoAdverso" />
+          <ScalarProperty Name="RangoInferior" ColumnName="RangoInferior" />
+          <ScalarProperty Name="RangoSuperior" ColumnName="RangoSuperior" />
+          <ScalarProperty Name="FechaCheckin" ColumnName="FechaCheckin" />
+          <ScalarProperty Name="FechaeEdicion" ColumnName="FechaeEdicion" />
+          <ScalarProperty Name="FechaIngreso" ColumnName="FechaIngreso" />
+          <ScalarProperty Name="FechaValidacion" ColumnName="FechaValidacion" />
+          <ScalarProperty Name="FechaImpresion" ColumnName="FechaImpresion" />
+          <ScalarProperty Name="IdPlanificacion" ColumnName="IdPlanificacion" />
+          <ScalarProperty Name="NumeroPlanificacion" ColumnName="NumeroPlanificacion" />
+          <ScalarProperty Name="FechaInicio" ColumnName="FechaInicio" />
+          <ScalarProperty Name="NombreProducto" ColumnName="NombreProducto" />
+          <ScalarProperty Name="NombrePrueba" ColumnName="NombrePrueba" />
+          <ScalarProperty Name="NombreLaboratorio" ColumnName="NombreLaboratorio" />
+          <ScalarProperty Name="NombreEspecialista" ColumnName="NombreEspecialista" />
+          <ScalarProperty Name="EstadoResultado" ColumnName="EstadoResultado" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SIGESU_PlanificacionLaboratorioActxIdPlanificacionxImpresion" FunctionName="SIGESUModel.Store.SIGESU_PlanificacionLaboratorioActxIdPlanificacionxImpresion">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SIGESUModel.SIGESU_PlanificacionLaboratorioActxIdPlanificacionxImpresion_Result">
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Mensaje" ColumnName="Mensaje" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

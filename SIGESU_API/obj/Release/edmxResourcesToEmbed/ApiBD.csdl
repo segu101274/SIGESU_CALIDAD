@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DB_A3CA54_segu101274Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="DB_A3CA54_segu101274Entities" annotation:LazyLoadingEnabled="true">
+    <FunctionImport Name="GCPS_SP_APIPlanificacionxEspecialista" ReturnType="Collection(DB_A3CA54_segu101274Model.GCPS_SP_APIPlanificacionxEspecialista_Result)">
+      <Parameter Name="IdEspecialista" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="GCPS_SP_APISucursalesxPlanificacion" ReturnType="Collection(DB_A3CA54_segu101274Model.GCPS_SP_APISucursalesxPlanificacion_Result)">
+      <Parameter Name="IdPlanificacion" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="GCPS_SP_APIAreasxSucursal" ReturnType="Collection(DB_A3CA54_segu101274Model.GCPS_SP_APIAreasxSucursal_Result)">
+      <Parameter Name="COD_SUCURSAL" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GCPS_SP_APIAreaSucursalDistancia" ReturnType="Collection(DB_A3CA54_segu101274Model.GCPS_SP_APIAreaSucursalDistancia_Result)">
+      <Parameter Name="IdPlanificacion" Mode="In" Type="Int32" />
+      <Parameter Name="IdAreaSucursal" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="GCPS_SP_APIESPECIALISTALOGIN" ReturnType="Collection(DB_A3CA54_segu101274Model.GCPS_SP_APIESPECIALISTALOGIN_Result)">
+      <Parameter Name="Usuario" Mode="In" Type="String" />
+      <Parameter Name="Pwd" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GCPS_SP_APIProductoxCodigoBarra" ReturnType="Collection(DB_A3CA54_segu101274Model.GCPS_SP_APIProductoxCodigoBarra_Result)">
+      <Parameter Name="CODIGOBARRAS" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GCPS_SP_APIProductoObservacionxProducto" ReturnType="Collection(DB_A3CA54_segu101274Model.GCPS_SP_APIProductoObservacionxProducto_Result)">
+      <Parameter Name="COD_PRODUCTO" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GCPS_SP_APIPlanificacionDetalleIns" ReturnType="Collection(DB_A3CA54_segu101274Model.GCPS_SP_APIPlanificacionDetalleIns_Result)">
+      <Parameter Name="IdPlanificacion" Mode="In" Type="Int32" />
+      <Parameter Name="COD_PRODUCTO" Mode="In" Type="String" />
+      <Parameter Name="IdObservacion" Mode="In" Type="Int32" />
+      <Parameter Name="Resultado" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GCPS_SP_APIPlanificacionDetallexIdPlanificacion" ReturnType="Collection(DB_A3CA54_segu101274Model.GCPS_SP_APIPlanificacionDetallexIdPlanificacion_Result)">
+      <Parameter Name="IdPlanificacion" Mode="In" Type="Int32" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="GCPS_SP_APIPlanificacionxEspecialista_Result">
+    <Property Type="Int32" Name="IdPlanificacion" Nullable="false" />
+    <Property Type="String" Name="NumeroPlanificacion" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="Estado" Nullable="false" MaxLength="1" />
+  </ComplexType>
+  <ComplexType Name="GCPS_SP_APISucursalesxPlanificacion_Result">
+    <Property Type="String" Name="COD_SUCURSAL" Nullable="false" MaxLength="9" />
+    <Property Type="String" Name="NOMBRE_SUCURSAL" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="GCPS_SP_APIAreasxSucursal_Result">
+    <Property Type="Int32" Name="IdAreaSucursal" Nullable="false" />
+    <Property Type="Int32" Name="IdArea" Nullable="false" />
+    <Property Type="String" Name="DescripcionArea" Nullable="false" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="GCPS_SP_APIAreaSucursalDistancia_Result">
+    <Property Type="Int32" Name="IdGondolaSucursal" Nullable="false" />
+    <Property Type="Int32" Name="IdAreaSucursal" Nullable="false" />
+    <Property Type="String" Name="DescripcionArea" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="DescripcionGondola" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="COD_PRODUCTO" Nullable="false" MaxLength="9" />
+    <Property Type="String" Name="NOMBRE_PRODUCTO" Nullable="false" MaxLength="50" />
+    <Property Type="Decimal" Name="DistanciaGondola" Nullable="false" Precision="9" Scale="2" />
+  </ComplexType>
+  <ComplexType Name="GCPS_SP_APIESPECIALISTALOGIN_Result">
+    <Property Type="Int32" Name="IdEspecialista" Nullable="false" />
+    <Property Type="String" Name="NombreEspecialista" Nullable="false" MaxLength="150" />
+    <Property Type="String" Name="Estado" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="Usuario" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="PWD" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="GCPS_SP_APIProductoxCodigoBarra_Result">
+    <Property Type="String" Name="COD_PRODUCTO" Nullable="false" MaxLength="9" />
+    <Property Type="String" Name="CODIGOBARRAS" Nullable="false" MaxLength="13" />
+    <Property Type="Decimal" Name="PRECIO_PRODUCTO" Nullable="true" Precision="9" Scale="2" />
+  </ComplexType>
+  <ComplexType Name="GCPS_SP_APIProductoObservacionxProducto_Result">
+    <Property Type="String" Name="COD_PRODUCTO" Nullable="false" MaxLength="9" />
+    <Property Type="Int32" Name="IdObservacion" Nullable="false" />
+    <Property Type="String" Name="Descripcion" Nullable="false" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="GCPS_SP_APIPlanificacionDetalleIns_Result">
+    <Property Type="Int32" Name="Respuesta" Nullable="false" />
+    <Property Type="String" Name="Mensaje" Nullable="false" MaxLength="36" />
+  </ComplexType>
+  <ComplexType Name="GCPS_SP_APIPlanificacionDetallexIdPlanificacion_Result">
+    <Property Type="String" Name="COD_PRODUCTO" Nullable="false" MaxLength="9" />
+    <Property Type="String" Name="NOMBRE_PRODUCTO" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="CODIGOBARRAS" Nullable="false" MaxLength="13" />
+    <Property Type="Int64" Name="CNTPLAN_PRODUCTO" Nullable="true" />
+  </ComplexType>
+</Schema>

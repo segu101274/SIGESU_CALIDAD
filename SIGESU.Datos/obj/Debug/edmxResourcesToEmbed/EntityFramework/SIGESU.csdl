@@ -1,0 +1,232 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SIGESUModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="SIGESUEntities" annotation:LazyLoadingEnabled="true">
+    <FunctionImport Name="SIGESU_PlanificacionSel" ReturnType="Collection(SIGESUModel.SIGESU_PlanificacionSel_Result)">
+      <Parameter Name="FechaInicio" Mode="In" Type="String" />
+      <Parameter Name="FechaFin" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SIGESU_ProductoSelTodo" ReturnType="Collection(SIGESUModel.SIGESU_ProductoSelTodo_Result)" />
+    <FunctionImport Name="SIGESU_EspecialistaSelTodo" ReturnType="Collection(SIGESUModel.SIGESU_EspecialistaSelTodo_Result)" />
+    <FunctionImport Name="SIGESU_LaboratorioSelTodo" ReturnType="Collection(SIGESUModel.SIGESU_LaboratorioSelTodo_Result)" />
+    <FunctionImport Name="SIGESU_ProductoSelAtributosxIdProducto" ReturnType="Collection(SIGESUModel.SIGESU_ProductoSelAtributosxIdProducto_Result)">
+      <Parameter Name="IdProducto" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SIGESU_SucursalAlmacenSelTodo" ReturnType="Collection(SIGESUModel.SIGESU_SucursalAlmacenSelTodo_Result)" />
+    <FunctionImport Name="SIGESU_PlanificacionIns" ReturnType="Collection(SIGESUModel.SIGESU_PlanificacionIns_Result)">
+      <Parameter Name="xml" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SIGESU_PlanificacionSelUltimoGenerado" ReturnType="Collection(SIGESUModel.SIGESU_PlanificacionSelUltimoGenerado_Result)" />
+    <FunctionImport Name="SIGESU_ServidorSel" ReturnType="Collection(SIGESUModel.SIGESU_ServidorSel_Result)" />
+    <FunctionImport Name="SIGESU_PlanificacionSelxIdPlanificacion" ReturnType="Collection(SIGESUModel.SIGESU_PlanificacionSelxIdPlanificacion_Result)">
+      <Parameter Name="IdPlanificacion" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SIGESU_PlanificacionAct" ReturnType="Collection(SIGESUModel.SIGESU_PlanificacionAct_Result)">
+      <Parameter Name="IdPlanificacion" Mode="In" Type="Int32" />
+      <Parameter Name="NumeroPlanificacion" Mode="In" Type="String" />
+      <Parameter Name="FechaInicio" Mode="In" Type="DateTime" />
+      <Parameter Name="FechaFin" Mode="In" Type="DateTime" />
+      <Parameter Name="Remuestreo" Mode="In" Type="Boolean" />
+      <Parameter Name="Observacion" Mode="In" Type="String" />
+      <Parameter Name="Estado" Mode="In" Type="String" />
+      <Parameter Name="IdEspecialista" Mode="In" Type="Int32" />
+      <Parameter Name="IdLaboratorio" Mode="In" Type="Int32" />
+      <Parameter Name="IdPlanificacionOrigen" Mode="In" Type="Int32" />
+      <Parameter Name="IdSucursalAlmacen" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SIGESU_PlanificacionLaboratorioAct" ReturnType="Collection(SIGESUModel.SIGESU_PlanificacionLaboratorioAct_Result)">
+      <Parameter Name="IdPlanificacionLaboratorio" Mode="In" Type="Int32" />
+      <Parameter Name="NumeroVeces" Mode="In" Type="Int32" />
+      <Parameter Name="Resultado" Mode="In" Type="String" />
+      <Parameter Name="FechaCheckin" Mode="In" Type="DateTime" />
+      <Parameter Name="FechaEdicion" Mode="In" Type="DateTime" />
+      <Parameter Name="FechaValidacion" Mode="In" Type="DateTime" />
+      <Parameter Name="FechaImpresion" Mode="In" Type="DateTime" />
+      <Parameter Name="AplicaRemuestreo" Mode="In" Type="Boolean" />
+      <Parameter Name="ResultadoAdverso" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SIGESU_PlanificacionLaboratorioSelxIdPlanificacionLaboratorio" ReturnType="Collection(SIGESUModel.SIGESU_PlanificacionLaboratorioSelxIdPlanificacionLaboratorio_Result)">
+      <Parameter Name="IdPlanificacionLaboratorio" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SIGESU_PlanificacionLaboratorioActxIdPlanificacion" ReturnType="Collection(SIGESUModel.SIGESU_PlanificacionLaboratorioActxIdPlanificacion_Result)">
+      <Parameter Name="IdPlanificacion" Mode="In" Type="Int32" />
+      <Parameter Name="NumeroVeces" Mode="In" Type="Int32" />
+      <Parameter Name="Resultado" Mode="In" Type="String" />
+      <Parameter Name="FechaCheckin" Mode="In" Type="DateTime" />
+      <Parameter Name="FechaEdicion" Mode="In" Type="DateTime" />
+      <Parameter Name="FechaValidacion" Mode="In" Type="DateTime" />
+      <Parameter Name="FechaImpresion" Mode="In" Type="DateTime" />
+      <Parameter Name="AplicaRemuestreo" Mode="In" Type="Boolean" />
+      <Parameter Name="ResultadoAdverso" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SIGESU_PlanificacionLaboratorioIns" ReturnType="Collection(SIGESUModel.SIGESU_PlanificacionLaboratorioIns_Result)">
+      <Parameter Name="IdPlanificacion" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SIGESU_PlanificacionLaboratorioSel" ReturnType="Collection(SIGESUModel.SIGESU_PlanificacionLaboratorioSel_Result)">
+      <Parameter Name="IdPlanificacion" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SIGESU_PlanificacionLaboratorioActxIdPlanificacionxImpresion" ReturnType="Collection(SIGESUModel.SIGESU_PlanificacionLaboratorioActxIdPlanificacionxImpresion_Result)">
+      <Parameter Name="IdPlanificacion" Mode="In" Type="Int32" />
+      <Parameter Name="NumeroVeces" Mode="In" Type="Int32" />
+      <Parameter Name="Resultado" Mode="In" Type="String" />
+      <Parameter Name="FechaCheckin" Mode="In" Type="DateTime" />
+      <Parameter Name="FechaEdicion" Mode="In" Type="DateTime" />
+      <Parameter Name="FechaValidacion" Mode="In" Type="DateTime" />
+      <Parameter Name="FechaImpresion" Mode="In" Type="DateTime" />
+      <Parameter Name="AplicaRemuestreo" Mode="In" Type="Boolean" />
+      <Parameter Name="ResultadoAdverso" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="SIGESU_PlanificacionSel_Result">
+    <Property Type="Int32" Name="IdPlanificacion" Nullable="false" />
+    <Property Type="String" Name="NumeroPlanificacion" Nullable="false" MaxLength="20" />
+    <Property Type="Int32" Name="IdProducto" Nullable="false" />
+    <Property Type="DateTime" Name="FechaInicio" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="FechaFin" Nullable="false" Precision="23" />
+    <Property Type="Boolean" Name="Remuestreo" Nullable="true" />
+    <Property Type="String" Name="Observacion" Nullable="true" MaxLength="400" />
+    <Property Type="String" Name="Estado" Nullable="true" MaxLength="11" />
+    <Property Type="Int32" Name="IdEspecialista" Nullable="true" />
+    <Property Type="Int32" Name="IdLaboratorio" Nullable="true" />
+    <Property Type="Int32" Name="IdPlanificacionOrigen" Nullable="true" />
+    <Property Type="DateTime" Name="FechaCreacion" Nullable="true" Precision="23" />
+    <Property Type="String" Name="NombreProducto" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Fabricante" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="DescripcionFamilia" Nullable="false" MaxLength="150" />
+    <Property Type="String" Name="NombreEspecialista" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="NombreLaboratorio" Nullable="true" MaxLength="150" />
+  </ComplexType>
+  <ComplexType Name="SIGESU_ProductoSelTodo_Result">
+    <Property Type="Int32" Name="IdProducto" Nullable="false" />
+    <Property Type="String" Name="NombreProducto" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Familia" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Fabricante" Nullable="true" MaxLength="150" />
+    <Property Type="Int32" Name="IdProductoFamilia" Nullable="true" />
+    <Property Type="Int32" Name="Estado" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="SIGESU_EspecialistaSelTodo_Result">
+    <Property Type="Int32" Name="IdEspecialista" Nullable="false" />
+    <Property Type="String" Name="NombreEspecialista" Nullable="true" MaxLength="150" />
+  </ComplexType>
+  <ComplexType Name="SIGESU_LaboratorioSelTodo_Result">
+    <Property Type="Int32" Name="IdLaboratorio" Nullable="false" />
+    <Property Type="String" Name="NombreLaboratorio" Nullable="false" MaxLength="150" />
+    <Property Type="String" Name="Estado" Nullable="false" MaxLength="1" />
+  </ComplexType>
+  <ComplexType Name="SIGESU_ProductoSelAtributosxIdProducto_Result">
+    <Property Type="Int32" Name="IdProducto" Nullable="false" />
+    <Property Type="String" Name="NombreProducto" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Familia" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Fabricante" Nullable="true" MaxLength="150" />
+    <Property Type="Int32" Name="IdProductoFamilia" Nullable="true" />
+    <Property Type="Int32" Name="Estado" Nullable="true" />
+    <Property Type="String" Name="NombreCertificado" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="NombreComposicion" Nullable="true" />
+    <Property Type="String" Name="DescripcionFamilia" Nullable="false" MaxLength="150" />
+  </ComplexType>
+  <ComplexType Name="SIGESU_SucursalAlmacenSelTodo_Result">
+    <Property Type="Int32" Name="IdSucursalAlmacen" Nullable="false" />
+    <Property Type="String" Name="Nombre" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Estado" Nullable="true" MaxLength="1" />
+  </ComplexType>
+  <ComplexType Name="SIGESU_PlanificacionIns_Result">
+    <Property Type="Int32" Name="Estado" Nullable="false" />
+    <Property Type="String" Name="Mensaje" Nullable="false" MaxLength="39" />
+  </ComplexType>
+  <ComplexType Name="SIGESU_PlanificacionSelUltimoGenerado_Result">
+    <Property Type="Int32" Name="IdPlanificacion" Nullable="false" />
+    <Property Type="String" Name="NumeroPlanificacion" Nullable="false" MaxLength="20" />
+    <Property Type="Int32" Name="IdProducto" Nullable="false" />
+    <Property Type="DateTime" Name="FechaInicio" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="FechaFin" Nullable="false" Precision="23" />
+    <Property Type="Boolean" Name="Remuestreo" Nullable="true" />
+    <Property Type="String" Name="Observacion" Nullable="true" MaxLength="400" />
+    <Property Type="String" Name="Estado" Nullable="true" MaxLength="11" />
+    <Property Type="Int32" Name="IdEspecialista" Nullable="true" />
+    <Property Type="Int32" Name="IdLaboratorio" Nullable="true" />
+    <Property Type="Int32" Name="IdPlanificacionOrigen" Nullable="true" />
+    <Property Type="DateTime" Name="FechaCreacion" Nullable="true" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="SIGESU_ServidorSel_Result">
+    <Property Type="DateTime" Name="FechaHoraActual" Nullable="false" Precision="23" />
+    <Property Type="String" Name="NombreServidor" Nullable="true" MaxLength="128" />
+  </ComplexType>
+  <ComplexType Name="SIGESU_PlanificacionSelxIdPlanificacion_Result">
+    <Property Type="Int32" Name="IdPlanificacion" Nullable="false" />
+    <Property Type="String" Name="NumeroPlanificacion" Nullable="false" MaxLength="20" />
+    <Property Type="Int32" Name="IdProducto" Nullable="false" />
+    <Property Type="DateTime" Name="FechaInicio" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="FechaFin" Nullable="false" Precision="23" />
+    <Property Type="Boolean" Name="Remuestreo" Nullable="true" />
+    <Property Type="String" Name="Observacion" Nullable="true" MaxLength="400" />
+    <Property Type="String" Name="Estado" Nullable="true" MaxLength="11" />
+    <Property Type="Int32" Name="IdEspecialista" Nullable="true" />
+    <Property Type="Int32" Name="IdLaboratorio" Nullable="true" />
+    <Property Type="Int32" Name="IdPlanificacionOrigen" Nullable="true" />
+    <Property Type="DateTime" Name="FechaCreacion" Nullable="true" Precision="23" />
+    <Property Type="String" Name="IdSucursalAlmacen" Nullable="true" />
+    <Property Type="String" Name="NombreComposicion" Nullable="true" />
+    <Property Type="String" Name="Fabricante" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="DescripcionFamilia" Nullable="false" MaxLength="150" />
+    <Property Type="String" Name="NombreCertificado" Nullable="true" MaxLength="150" />
+  </ComplexType>
+  <ComplexType Name="SIGESU_PlanificacionAct_Result">
+    <Property Type="Int32" Name="Estado" Nullable="false" />
+    <Property Type="String" Name="Mensaje" Nullable="false" MaxLength="44" />
+  </ComplexType>
+  <ComplexType Name="SIGESU_PlanificacionLaboratorioAct_Result">
+    <Property Type="Int32" Name="Estado" Nullable="false" />
+    <Property Type="String" Name="Mensaje" Nullable="false" MaxLength="39" />
+  </ComplexType>
+  <ComplexType Name="SIGESU_PlanificacionLaboratorioSelxIdPlanificacionLaboratorio_Result">
+    <Property Type="Int32" Name="IdPlanificacionLaboratorio" Nullable="false" />
+    <Property Type="Int32" Name="IdPrueba" Nullable="false" />
+    <Property Type="Int32" Name="IdEstudio" Nullable="false" />
+    <Property Type="Int32" Name="NumeroVeces" Nullable="true" />
+    <Property Type="String" Name="Resultado" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="ResultadoAdverso" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="RangoInferior" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="RangoSuperior" Nullable="true" MaxLength="20" />
+    <Property Type="DateTime" Name="FechaCheckin" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="FechaeEdicion" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="FechaIngreso" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="FechaValidacion" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="FechaImpresion" Nullable="true" Precision="23" />
+    <Property Type="Boolean" Name="AplicaRemuestreo" Nullable="true" />
+    <Property Type="Int32" Name="IdPlanificacion" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="SIGESU_PlanificacionLaboratorioActxIdPlanificacion_Result">
+    <Property Type="Int32" Name="Estado" Nullable="false" />
+    <Property Type="String" Name="Mensaje" Nullable="false" MaxLength="39" />
+  </ComplexType>
+  <ComplexType Name="SIGESU_PlanificacionLaboratorioIns_Result">
+    <Property Type="Int32" Name="Estado" Nullable="false" />
+    <Property Type="String" Name="Mensaje" Nullable="false" MaxLength="39" />
+  </ComplexType>
+  <ComplexType Name="SIGESU_PlanificacionLaboratorioSel_Result">
+    <Property Type="Int32" Name="IdPlanificacionLaboratorio" Nullable="false" />
+    <Property Type="Int32" Name="IdPrueba" Nullable="false" />
+    <Property Type="Int32" Name="IdEstudio" Nullable="false" />
+    <Property Type="Int32" Name="NumeroVeces" Nullable="true" />
+    <Property Type="String" Name="Resultado" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="ResultadoAdverso" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="RangoInferior" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="RangoSuperior" Nullable="true" MaxLength="20" />
+    <Property Type="DateTime" Name="FechaCheckin" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="FechaeEdicion" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="FechaIngreso" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="FechaValidacion" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="FechaImpresion" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="IdPlanificacion" Nullable="false" />
+    <Property Type="String" Name="NumeroPlanificacion" Nullable="false" MaxLength="20" />
+    <Property Type="DateTime" Name="FechaInicio" Nullable="false" Precision="23" />
+    <Property Type="String" Name="NombreProducto" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="NombrePrueba" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="NombreLaboratorio" Nullable="false" MaxLength="150" />
+    <Property Type="String" Name="NombreEspecialista" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="EstadoResultado" Nullable="true" MaxLength="14" />
+  </ComplexType>
+  <ComplexType Name="SIGESU_PlanificacionLaboratorioActxIdPlanificacionxImpresion_Result">
+    <Property Type="Int32" Name="Estado" Nullable="false" />
+    <Property Type="String" Name="Mensaje" Nullable="false" MaxLength="39" />
+  </ComplexType>
+</Schema>

@@ -1,0 +1,20 @@
+A:\UPC\TP2\SIGESU\SIGESU\SIGESU.Helpers\bin\Debug\SIGESU.Helpers.dll
+A:\UPC\TP2\SIGESU\SIGESU\SIGESU.Helpers\bin\Debug\SIGESU.Helpers.pdb
+A:\UPC\TP2\SIGESU\SIGESU\SIGESU.Helpers\obj\Debug\SIGESU.Helpers.csprojResolveAssemblyReference.cache
+A:\UPC\TP2\SIGESU\SIGESU\SIGESU.Helpers\obj\Debug\SIGESU.Helpers.dll
+A:\UPC\TP2\SIGESU\SIGESU\SIGESU.Helpers\obj\Debug\SIGESU.Helpers.pdb
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU.Helpers\bin\Debug\SIGESU.Helpers.dll
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU.Helpers\bin\Debug\SIGESU.Helpers.pdb
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU.Helpers\obj\Debug\SIGESU.Helpers.dll
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU.Helpers\obj\Debug\SIGESU.Helpers.pdb
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU.Helpers\obj\Debug\SIGESU.Helpers.csprojResolveAssemblyReference.cache
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU.Helpers\bin\Debug\SIGESU.Helpers.dll
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU.Helpers\bin\Debug\SIGESU.Helpers.pdb
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU.Helpers\obj\Debug\SIGESU.Helpers.csprojResolveAssemblyReference.cache
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU.Helpers\obj\Debug\SIGESU.Helpers.csproj.CoreCompileInputs.cache
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU.Helpers\obj\Debug\SIGESU.Helpers.dll
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU.Helpers\obj\Debug\SIGESU.Helpers.pdb
+D:\Git\SIGESU\SIGESU.Helpers\bin\Debug\SIGESU.Helpers.dll
+D:\Git\SIGESU\SIGESU.Helpers\bin\Debug\SIGESU.Helpers.pdb
+D:\Git\SIGESU\SIGESU.Helpers\obj\Debug\SIGESU.Helpers.dll
+D:\Git\SIGESU\SIGESU.Helpers\obj\Debug\SIGESU.Helpers.pdb

@@ -1,0 +1,302 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2142EFFC-6D39-46E4-A918-AC0F47BE1F08}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SIGESU.Datos</RootNamespace>
+    <AssemblyName>SIGESU.Datos</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper">
+      <HintPath>..\..\..\..\..\Proyectos\BaseLab\Baselab_web\packages\AutoMapper.6.0.2\lib\net45\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AutoMapper\AutoMapperWebConfiguration.cs" />
+    <Compile Include="DAL\EquipmentPrueba\EquipmentPruebaDAL.cs" />
+    <Compile Include="DAL\EquipmentPrueba\IEquipmentPrueba.cs" />
+    <Compile Include="DAL\Equipment\EquipmentDAL.cs" />
+    <Compile Include="DAL\Equipment\IEquipment.cs" />
+    <Compile Include="DAL\Especialista\EspecialistaDAL.cs" />
+    <Compile Include="DAL\Especialista\IEspecialista.cs" />
+    <Compile Include="DAL\Laboratorio\ILaboratorio.cs" />
+    <Compile Include="DAL\Laboratorio\LaboratorioDAL.cs" />
+    <Compile Include="DAL\LeveyJennings\ILeveyJennings.cs" />
+    <Compile Include="DAL\LeveyJennings\LeveyJenningsDAL.cs" />
+    <Compile Include="DAL\Observacion\IObservacion.cs" />
+    <Compile Include="DAL\Observacion\ObservacionDAL.cs" />
+    <Compile Include="DAL\PlanificacionDetalle\IPlanificacionDetalle.cs" />
+    <Compile Include="DAL\PlanificacionDetalle\PlanificacionDetalleDAL.cs" />
+    <Compile Include="DAL\PlanificacionLaboratorio\IPlanificacionLaboratorio.cs" />
+    <Compile Include="DAL\PlanificacionLaboratorio\PlanificacionLaboratorioDAL.cs" />
+    <Compile Include="DAL\Planificacion\IPlanificacion.cs" />
+    <Compile Include="DAL\Planificacion\PlanificacionDAL.cs" />
+    <Compile Include="DAL\Producto\IProducto.cs" />
+    <Compile Include="DAL\Producto\ProductoDAL.cs" />
+    <Compile Include="DAL\Reporte\IReporte.cs" />
+    <Compile Include="DAL\Reporte\ReporteDAL.cs" />
+    <Compile Include="DAL\Servidor\IServidor.cs" />
+    <Compile Include="DAL\Servidor\ServidorDAL.cs" />
+    <Compile Include="DAL\Sucursal\ISucursal.cs" />
+    <Compile Include="DAL\Sucursal\SucursalDAL.cs" />
+    <Compile Include="DAL\SurcursalAlmacen\ISurcursalAlmacen.cs" />
+    <Compile Include="DAL\SurcursalAlmacen\SucursalAlmacenDAL.cs" />
+    <Compile Include="EntityFramework\GCPS_PLANIFICACION.cs">
+      <DependentUpon>TP3.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\GCPS_SP_EquipmentSel_Result.cs">
+      <DependentUpon>TP3.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\GCPS_SP_EspecialistaSelTodo_Result.cs">
+      <DependentUpon>TP3.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\GCPS_SP_LaboratorioSelTodo_Result.cs">
+      <DependentUpon>TP3.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\GCPS_SP_ObservacionesSugerenciasSel_Result.cs">
+      <DependentUpon>TP3.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\GCPS_SP_PlanificacionAct_Result.cs">
+      <DependentUpon>TP3.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\GCPS_SP_PlanificacionDetalleActxCheckin_Result.cs">
+      <DependentUpon>TP3.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\GCPS_SP_PlanificacionDetalleAct_Result.cs">
+      <DependentUpon>TP3.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\GCPS_SP_PlanificacionDetalleSelxIdPlanificacionDetalle_Result.cs">
+      <DependentUpon>TP3.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\GCPS_SP_PlanificacionDetalleSel_Result.cs">
+      <DependentUpon>TP3.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\GCPS_SP_PlanificacionIns_Result.cs">
+      <DependentUpon>TP3.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\GCPS_SP_PlanificacionLaboratorioSel_Result.cs">
+      <DependentUpon>TP3.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\GCPS_SP_PlanificacionSelDetalle_Result.cs">
+      <DependentUpon>TP3.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\GCPS_SP_PlanificacionSel_Result.cs">
+      <DependentUpon>TP3.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\GCPS_SP_PlanificionSelxIdPlanificacion_Result.cs">
+      <DependentUpon>TP3.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\GCPS_SP_ProductoEnPlanificacionSel_Result.cs">
+      <DependentUpon>TP3.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\GCPS_SP_ProductoSelAtributosxIdProducto_Result.cs">
+      <DependentUpon>TP3.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\GCPS_SP_ProductoSelTodo_Result.cs">
+      <DependentUpon>TP3.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\GCPS_SP_QCEquipmentPruebaSelxIdEquipment_Result.cs">
+      <DependentUpon>TP3.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\GCPS_SP_QC_LEVEY_JENNINGS_Result.cs">
+      <DependentUpon>TP3.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\GCPS_SP_ReporteCampo_Result.cs">
+      <DependentUpon>TP3.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\GCPS_SP_ServidorSel_Result.cs">
+      <DependentUpon>TP3.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\GCPS_SP_SucursalSelTodo_Result.cs">
+      <DependentUpon>TP3.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\SIGESU.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SIGESU.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\SIGESU.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SIGESU.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\SIGESU.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SIGESU.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\SIGESU_EspecialistaSelTodo_Result.cs">
+      <DependentUpon>SIGESU.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\SIGESU_LaboratorioSelTodo_Result.cs">
+      <DependentUpon>SIGESU.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\SIGESU_PlanificacionAct_Result.cs">
+      <DependentUpon>SIGESU.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\SIGESU_PlanificacionIns_Result.cs">
+      <DependentUpon>SIGESU.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\SIGESU_PlanificacionLaboratorioActxIdPlanificacionxImpresion_Result.cs">
+      <DependentUpon>SIGESU.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\SIGESU_PlanificacionLaboratorioActxIdPlanificacion_Result.cs">
+      <DependentUpon>SIGESU.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\SIGESU_PlanificacionLaboratorioAct_Result.cs">
+      <DependentUpon>SIGESU.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\SIGESU_PlanificacionLaboratorioIns_Result.cs">
+      <DependentUpon>SIGESU.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\SIGESU_PlanificacionLaboratorioSelxIdPlanificacionLaboratorio_Result.cs">
+      <DependentUpon>SIGESU.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\SIGESU_PlanificacionLaboratorioSel_Result.cs">
+      <DependentUpon>SIGESU.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\SIGESU_PlanificacionSelUltimoGenerado_Result.cs">
+      <DependentUpon>SIGESU.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\SIGESU_PlanificacionSelxIdPlanificacion_Result.cs">
+      <DependentUpon>SIGESU.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\SIGESU_PlanificacionSel_Result.cs">
+      <DependentUpon>SIGESU.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\SIGESU_ProductoSelAtributosxIdProducto_Result.cs">
+      <DependentUpon>SIGESU.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\SIGESU_ProductoSelTodo_Result.cs">
+      <DependentUpon>SIGESU.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\SIGESU_ServidorSel_Result.cs">
+      <DependentUpon>SIGESU.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\SIGESU_SucursalAlmacenSelTodo_Result.cs">
+      <DependentUpon>SIGESU.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\TP3.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TP3.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\TP3.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TP3.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\TP3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TP3.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="EntityFramework\SIGESU.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>SIGESU.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="EntityFramework\SIGESU.edmx.diagram">
+      <DependentUpon>SIGESU.edmx</DependentUpon>
+    </None>
+    <EntityDeploy Include="EntityFramework\TP3.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>TP3.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="EntityFramework\TP3.edmx.diagram">
+      <DependentUpon>TP3.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="EntityFramework\SIGESU.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SIGESU.edmx</DependentUpon>
+      <LastGenOutput>SIGESU.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="EntityFramework\SIGESU.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SIGESU.edmx</DependentUpon>
+      <LastGenOutput>SIGESU.cs</LastGenOutput>
+    </Content>
+    <Content Include="EntityFramework\TP3.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>TP3.edmx</DependentUpon>
+      <LastGenOutput>TP3.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="EntityFramework\TP3.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>TP3.edmx</DependentUpon>
+      <LastGenOutput>TP3.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SIGESU.Entidades\SIGESU.Entidades.csproj">
+      <Project>{a8a4b130-decd-4994-aba4-55efc2e64a66}</Project>
+      <Name>SIGESU.Entidades</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SIGESU.Helpers\SIGESU.Helpers.csproj">
+      <Project>{5009d507-cabc-478b-ae3a-cef4f5482779}</Project>
+      <Name>SIGESU.Helpers</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

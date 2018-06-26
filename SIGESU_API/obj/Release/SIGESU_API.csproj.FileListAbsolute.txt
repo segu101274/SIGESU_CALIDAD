@@ -1,0 +1,385 @@
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU_API\bin\ApplicationInsights.config
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU_API\bin\roslyn\csc.exe
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU_API\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU_API\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU_API\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU_API\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU_API\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU_API\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU_API\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU_API\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU_API\bin\roslyn\vbc.exe
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU_API\bin\roslyn\VBCSCompiler.exe
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU_API\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU_API\bin\SIGESU_API.dll.config
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU_API\bin\SIGESU_API.dll
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU_API\bin\SIGESU_API.pdb
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU_API\bin\Antlr3.Runtime.dll
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU_API\bin\EntityFramework.dll
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU_API\bin\EntityFramework.SqlServer.dll
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU_API\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU_API\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU_API\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU_API\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU_API\bin\Microsoft.AI.Web.dll
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU_API\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU_API\bin\Microsoft.ApplicationInsights.dll
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU_API\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU_API\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU_API\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU_API\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU_API\bin\Microsoft.Owin.dll
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU_API\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU_API\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU_API\bin\Microsoft.Owin.Security.dll
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU_API\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU_API\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU_API\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU_API\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU_API\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU_API\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU_API\bin\Newtonsoft.Json.dll
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU_API\bin\Owin.dll
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU_API\bin\System.Net.Http.Formatting.dll
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU_API\bin\System.Web.Cors.dll
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU_API\bin\System.Web.Helpers.dll
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU_API\bin\System.Web.Http.Cors.dll
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU_API\bin\System.Web.Http.dll
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU_API\bin\System.Web.Http.Owin.dll
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU_API\bin\System.Web.Http.WebHost.dll
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU_API\bin\System.Web.Mvc.dll
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU_API\bin\System.Web.Optimization.dll
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU_API\bin\System.Web.Razor.dll
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU_API\bin\System.Web.WebPages.Deployment.dll
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU_API\bin\System.Web.WebPages.dll
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU_API\bin\System.Web.WebPages.Razor.dll
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU_API\bin\WebGrease.dll
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU_API\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU_API\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU_API\bin\Microsoft.AI.Web.xml
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU_API\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU_API\bin\Microsoft.ApplicationInsights.xml
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU_API\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU_API\bin\System.Net.Http.Formatting.xml
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU_API\bin\System.Web.Http.xml
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU_API\bin\System.Web.Http.Cors.xml
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU_API\bin\Newtonsoft.Json.xml
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU_API\bin\System.Web.Helpers.xml
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU_API\bin\System.Web.Http.WebHost.xml
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU_API\bin\System.Web.Mvc.xml
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU_API\bin\System.Web.Optimization.xml
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU_API\bin\System.Web.Razor.xml
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU_API\bin\System.Web.WebPages.xml
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU_API\bin\System.Web.WebPages.Deployment.xml
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU_API\bin\System.Web.WebPages.Razor.xml
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU_API\bin\Antlr3.Runtime.pdb
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU_API\bin\EntityFramework.xml
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU_API\bin\EntityFramework.SqlServer.xml
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU_API\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU_API\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU_API\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU_API\bin\Microsoft.Owin.xml
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU_API\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU_API\bin\Microsoft.Owin.Security.xml
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU_API\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU_API\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU_API\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU_API\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU_API\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU_API\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU_API\bin\System.Web.Http.Owin.xml
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU_API\bin\es\System.Net.Http.Formatting.resources.dll
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU_API\bin\es\System.Web.Http.resources.dll
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU_API\bin\es\System.Web.Helpers.resources.dll
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU_API\bin\es\System.Web.Http.WebHost.resources.dll
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU_API\bin\es\System.Web.Mvc.resources.dll
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU_API\bin\es\System.Web.Optimization.resources.dll
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU_API\bin\es\System.Web.Razor.resources.dll
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU_API\bin\es\System.Web.WebPages.resources.dll
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU_API\bin\es\System.Web.WebPages.Deployment.resources.dll
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU_API\bin\es\System.Web.WebPages.Razor.resources.dll
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU_API\bin\es\EntityFramework.resources.dll
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU_API\bin\es\EntityFramework.SqlServer.resources.dll
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU_API\bin\es\Microsoft.AspNet.Identity.Core.resources.dll
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU_API\bin\es\Microsoft.AspNet.Identity.Owin.resources.dll
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU_API\bin\es\Microsoft.AspNet.Identity.EntityFramework.resources.dll
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU_API\bin\es\Microsoft.Owin.resources.dll
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU_API\bin\es\Microsoft.Owin.Host.SystemWeb.resources.dll
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU_API\bin\es\Microsoft.Owin.Security.resources.dll
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU_API\bin\es\Microsoft.Owin.Security.Facebook.resources.dll
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU_API\bin\es\Microsoft.Owin.Security.Google.resources.dll
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU_API\bin\es\Microsoft.Owin.Security.Twitter.resources.dll
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU_API\bin\es\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU_API\bin\es\System.Web.Http.Owin.resources.dll
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU_API\obj\Release\SIGESU_API.dll
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU_API\obj\Release\SIGESU_API.pdb
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\ApplicationInsights.config
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\roslyn\csc.exe
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\roslyn\vbc.exe
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\roslyn\VBCSCompiler.exe
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\SIGESU_API.dll.config
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\SIGESU_API.dll
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\SIGESU_API.pdb
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\Antlr3.Runtime.dll
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\EntityFramework.dll
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\EntityFramework.SqlServer.dll
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\Microsoft.AI.Web.dll
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\Microsoft.ApplicationInsights.dll
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\Microsoft.CSharp.dll
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\Microsoft.Owin.dll
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\Microsoft.Owin.Security.dll
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\Newtonsoft.Json.dll
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\Owin.dll
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\System.ComponentModel.DataAnnotations.dll
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\System.Configuration.dll
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\System.Data.DataSetExtensions.dll
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\System.Data.dll
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\System.dll
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\System.Drawing.dll
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\System.Net.Http.dll
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\System.Net.Http.Formatting.dll
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\System.Net.Http.WebRequest.dll
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\System.Runtime.Serialization.dll
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\System.Security.dll
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\System.Web.Abstractions.dll
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\System.Web.ApplicationServices.dll
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\System.Web.Cors.dll
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\System.Web.dll
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\System.Web.Entity.dll
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\System.Web.Helpers.dll
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\System.Web.Http.Cors.dll
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\System.Web.Http.dll
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\System.Web.Http.Owin.dll
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\System.Web.Http.WebHost.dll
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\System.Web.Mvc.dll
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\System.Web.Optimization.dll
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\System.Web.Razor.dll
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\System.Web.Routing.dll
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\System.Web.WebPages.Deployment.dll
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\System.Web.WebPages.dll
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\System.Web.WebPages.Razor.dll
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\System.Xml.dll
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\System.Xml.Linq.dll
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\WebGrease.dll
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\Microsoft.AI.Web.xml
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\Microsoft.ApplicationInsights.xml
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\System.Net.Http.Formatting.xml
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\System.Web.Http.xml
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\System.Web.Http.Cors.xml
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\Newtonsoft.Json.xml
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\System.Web.Helpers.xml
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\System.Web.Http.WebHost.xml
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\System.Web.Mvc.xml
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\System.Web.Optimization.xml
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\System.Web.Razor.xml
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\System.Web.WebPages.xml
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\System.Web.WebPages.Deployment.xml
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\System.Web.WebPages.Razor.xml
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\Antlr3.Runtime.pdb
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\EntityFramework.xml
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\EntityFramework.SqlServer.xml
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\Microsoft.Owin.xml
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\Microsoft.Owin.Security.xml
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\System.Web.Http.Owin.xml
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\es\System.Net.Http.Formatting.resources.dll
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\es\System.Web.Http.resources.dll
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\es\System.Web.Helpers.resources.dll
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\es\System.Web.Http.WebHost.resources.dll
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\es\System.Web.Mvc.resources.dll
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\es\System.Web.Optimization.resources.dll
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\es\System.Web.Razor.resources.dll
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\es\System.Web.WebPages.resources.dll
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\es\System.Web.WebPages.Deployment.resources.dll
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\es\System.Web.WebPages.Razor.resources.dll
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\es\EntityFramework.resources.dll
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\es\EntityFramework.SqlServer.resources.dll
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\es\Microsoft.AspNet.Identity.Core.resources.dll
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\es\Microsoft.AspNet.Identity.Owin.resources.dll
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\es\Microsoft.AspNet.Identity.EntityFramework.resources.dll
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\es\Microsoft.Owin.resources.dll
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\es\Microsoft.Owin.Host.SystemWeb.resources.dll
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\es\Microsoft.Owin.Security.resources.dll
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\es\Microsoft.Owin.Security.Facebook.resources.dll
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\es\Microsoft.Owin.Security.Google.resources.dll
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\es\Microsoft.Owin.Security.Twitter.resources.dll
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\es\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\bin\es\System.Web.Http.Owin.resources.dll
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\obj\Release\SIGESU_API.csprojResolveAssemblyReference.cache
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\obj\Release\SIGESU_API.csproj.CoreCompileInputs.cache
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\obj\Release\SIGESU_API.csproj.CopyComplete
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\obj\Release\SIGESU_API.dll
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU_API\obj\Release\SIGESU_API.pdb
+D:\Git\SIGESU\SIGESU_API\bin\ApplicationInsights.config
+D:\Git\SIGESU\SIGESU_API\bin\roslyn\csc.exe
+D:\Git\SIGESU\SIGESU_API\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Git\SIGESU\SIGESU_API\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Git\SIGESU\SIGESU_API\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Git\SIGESU\SIGESU_API\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Git\SIGESU\SIGESU_API\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Git\SIGESU\SIGESU_API\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Git\SIGESU\SIGESU_API\bin\roslyn\System.Collections.Immutable.dll
+D:\Git\SIGESU\SIGESU_API\bin\roslyn\System.Reflection.Metadata.dll
+D:\Git\SIGESU\SIGESU_API\bin\roslyn\vbc.exe
+D:\Git\SIGESU\SIGESU_API\bin\roslyn\VBCSCompiler.exe
+D:\Git\SIGESU\SIGESU_API\bin\roslyn\VBCSCompiler.exe.config
+D:\Git\SIGESU\SIGESU_API\bin\SIGESU_API.dll.config
+D:\Git\SIGESU\SIGESU_API\bin\SIGESU_API.dll
+D:\Git\SIGESU\SIGESU_API\bin\SIGESU_API.pdb
+D:\Git\SIGESU\SIGESU_API\bin\Antlr3.Runtime.dll
+D:\Git\SIGESU\SIGESU_API\bin\EntityFramework.dll
+D:\Git\SIGESU\SIGESU_API\bin\EntityFramework.SqlServer.dll
+D:\Git\SIGESU\SIGESU_API\bin\Microsoft.AI.Agent.Intercept.dll
+D:\Git\SIGESU\SIGESU_API\bin\Microsoft.AI.DependencyCollector.dll
+D:\Git\SIGESU\SIGESU_API\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\Git\SIGESU\SIGESU_API\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\Git\SIGESU\SIGESU_API\bin\Microsoft.AI.Web.dll
+D:\Git\SIGESU\SIGESU_API\bin\Microsoft.AI.WindowsServer.dll
+D:\Git\SIGESU\SIGESU_API\bin\Microsoft.ApplicationInsights.dll
+D:\Git\SIGESU\SIGESU_API\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Git\SIGESU\SIGESU_API\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Git\SIGESU\SIGESU_API\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Git\SIGESU\SIGESU_API\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Git\SIGESU\SIGESU_API\bin\Microsoft.CSharp.dll
+D:\Git\SIGESU\SIGESU_API\bin\Microsoft.Owin.dll
+D:\Git\SIGESU\SIGESU_API\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Git\SIGESU\SIGESU_API\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Git\SIGESU\SIGESU_API\bin\Microsoft.Owin.Security.dll
+D:\Git\SIGESU\SIGESU_API\bin\Microsoft.Owin.Security.Facebook.dll
+D:\Git\SIGESU\SIGESU_API\bin\Microsoft.Owin.Security.Google.dll
+D:\Git\SIGESU\SIGESU_API\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\Git\SIGESU\SIGESU_API\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Git\SIGESU\SIGESU_API\bin\Microsoft.Owin.Security.Twitter.dll
+D:\Git\SIGESU\SIGESU_API\bin\Microsoft.Web.Infrastructure.dll
+D:\Git\SIGESU\SIGESU_API\bin\Newtonsoft.Json.dll
+D:\Git\SIGESU\SIGESU_API\bin\Owin.dll
+D:\Git\SIGESU\SIGESU_API\bin\System.ComponentModel.DataAnnotations.dll
+D:\Git\SIGESU\SIGESU_API\bin\System.Configuration.dll
+D:\Git\SIGESU\SIGESU_API\bin\System.Data.DataSetExtensions.dll
+D:\Git\SIGESU\SIGESU_API\bin\System.Data.dll
+D:\Git\SIGESU\SIGESU_API\bin\System.dll
+D:\Git\SIGESU\SIGESU_API\bin\System.Drawing.dll
+D:\Git\SIGESU\SIGESU_API\bin\System.Net.Http.dll
+D:\Git\SIGESU\SIGESU_API\bin\System.Net.Http.Formatting.dll
+D:\Git\SIGESU\SIGESU_API\bin\System.Net.Http.WebRequest.dll
+D:\Git\SIGESU\SIGESU_API\bin\System.Runtime.Serialization.dll
+D:\Git\SIGESU\SIGESU_API\bin\System.Security.dll
+D:\Git\SIGESU\SIGESU_API\bin\System.Web.Abstractions.dll
+D:\Git\SIGESU\SIGESU_API\bin\System.Web.ApplicationServices.dll
+D:\Git\SIGESU\SIGESU_API\bin\System.Web.Cors.dll
+D:\Git\SIGESU\SIGESU_API\bin\System.Web.dll
+D:\Git\SIGESU\SIGESU_API\bin\System.Web.Entity.dll
+D:\Git\SIGESU\SIGESU_API\bin\System.Web.Helpers.dll
+D:\Git\SIGESU\SIGESU_API\bin\System.Web.Http.Cors.dll
+D:\Git\SIGESU\SIGESU_API\bin\System.Web.Http.dll
+D:\Git\SIGESU\SIGESU_API\bin\System.Web.Http.Owin.dll
+D:\Git\SIGESU\SIGESU_API\bin\System.Web.Http.WebHost.dll
+D:\Git\SIGESU\SIGESU_API\bin\System.Web.Mvc.dll
+D:\Git\SIGESU\SIGESU_API\bin\System.Web.Optimization.dll
+D:\Git\SIGESU\SIGESU_API\bin\System.Web.Razor.dll
+D:\Git\SIGESU\SIGESU_API\bin\System.Web.Routing.dll
+D:\Git\SIGESU\SIGESU_API\bin\System.Web.WebPages.Deployment.dll
+D:\Git\SIGESU\SIGESU_API\bin\System.Web.WebPages.dll
+D:\Git\SIGESU\SIGESU_API\bin\System.Web.WebPages.Razor.dll
+D:\Git\SIGESU\SIGESU_API\bin\System.Xml.dll
+D:\Git\SIGESU\SIGESU_API\bin\System.Xml.Linq.dll
+D:\Git\SIGESU\SIGESU_API\bin\WebGrease.dll
+D:\Git\SIGESU\SIGESU_API\bin\Microsoft.AI.DependencyCollector.xml
+D:\Git\SIGESU\SIGESU_API\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\Git\SIGESU\SIGESU_API\bin\Microsoft.AI.Web.xml
+D:\Git\SIGESU\SIGESU_API\bin\Microsoft.AI.WindowsServer.xml
+D:\Git\SIGESU\SIGESU_API\bin\Microsoft.ApplicationInsights.xml
+D:\Git\SIGESU\SIGESU_API\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Git\SIGESU\SIGESU_API\bin\System.Net.Http.Formatting.xml
+D:\Git\SIGESU\SIGESU_API\bin\System.Web.Http.xml
+D:\Git\SIGESU\SIGESU_API\bin\System.Web.Http.Cors.xml
+D:\Git\SIGESU\SIGESU_API\bin\Newtonsoft.Json.xml
+D:\Git\SIGESU\SIGESU_API\bin\System.Web.Helpers.xml
+D:\Git\SIGESU\SIGESU_API\bin\System.Web.Http.WebHost.xml
+D:\Git\SIGESU\SIGESU_API\bin\System.Web.Mvc.xml
+D:\Git\SIGESU\SIGESU_API\bin\System.Web.Optimization.xml
+D:\Git\SIGESU\SIGESU_API\bin\System.Web.Razor.xml
+D:\Git\SIGESU\SIGESU_API\bin\System.Web.WebPages.xml
+D:\Git\SIGESU\SIGESU_API\bin\System.Web.WebPages.Deployment.xml
+D:\Git\SIGESU\SIGESU_API\bin\System.Web.WebPages.Razor.xml
+D:\Git\SIGESU\SIGESU_API\bin\Antlr3.Runtime.pdb
+D:\Git\SIGESU\SIGESU_API\bin\EntityFramework.xml
+D:\Git\SIGESU\SIGESU_API\bin\EntityFramework.SqlServer.xml
+D:\Git\SIGESU\SIGESU_API\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Git\SIGESU\SIGESU_API\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Git\SIGESU\SIGESU_API\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Git\SIGESU\SIGESU_API\bin\Microsoft.Owin.xml
+D:\Git\SIGESU\SIGESU_API\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Git\SIGESU\SIGESU_API\bin\Microsoft.Owin.Security.xml
+D:\Git\SIGESU\SIGESU_API\bin\Microsoft.Owin.Security.Facebook.xml
+D:\Git\SIGESU\SIGESU_API\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Git\SIGESU\SIGESU_API\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Git\SIGESU\SIGESU_API\bin\Microsoft.Owin.Security.Google.xml
+D:\Git\SIGESU\SIGESU_API\bin\Microsoft.Owin.Security.Twitter.xml
+D:\Git\SIGESU\SIGESU_API\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\Git\SIGESU\SIGESU_API\bin\System.Web.Http.Owin.xml
+D:\Git\SIGESU\SIGESU_API\bin\es\System.Net.Http.Formatting.resources.dll
+D:\Git\SIGESU\SIGESU_API\bin\es\System.Web.Http.resources.dll
+D:\Git\SIGESU\SIGESU_API\bin\es\System.Web.Helpers.resources.dll
+D:\Git\SIGESU\SIGESU_API\bin\es\System.Web.Http.WebHost.resources.dll
+D:\Git\SIGESU\SIGESU_API\bin\es\System.Web.Mvc.resources.dll
+D:\Git\SIGESU\SIGESU_API\bin\es\System.Web.Optimization.resources.dll
+D:\Git\SIGESU\SIGESU_API\bin\es\System.Web.Razor.resources.dll
+D:\Git\SIGESU\SIGESU_API\bin\es\System.Web.WebPages.resources.dll
+D:\Git\SIGESU\SIGESU_API\bin\es\System.Web.WebPages.Deployment.resources.dll
+D:\Git\SIGESU\SIGESU_API\bin\es\System.Web.WebPages.Razor.resources.dll
+D:\Git\SIGESU\SIGESU_API\bin\es\EntityFramework.resources.dll
+D:\Git\SIGESU\SIGESU_API\bin\es\EntityFramework.SqlServer.resources.dll
+D:\Git\SIGESU\SIGESU_API\bin\es\Microsoft.AspNet.Identity.Core.resources.dll
+D:\Git\SIGESU\SIGESU_API\bin\es\Microsoft.AspNet.Identity.Owin.resources.dll
+D:\Git\SIGESU\SIGESU_API\bin\es\Microsoft.AspNet.Identity.EntityFramework.resources.dll
+D:\Git\SIGESU\SIGESU_API\bin\es\Microsoft.Owin.resources.dll
+D:\Git\SIGESU\SIGESU_API\bin\es\Microsoft.Owin.Host.SystemWeb.resources.dll
+D:\Git\SIGESU\SIGESU_API\bin\es\Microsoft.Owin.Security.resources.dll
+D:\Git\SIGESU\SIGESU_API\bin\es\Microsoft.Owin.Security.Facebook.resources.dll
+D:\Git\SIGESU\SIGESU_API\bin\es\Microsoft.Owin.Security.Google.resources.dll
+D:\Git\SIGESU\SIGESU_API\bin\es\Microsoft.Owin.Security.Twitter.resources.dll
+D:\Git\SIGESU\SIGESU_API\bin\es\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
+D:\Git\SIGESU\SIGESU_API\bin\es\System.Web.Http.Owin.resources.dll
+D:\Git\SIGESU\SIGESU_API\obj\Release\SIGESU_API.csprojResolveAssemblyReference.cache
+D:\Git\SIGESU\SIGESU_API\obj\Release\SIGESU_API.dll
+D:\Git\SIGESU\SIGESU_API\obj\Release\SIGESU_API.pdb

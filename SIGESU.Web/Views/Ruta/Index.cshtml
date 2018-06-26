@@ -1,0 +1,306 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Dashboard">
+    <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
+
+    <title>DASHGUM - Bootstrap Admin Template</title>
+
+    <style>
+        .context-menu-abc {
+            border: 1px solid gray;
+            padding: 5px;
+        }
+
+        /* used for all items */
+        .context-menu-item {
+            min-height: 18px;
+            background-repeat: no-repeat;
+            background-position: 4px 4px;
+        }
+            /* all custom icons */
+            .context-menu-item.context-menu-icon-edit {
+                background-image: url("/assets/img/edit.png");
+            }
+
+            .context-menu-item.context-menu-icon-delete {
+                background-image: url("/assets/img/delete.png");
+            }
+    </style>
+
+
+    <script type="text/javascript">
+
+        $(function () {
+
+            var oPlanificacionHistorico;
+
+            var oPlanificacion = $("#dtPlanificacion").dataTable(
+                {
+                    "ajax":
+                    {
+                        "url": "/Planificacion/listarPlanificacion",
+                        "type": "get",
+                        "datatype": "json",
+                        "data": {FechaInicio: "20171201" , FechaFin: "20180701"},
+                        "dataSrc": ""
+                    }
+                    , "columns": [
+                        { "data": "NumeroPlanificacion", "autoWidth": true },
+                        { "data": "NombreProducto", "autoWidth": true },
+                        { "data": "Fabricante", "autoWidth": true },
+                        { "data": "DescripcionFamilia", "autoWidth": true },
+                        { "data": "FechaInicioWithFormat", "autoWidth": true },
+                        { "data": "Estado", "autoWidth": true },
+                        { "data": "IdPlanificacion", "autoWidth": true },
+                        { "data": "IdProducto", "autoWidth": true },
+                        { "data": "FechaInicio", "autoWidth": true },
+                        { "data": "FechaFin", "autoWidth": true },
+                        { "data": "Remuestreo", "autoWidth": true },
+                        { "data": "Observacion", "autoWidth": true },
+                        { "data": "IdEspecialista", "autoWidth": true },
+                        { "data": "IdLaboratorio", "autoWidth": true },
+                        { "data": "IdPlanificacionOrigen", "autoWidth": true },
+                        { "data": "NombreEspecialista", "autoWidth": true },
+                        { "data": "NombreLaboratorio", "autoWidth": true }
+                    ],
+                    "columnDefs": [
+
+                        { "targets": [6], "visible": false, "searchable": false },
+                        { "targets": [7], "visible": false, "searchable": false },
+                        { "targets": [8], "visible": false, "searchable": false },
+                        { "targets": [9], "visible": false, "searchable": false },
+                        { "targets": [10], "visible": false, "searchable": false },
+                        { "targets": [11], "visible": false, "searchable": false },
+                        { "targets": [12], "visible": false, "searchable": false },
+                        { "targets": [13], "visible": false, "searchable": false },
+                        { "targets": [14], "visible": false, "searchable": false },
+                        { "targets": [15], "visible": false, "searchable": false },
+                        { "targets": [16], "visible": false, "searchable": false }
+                    ],
+                    "language":
+                    {
+                        "url": "/assets/languages/español.js"
+                    }
+                });
+            
+            var oPlanificacion2 = $("#dtPlanificacion2").dataTable(
+                {
+                    "ajax":
+                    {
+                        "url": "/Planificacion/listarPlanificacion",
+                        "type": "get",
+                        "datatype": "json",
+                        "data": { FechaInicio: "20171201", FechaFin: "20180701" },
+                        "dataSrc": ""
+                    }
+                    , "columns": [
+                        { "data": "NumeroPlanificacion", "autoWidth": true },
+                        { "data": "NombreProducto", "autoWidth": true },
+                        { "data": "Fabricante", "autoWidth": true },
+                        { "data": "DescripcionFamilia", "autoWidth": true },
+                        { "data": "FechaInicioWithFormat", "autoWidth": true },
+                        { "data": "Estado", "autoWidth": true },
+                        { "data": "IdPlanificacion", "autoWidth": true },
+                        { "data": "IdProducto", "autoWidth": true },
+                        { "data": "FechaInicio", "autoWidth": true },
+                        { "data": "FechaFin", "autoWidth": true },
+                        { "data": "Remuestreo", "autoWidth": true },
+                        { "data": "Observacion", "autoWidth": true },
+                        { "data": "IdEspecialista", "autoWidth": true },
+                        { "data": "IdLaboratorio", "autoWidth": true },
+                        { "data": "IdPlanificacionOrigen", "autoWidth": true },
+                        { "data": "NombreEspecialista", "autoWidth": true },
+                        { "data": "NombreLaboratorio", "autoWidth": true }
+                    ],
+                    "columnDefs": [
+
+                        { "targets": [6], "visible": false, "searchable": false },
+                        { "targets": [7], "visible": false, "searchable": false },
+                        { "targets": [8], "visible": false, "searchable": false },
+                        { "targets": [9], "visible": false, "searchable": false },
+                        { "targets": [10], "visible": false, "searchable": false },
+                        { "targets": [11], "visible": false, "searchable": false },
+                        { "targets": [12], "visible": false, "searchable": false },
+                        { "targets": [13], "visible": false, "searchable": false },
+                        { "targets": [14], "visible": false, "searchable": false },
+                        { "targets": [15], "visible": false, "searchable": false },
+                        { "targets": [16], "visible": false, "searchable": false }
+                    ],
+                    "language":
+                    {
+                        "url": "/assets/languages/español.js"
+                    }
+                });
+
+            $("#dtPlanificacion").contextMenu({
+                selector: 'tr',
+                callback: function (key, options) {
+                    var index = $(this).index();
+                    var aData = oPlanificacion.fnGetData(this);
+                    var id = aData['IdPlanificacion'];
+                    var mensaje;
+                    var estado;
+
+                    if (key == "desaprobar") {
+                        estado = "3";
+                        AnularPlanificacion(id, estado);
+                    }
+
+                    if (key == "editar")
+                    {
+                        EditarPlanificacion(id);
+                    }
+                },
+                items:
+                {
+                    "desaprobar": { name: "Anular", icon: "delete" },
+                    "editar": {name: "Modificar", icon: "edit" }
+                }
+
+            });
+
+
+            $('#dtPlanificacion tbody').on('click', 'tr', function () {
+                if ($(this).hasClass('selected')) {
+                    $(this).removeClass('selected');
+                }
+                else {
+                    oPlanificacion.$('tr.selected').removeClass('selected');
+                    $(this).addClass('selected');
+                }
+            });
+
+
+            $("#FechaInicio").datepicker({
+                format: 'dd/mm/yyyy'
+            });
+
+
+            $('#FechaInicio').on('changeDate', function(ev){
+                $(this).datepicker('hide');
+            });
+
+            $("#FechaFin").datepicker({
+                format: 'dd/mm/yyyy'
+            });
+
+
+            $('#FechaFin').on('changeDate', function (ev) {
+                $(this).datepicker('hide');
+            });
+
+
+            $("#SucursalAlmacenes").multiselect({ numberDisplayed: 1 });
+
+        });
+
+    </script>
+
+</head>
+
+<body>
+
+    <section id="container">
+        <!-- **********************************************************************************************************************************************************
+        TOP BAR CONTENT & NOTIFICATIONS
+        *********************************************************************************************************************************************************** -->
+        <!--header start-->
+        @Html.Partial("~/Views/Shared/Header.cshtml")
+        <!--header end-->
+        <!-- **********************************************************************************************************************************************************
+        MAIN SIDEBAR MENU
+        *********************************************************************************************************************************************************** -->
+        <!--sidebar start-->
+        @Html.Partial("~/Views/Shared/Menu.cshtml")
+        <!--sidebar end-->
+        <!-- **********************************************************************************************************************************************************
+        MAIN CONTENT
+        *********************************************************************************************************************************************************** -->
+        <!--main content start-->
+        <section id="main-content">
+            <section class="wrapper">
+                <h3><i class="fa fa-angle-right"></i>Ruta Plan de Calidad</h3>
+
+                <!-- BASIC FORM ELELEMNTS -->
+                <div class="row mt">
+                    <div class="col-lg-12">
+                        <div class="form-panel">
+                            <h4 class="mb"><i class="fa fa-angle-right"></i> Ruta</h4>
+                            <form class="form-horizontal style-form" method="get">
+                                <div class="form-group">
+                                    <div class="col-sm-2">
+                                        <input id="NumeroPlanificacion" type="text" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-10">
+                                        <button id="btnBuscar" type="button" class="btn btn-theme" data-toggle="modal" data-target="#myModal">Consultar Planificación</button>
+                                    </div>
+                                </div>
+                                <table id="dtPlanificacion2" class="display" width="100%">
+                                    <thead>
+                                        <tr>
+                                            <th>Número Plan</th>
+                                            <th>Producto</th>
+                                            <th>Fabricante</th>
+                                            <th>Categoria</th>
+                                            <th>FechaEjecucion</th>
+                                            <th>Estado</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody></tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <th>Número Plan</th>
+                                            <th>Producto</th>
+                                            <th>Fabricante</th>
+                                            <th>Categoria</th>
+                                            <th>FechaEjecucion</th>
+                                            <th>Estado</th>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                                <table id="dtPlanificacion" class="display" width="100%">
+                                    <thead>
+                                        <tr>
+                                            <th>Número Plan</th>
+                                            <th>Producto</th>
+                                            <th>Fabricante</th>
+                                            <th>Categoria</th>
+                                            <th>FechaEjecucion</th>
+                                            <th>Estado</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody></tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <th>Número Plan</th>
+                                            <th>Producto</th>
+                                            <th>Fabricante</th>
+                                            <th>Categoria</th>
+                                            <th>FechaEjecucion</th>
+                                            <th>Estado</th>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                                @*@Html.Partial("~/Views/Propuesta/ModalPropuesta.cshtml")*@
+                            </form>
+                        </div>
+                    </div><!-- col-lg-12-->
+                </div><!-- /row -->
+
+            </section><! --/wrapper -->
+        </section><!-- /MAIN CONTENT -->
+        <!--main content end-->
+
+    </section>
+</body>
+</html>

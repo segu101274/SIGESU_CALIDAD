@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SIGESUModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <Function Name="SIGESU_EspecialistaSelTodo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SIGESU_LaboratorioSelTodo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SIGESU_PlanificacionAct" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdPlanificacion" Type="int" Mode="In" />
+    <Parameter Name="NumeroPlanificacion" Type="varchar" Mode="In" />
+    <Parameter Name="FechaInicio" Type="datetime" Mode="In" />
+    <Parameter Name="FechaFin" Type="datetime" Mode="In" />
+    <Parameter Name="Remuestreo" Type="bit" Mode="In" />
+    <Parameter Name="Observacion" Type="varchar" Mode="In" />
+    <Parameter Name="Estado" Type="char" Mode="In" />
+    <Parameter Name="IdEspecialista" Type="int" Mode="In" />
+    <Parameter Name="IdLaboratorio" Type="int" Mode="In" />
+    <Parameter Name="IdPlanificacionOrigen" Type="int" Mode="In" />
+    <Parameter Name="IdSucursalAlmacen" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="SIGESU_PlanificacionIns" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="xml" Type="xml" Mode="In" />
+  </Function>
+  <Function Name="SIGESU_PlanificacionLaboratorioAct" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdPlanificacionLaboratorio" Type="int" Mode="In" />
+    <Parameter Name="NumeroVeces" Type="int" Mode="In" />
+    <Parameter Name="Resultado" Type="varchar" Mode="In" />
+    <Parameter Name="FechaCheckin" Type="datetime" Mode="In" />
+    <Parameter Name="FechaEdicion" Type="datetime" Mode="In" />
+    <Parameter Name="FechaValidacion" Type="datetime" Mode="In" />
+    <Parameter Name="FechaImpresion" Type="datetime" Mode="In" />
+    <Parameter Name="AplicaRemuestreo" Type="bit" Mode="In" />
+    <Parameter Name="ResultadoAdverso" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="SIGESU_PlanificacionLaboratorioActxIdPlanificacion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdPlanificacion" Type="int" Mode="In" />
+    <Parameter Name="NumeroVeces" Type="int" Mode="In" />
+    <Parameter Name="Resultado" Type="varchar" Mode="In" />
+    <Parameter Name="FechaCheckin" Type="datetime" Mode="In" />
+    <Parameter Name="FechaEdicion" Type="datetime" Mode="In" />
+    <Parameter Name="FechaValidacion" Type="datetime" Mode="In" />
+    <Parameter Name="FechaImpresion" Type="datetime" Mode="In" />
+    <Parameter Name="AplicaRemuestreo" Type="bit" Mode="In" />
+    <Parameter Name="ResultadoAdverso" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="SIGESU_PlanificacionLaboratorioActxIdPlanificacionxImpresion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdPlanificacion" Type="int" Mode="In" />
+    <Parameter Name="NumeroVeces" Type="int" Mode="In" />
+    <Parameter Name="Resultado" Type="varchar" Mode="In" />
+    <Parameter Name="FechaCheckin" Type="datetime" Mode="In" />
+    <Parameter Name="FechaEdicion" Type="datetime" Mode="In" />
+    <Parameter Name="FechaValidacion" Type="datetime" Mode="In" />
+    <Parameter Name="FechaImpresion" Type="datetime" Mode="In" />
+    <Parameter Name="AplicaRemuestreo" Type="bit" Mode="In" />
+    <Parameter Name="ResultadoAdverso" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="SIGESU_PlanificacionLaboratorioIns" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdPlanificacion" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SIGESU_PlanificacionLaboratorioSel" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdPlanificacion" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SIGESU_PlanificacionLaboratorioSelxIdPlanificacionLaboratorio" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdPlanificacionLaboratorio" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SIGESU_PlanificacionSel" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="FechaInicio" Type="varchar" Mode="In" />
+    <Parameter Name="FechaFin" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="SIGESU_PlanificacionSelUltimoGenerado" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SIGESU_PlanificacionSelxIdPlanificacion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdPlanificacion" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SIGESU_ProductoSelAtributosxIdProducto" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdProducto" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SIGESU_ProductoSelTodo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SIGESU_ServidorSel" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SIGESU_SucursalAlmacenSelTodo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <EntityContainer Name="SIGESUModelStoreContainer" />
+</Schema>

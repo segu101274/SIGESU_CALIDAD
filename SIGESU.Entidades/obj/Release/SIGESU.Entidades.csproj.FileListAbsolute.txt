@@ -1,0 +1,7 @@
+D:\Git\SIGESU\SIGESU.Entidades\bin\Release\SIGESU.Entidades.dll
+D:\Git\SIGESU\SIGESU.Entidades\bin\Release\SIGESU.Entidades.pdb
+D:\Git\SIGESU\SIGESU.Entidades\bin\Release\SIGESU.Helpers.dll
+D:\Git\SIGESU\SIGESU.Entidades\bin\Release\SIGESU.Helpers.pdb
+D:\Git\SIGESU\SIGESU.Entidades\obj\Release\SIGESU.Entidades.csprojResolveAssemblyReference.cache
+D:\Git\SIGESU\SIGESU.Entidades\obj\Release\SIGESU.Entidades.dll
+D:\Git\SIGESU\SIGESU.Entidades\obj\Release\SIGESU.Entidades.pdb

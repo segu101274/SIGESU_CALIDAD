@@ -1,0 +1,244 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="DB_A3CA54_segu101274Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <Function Name="GCPS_SP_APIAreaSucursalDistancia" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IdPlanificacion" Type="int" Mode="In" />
+          <Parameter Name="IdAreaSucursal" Type="int" Mode="In" />
+        </Function>
+        <Function Name="GCPS_SP_APIAreasxSucursal" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="COD_SUCURSAL" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="GCPS_SP_APIESPECIALISTALOGIN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Usuario" Type="varchar" Mode="In" />
+          <Parameter Name="Pwd" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="GCPS_SP_APIPlanificacionDetalleIns" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IdPlanificacion" Type="int" Mode="In" />
+          <Parameter Name="COD_PRODUCTO" Type="varchar" Mode="In" />
+          <Parameter Name="IdObservacion" Type="int" Mode="In" />
+          <Parameter Name="Resultado" Type="nvarchar(max)" Mode="In" />
+        </Function>
+        <Function Name="GCPS_SP_APIPlanificacionDetallexIdPlanificacion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IdPlanificacion" Type="int" Mode="In" />
+        </Function>
+        <Function Name="GCPS_SP_APIPlanificacionxEspecialista" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IdEspecialista" Type="int" Mode="In" />
+        </Function>
+        <Function Name="GCPS_SP_APIProductoObservacionxProducto" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="COD_PRODUCTO" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="GCPS_SP_APIProductoxCodigoBarra" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="CODIGOBARRAS" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="GCPS_SP_APISucursalesxPlanificacion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IdPlanificacion" Type="int" Mode="In" />
+        </Function>
+        <EntityContainer Name="DB_A3CA54_segu101274ModelStoreContainer" />
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DB_A3CA54_segu101274Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="DB_A3CA54_segu101274Entities" annotation:LazyLoadingEnabled="true" >
+          <FunctionImport Name="GCPS_SP_APIPlanificacionxEspecialista" ReturnType="Collection(DB_A3CA54_segu101274Model.GCPS_SP_APIPlanificacionxEspecialista_Result)">
+          <Parameter Name="IdEspecialista" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="GCPS_SP_APISucursalesxPlanificacion" ReturnType="Collection(DB_A3CA54_segu101274Model.GCPS_SP_APISucursalesxPlanificacion_Result)">
+          <Parameter Name="IdPlanificacion" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="GCPS_SP_APIAreasxSucursal" ReturnType="Collection(DB_A3CA54_segu101274Model.GCPS_SP_APIAreasxSucursal_Result)">
+          <Parameter Name="COD_SUCURSAL" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="GCPS_SP_APIAreaSucursalDistancia" ReturnType="Collection(DB_A3CA54_segu101274Model.GCPS_SP_APIAreaSucursalDistancia_Result)">
+            <Parameter Name="IdPlanificacion" Mode="In" Type="Int32" />
+            <Parameter Name="IdAreaSucursal" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="GCPS_SP_APIESPECIALISTALOGIN" ReturnType="Collection(DB_A3CA54_segu101274Model.GCPS_SP_APIESPECIALISTALOGIN_Result)">
+            <Parameter Name="Usuario" Mode="In" Type="String" />
+            <Parameter Name="Pwd" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="GCPS_SP_APIProductoxCodigoBarra" ReturnType="Collection(DB_A3CA54_segu101274Model.GCPS_SP_APIProductoxCodigoBarra_Result)">
+          <Parameter Name="CODIGOBARRAS" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="GCPS_SP_APIProductoObservacionxProducto" ReturnType="Collection(DB_A3CA54_segu101274Model.GCPS_SP_APIProductoObservacionxProducto_Result)">
+          <Parameter Name="COD_PRODUCTO" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="GCPS_SP_APIPlanificacionDetalleIns" ReturnType="Collection(DB_A3CA54_segu101274Model.GCPS_SP_APIPlanificacionDetalleIns_Result)">
+            <Parameter Name="IdPlanificacion" Mode="In" Type="Int32" />
+            <Parameter Name="COD_PRODUCTO" Mode="In" Type="String" />
+            <Parameter Name="IdObservacion" Mode="In" Type="Int32" />
+            <Parameter Name="Resultado" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="GCPS_SP_APIPlanificacionDetallexIdPlanificacion" ReturnType="Collection(DB_A3CA54_segu101274Model.GCPS_SP_APIPlanificacionDetallexIdPlanificacion_Result)">
+            <Parameter Name="IdPlanificacion" Mode="In" Type="Int32" />
+          </FunctionImport>
+        </EntityContainer>
+        <ComplexType Name="GCPS_SP_APIPlanificacionxEspecialista_Result">
+          <Property Type="Int32" Name="IdPlanificacion" Nullable="false" />
+          <Property Type="String" Name="NumeroPlanificacion" Nullable="false" MaxLength="20" />
+          <Property Type="String" Name="Estado" Nullable="false" MaxLength="1" />
+        </ComplexType>
+        <ComplexType Name="GCPS_SP_APISucursalesxPlanificacion_Result">
+          <Property Type="String" Name="COD_SUCURSAL" Nullable="false" MaxLength="9" />
+          <Property Type="String" Name="NOMBRE_SUCURSAL" Nullable="false" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="GCPS_SP_APIAreasxSucursal_Result">
+          <Property Type="Int32" Name="IdAreaSucursal" Nullable="false" />
+          <Property Type="Int32" Name="IdArea" Nullable="false" />
+          <Property Type="String" Name="DescripcionArea" Nullable="false" MaxLength="100" />
+        </ComplexType>
+        <ComplexType Name="GCPS_SP_APIAreaSucursalDistancia_Result">
+          <Property Type="Int32" Name="IdGondolaSucursal" Nullable="false" />
+          <Property Type="Int32" Name="IdAreaSucursal" Nullable="false" />
+          <Property Type="String" Name="DescripcionArea" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="DescripcionGondola" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="COD_PRODUCTO" Nullable="false" MaxLength="9" />
+          <Property Type="String" Name="NOMBRE_PRODUCTO" Nullable="false" MaxLength="50" />
+          <Property Type="Decimal" Name="DistanciaGondola" Nullable="false" Precision="9" Scale="2" />
+        </ComplexType>
+        <ComplexType Name="GCPS_SP_APIESPECIALISTALOGIN_Result">
+          <Property Type="Int32" Name="IdEspecialista" Nullable="false" />
+          <Property Type="String" Name="NombreEspecialista" Nullable="false" MaxLength="150" />
+          <Property Type="String" Name="Estado" Nullable="false" MaxLength="1" />
+          <Property Type="String" Name="Usuario" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="PWD" Nullable="true" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="GCPS_SP_APIProductoxCodigoBarra_Result">
+          <Property Type="String" Name="COD_PRODUCTO" Nullable="false" MaxLength="9" />
+          <Property Type="String" Name="CODIGOBARRAS" Nullable="false" MaxLength="13" />
+          <Property Type="Decimal" Name="PRECIO_PRODUCTO" Nullable="true" Precision="9" Scale="2" />
+        </ComplexType>
+        <ComplexType Name="GCPS_SP_APIProductoObservacionxProducto_Result">
+          <Property Type="String" Name="COD_PRODUCTO" Nullable="false" MaxLength="9" />
+          <Property Type="Int32" Name="IdObservacion" Nullable="false" />
+          <Property Type="String" Name="Descripcion" Nullable="false" MaxLength="100" />
+        </ComplexType>
+        <ComplexType Name="GCPS_SP_APIPlanificacionDetalleIns_Result">
+          <Property Type="Int32" Name="Respuesta" Nullable="false" />
+          <Property Type="String" Name="Mensaje" Nullable="false" MaxLength="36" />
+        </ComplexType>
+        <ComplexType Name="GCPS_SP_APIPlanificacionDetallexIdPlanificacion_Result">
+          <Property Type="String" Name="COD_PRODUCTO" Nullable="false" MaxLength="9" />
+          <Property Type="String" Name="NOMBRE_PRODUCTO" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="CODIGOBARRAS" Nullable="false" MaxLength="13" />
+          <Property Type="Int64" Name="CNTPLAN_PRODUCTO" Nullable="true" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DB_A3CA54_segu101274ModelStoreContainer" CdmEntityContainer="DB_A3CA54_segu101274Entities" >
+          <FunctionImportMapping FunctionImportName="GCPS_SP_APIPlanificacionxEspecialista" FunctionName="DB_A3CA54_segu101274Model.Store.GCPS_SP_APIPlanificacionxEspecialista">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DB_A3CA54_segu101274Model.GCPS_SP_APIPlanificacionxEspecialista_Result">
+                <ScalarProperty Name="IdPlanificacion" ColumnName="IdPlanificacion" />
+                <ScalarProperty Name="NumeroPlanificacion" ColumnName="NumeroPlanificacion" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GCPS_SP_APISucursalesxPlanificacion" FunctionName="DB_A3CA54_segu101274Model.Store.GCPS_SP_APISucursalesxPlanificacion">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DB_A3CA54_segu101274Model.GCPS_SP_APISucursalesxPlanificacion_Result">
+                <ScalarProperty Name="COD_SUCURSAL" ColumnName="COD_SUCURSAL" />
+                <ScalarProperty Name="NOMBRE_SUCURSAL" ColumnName="NOMBRE_SUCURSAL" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GCPS_SP_APIAreasxSucursal" FunctionName="DB_A3CA54_segu101274Model.Store.GCPS_SP_APIAreasxSucursal">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DB_A3CA54_segu101274Model.GCPS_SP_APIAreasxSucursal_Result">
+                <ScalarProperty Name="IdAreaSucursal" ColumnName="IdAreaSucursal" />
+                <ScalarProperty Name="IdArea" ColumnName="IdArea" />
+                <ScalarProperty Name="DescripcionArea" ColumnName="DescripcionArea" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GCPS_SP_APIAreaSucursalDistancia" FunctionName="DB_A3CA54_segu101274Model.Store.GCPS_SP_APIAreaSucursalDistancia">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DB_A3CA54_segu101274Model.GCPS_SP_APIAreaSucursalDistancia_Result">
+                <ScalarProperty Name="IdGondolaSucursal" ColumnName="IdGondolaSucursal" />
+                <ScalarProperty Name="IdAreaSucursal" ColumnName="IdAreaSucursal" />
+                <ScalarProperty Name="DescripcionArea" ColumnName="DescripcionArea" />
+                <ScalarProperty Name="DescripcionGondola" ColumnName="DescripcionGondola" />
+                <ScalarProperty Name="COD_PRODUCTO" ColumnName="COD_PRODUCTO" />
+                <ScalarProperty Name="NOMBRE_PRODUCTO" ColumnName="NOMBRE_PRODUCTO" />
+                <ScalarProperty Name="DistanciaGondola" ColumnName="DistanciaGondola" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GCPS_SP_APIESPECIALISTALOGIN" FunctionName="DB_A3CA54_segu101274Model.Store.GCPS_SP_APIESPECIALISTALOGIN">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DB_A3CA54_segu101274Model.GCPS_SP_APIESPECIALISTALOGIN_Result">
+                <ScalarProperty Name="IdEspecialista" ColumnName="IdEspecialista" />
+                <ScalarProperty Name="NombreEspecialista" ColumnName="NombreEspecialista" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="Usuario" ColumnName="Usuario" />
+                <ScalarProperty Name="PWD" ColumnName="PWD" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GCPS_SP_APIProductoxCodigoBarra" FunctionName="DB_A3CA54_segu101274Model.Store.GCPS_SP_APIProductoxCodigoBarra">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DB_A3CA54_segu101274Model.GCPS_SP_APIProductoxCodigoBarra_Result">
+                <ScalarProperty Name="COD_PRODUCTO" ColumnName="COD_PRODUCTO" />
+                <ScalarProperty Name="CODIGOBARRAS" ColumnName="CODIGOBARRAS" />
+                <ScalarProperty Name="PRECIO_PRODUCTO" ColumnName="PRECIO_PRODUCTO" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GCPS_SP_APIProductoObservacionxProducto" FunctionName="DB_A3CA54_segu101274Model.Store.GCPS_SP_APIProductoObservacionxProducto">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DB_A3CA54_segu101274Model.GCPS_SP_APIProductoObservacionxProducto_Result">
+                <ScalarProperty Name="COD_PRODUCTO" ColumnName="COD_PRODUCTO" />
+                <ScalarProperty Name="IdObservacion" ColumnName="IdObservacion" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GCPS_SP_APIPlanificacionDetalleIns" FunctionName="DB_A3CA54_segu101274Model.Store.GCPS_SP_APIPlanificacionDetalleIns">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DB_A3CA54_segu101274Model.GCPS_SP_APIPlanificacionDetalleIns_Result">
+                <ScalarProperty Name="Respuesta" ColumnName="Respuesta" />
+                <ScalarProperty Name="Mensaje" ColumnName="Mensaje" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GCPS_SP_APIPlanificacionDetallexIdPlanificacion" FunctionName="DB_A3CA54_segu101274Model.Store.GCPS_SP_APIPlanificacionDetallexIdPlanificacion">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DB_A3CA54_segu101274Model.GCPS_SP_APIPlanificacionDetallexIdPlanificacion_Result">
+                <ScalarProperty Name="COD_PRODUCTO" ColumnName="COD_PRODUCTO" />
+                <ScalarProperty Name="NOMBRE_PRODUCTO" ColumnName="NOMBRE_PRODUCTO" />
+                <ScalarProperty Name="CODIGOBARRAS" ColumnName="CODIGOBARRAS" />
+                <ScalarProperty Name="CNTPLAN_PRODUCTO" ColumnName="CNTPLAN_PRODUCTO" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,566 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="SIGESUModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <Function Name="SIGESU_EspecialistaSelTodo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="SIGESU_LaboratorioSelTodo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="SIGESU_PlanificacionAct" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IdPlanificacion" Type="int" Mode="In" />
+          <Parameter Name="NumeroPlanificacion" Type="varchar" Mode="In" />
+          <Parameter Name="FechaInicio" Type="datetime" Mode="In" />
+          <Parameter Name="FechaFin" Type="datetime" Mode="In" />
+          <Parameter Name="Remuestreo" Type="bit" Mode="In" />
+          <Parameter Name="Observacion" Type="varchar" Mode="In" />
+          <Parameter Name="Estado" Type="char" Mode="In" />
+          <Parameter Name="IdEspecialista" Type="int" Mode="In" />
+          <Parameter Name="IdLaboratorio" Type="int" Mode="In" />
+          <Parameter Name="IdPlanificacionOrigen" Type="int" Mode="In" />
+          <Parameter Name="IdSucursalAlmacen" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="SIGESU_PlanificacionIns" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="xml" Type="xml" Mode="In" />
+        </Function>
+        <Function Name="SIGESU_PlanificacionLaboratorioAct" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IdPlanificacionLaboratorio" Type="int" Mode="In" />
+          <Parameter Name="NumeroVeces" Type="int" Mode="In" />
+          <Parameter Name="Resultado" Type="varchar" Mode="In" />
+          <Parameter Name="FechaCheckin" Type="datetime" Mode="In" />
+          <Parameter Name="FechaEdicion" Type="datetime" Mode="In" />
+          <Parameter Name="FechaValidacion" Type="datetime" Mode="In" />
+          <Parameter Name="FechaImpresion" Type="datetime" Mode="In" />
+          <Parameter Name="AplicaRemuestreo" Type="bit" Mode="In" />
+          <Parameter Name="ResultadoAdverso" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="SIGESU_PlanificacionLaboratorioActxIdPlanificacion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IdPlanificacion" Type="int" Mode="In" />
+          <Parameter Name="NumeroVeces" Type="int" Mode="In" />
+          <Parameter Name="Resultado" Type="varchar" Mode="In" />
+          <Parameter Name="FechaCheckin" Type="datetime" Mode="In" />
+          <Parameter Name="FechaEdicion" Type="datetime" Mode="In" />
+          <Parameter Name="FechaValidacion" Type="datetime" Mode="In" />
+          <Parameter Name="FechaImpresion" Type="datetime" Mode="In" />
+          <Parameter Name="AplicaRemuestreo" Type="bit" Mode="In" />
+          <Parameter Name="ResultadoAdverso" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="SIGESU_PlanificacionLaboratorioActxIdPlanificacionxImpresion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IdPlanificacion" Type="int" Mode="In" />
+          <Parameter Name="NumeroVeces" Type="int" Mode="In" />
+          <Parameter Name="Resultado" Type="varchar" Mode="In" />
+          <Parameter Name="FechaCheckin" Type="datetime" Mode="In" />
+          <Parameter Name="FechaEdicion" Type="datetime" Mode="In" />
+          <Parameter Name="FechaValidacion" Type="datetime" Mode="In" />
+          <Parameter Name="FechaImpresion" Type="datetime" Mode="In" />
+          <Parameter Name="AplicaRemuestreo" Type="bit" Mode="In" />
+          <Parameter Name="ResultadoAdverso" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="SIGESU_PlanificacionLaboratorioIns" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IdPlanificacion" Type="int" Mode="In" />
+        </Function>
+        <Function Name="SIGESU_PlanificacionLaboratorioSel" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IdPlanificacion" Type="int" Mode="In" />
+        </Function>
+        <Function Name="SIGESU_PlanificacionLaboratorioSelxIdPlanificacionLaboratorio" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IdPlanificacionLaboratorio" Type="int" Mode="In" />
+        </Function>
+        <Function Name="SIGESU_PlanificacionSel" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="FechaInicio" Type="varchar" Mode="In" />
+          <Parameter Name="FechaFin" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="SIGESU_PlanificacionSelUltimoGenerado" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="SIGESU_PlanificacionSelxIdPlanificacion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IdPlanificacion" Type="int" Mode="In" />
+        </Function>
+        <Function Name="SIGESU_ProductoSelAtributosxIdProducto" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IdProducto" Type="int" Mode="In" />
+        </Function>
+        <Function Name="SIGESU_ProductoSelTodo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="SIGESU_ServidorSel" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="SIGESU_SucursalAlmacenSelTodo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <EntityContainer Name="SIGESUModelStoreContainer" />
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="SIGESUModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="SIGESUEntities" annotation:LazyLoadingEnabled="true">
+          <FunctionImport Name="SIGESU_PlanificacionSel" ReturnType="Collection(SIGESUModel.SIGESU_PlanificacionSel_Result)">
+            <Parameter Name="FechaInicio" Mode="In" Type="String" />
+            <Parameter Name="FechaFin" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SIGESU_ProductoSelTodo" ReturnType="Collection(SIGESUModel.SIGESU_ProductoSelTodo_Result)" />
+          <FunctionImport Name="SIGESU_EspecialistaSelTodo" ReturnType="Collection(SIGESUModel.SIGESU_EspecialistaSelTodo_Result)" />
+          <FunctionImport Name="SIGESU_LaboratorioSelTodo" ReturnType="Collection(SIGESUModel.SIGESU_LaboratorioSelTodo_Result)" />
+          <FunctionImport Name="SIGESU_ProductoSelAtributosxIdProducto" ReturnType="Collection(SIGESUModel.SIGESU_ProductoSelAtributosxIdProducto_Result)">
+          <Parameter Name="IdProducto" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="SIGESU_SucursalAlmacenSelTodo" ReturnType="Collection(SIGESUModel.SIGESU_SucursalAlmacenSelTodo_Result)" />
+          <FunctionImport Name="SIGESU_PlanificacionIns" ReturnType="Collection(SIGESUModel.SIGESU_PlanificacionIns_Result)">
+          <Parameter Name="xml" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SIGESU_PlanificacionSelUltimoGenerado" ReturnType="Collection(SIGESUModel.SIGESU_PlanificacionSelUltimoGenerado_Result)" />
+          <FunctionImport Name="SIGESU_ServidorSel" ReturnType="Collection(SIGESUModel.SIGESU_ServidorSel_Result)" />
+          <FunctionImport Name="SIGESU_PlanificacionSelxIdPlanificacion" ReturnType="Collection(SIGESUModel.SIGESU_PlanificacionSelxIdPlanificacion_Result)">
+          <Parameter Name="IdPlanificacion" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="SIGESU_PlanificacionAct" ReturnType="Collection(SIGESUModel.SIGESU_PlanificacionAct_Result)">
+            <Parameter Name="IdPlanificacion" Mode="In" Type="Int32" />
+            <Parameter Name="NumeroPlanificacion" Mode="In" Type="String" />
+            <Parameter Name="FechaInicio" Mode="In" Type="DateTime" />
+            <Parameter Name="FechaFin" Mode="In" Type="DateTime" />
+            <Parameter Name="Remuestreo" Mode="In" Type="Boolean" />
+            <Parameter Name="Observacion" Mode="In" Type="String" />
+            <Parameter Name="Estado" Mode="In" Type="String" />
+            <Parameter Name="IdEspecialista" Mode="In" Type="Int32" />
+            <Parameter Name="IdLaboratorio" Mode="In" Type="Int32" />
+            <Parameter Name="IdPlanificacionOrigen" Mode="In" Type="Int32" />
+            <Parameter Name="IdSucursalAlmacen" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SIGESU_PlanificacionLaboratorioAct" ReturnType="Collection(SIGESUModel.SIGESU_PlanificacionLaboratorioAct_Result)">
+            <Parameter Name="IdPlanificacionLaboratorio" Mode="In" Type="Int32" />
+            <Parameter Name="NumeroVeces" Mode="In" Type="Int32" />
+            <Parameter Name="Resultado" Mode="In" Type="String" />
+            <Parameter Name="FechaCheckin" Mode="In" Type="DateTime" />
+            <Parameter Name="FechaEdicion" Mode="In" Type="DateTime" />
+            <Parameter Name="FechaValidacion" Mode="In" Type="DateTime" />
+            <Parameter Name="FechaImpresion" Mode="In" Type="DateTime" />
+            <Parameter Name="AplicaRemuestreo" Mode="In" Type="Boolean" />
+            <Parameter Name="ResultadoAdverso" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SIGESU_PlanificacionLaboratorioSelxIdPlanificacionLaboratorio" ReturnType="Collection(SIGESUModel.SIGESU_PlanificacionLaboratorioSelxIdPlanificacionLaboratorio_Result)">
+          <Parameter Name="IdPlanificacionLaboratorio" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="SIGESU_PlanificacionLaboratorioActxIdPlanificacion" ReturnType="Collection(SIGESUModel.SIGESU_PlanificacionLaboratorioActxIdPlanificacion_Result)">
+            <Parameter Name="IdPlanificacion" Mode="In" Type="Int32" />
+            <Parameter Name="NumeroVeces" Mode="In" Type="Int32" />
+            <Parameter Name="Resultado" Mode="In" Type="String" />
+            <Parameter Name="FechaCheckin" Mode="In" Type="DateTime" />
+            <Parameter Name="FechaEdicion" Mode="In" Type="DateTime" />
+            <Parameter Name="FechaValidacion" Mode="In" Type="DateTime" />
+            <Parameter Name="FechaImpresion" Mode="In" Type="DateTime" />
+            <Parameter Name="AplicaRemuestreo" Mode="In" Type="Boolean" />
+            <Parameter Name="ResultadoAdverso" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SIGESU_PlanificacionLaboratorioIns" ReturnType="Collection(SIGESUModel.SIGESU_PlanificacionLaboratorioIns_Result)">
+          <Parameter Name="IdPlanificacion" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="SIGESU_PlanificacionLaboratorioSel" ReturnType="Collection(SIGESUModel.SIGESU_PlanificacionLaboratorioSel_Result)">
+          <Parameter Name="IdPlanificacion" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="SIGESU_PlanificacionLaboratorioActxIdPlanificacionxImpresion" ReturnType="Collection(SIGESUModel.SIGESU_PlanificacionLaboratorioActxIdPlanificacionxImpresion_Result)">
+            <Parameter Name="IdPlanificacion" Mode="In" Type="Int32" />
+            <Parameter Name="NumeroVeces" Mode="In" Type="Int32" />
+            <Parameter Name="Resultado" Mode="In" Type="String" />
+            <Parameter Name="FechaCheckin" Mode="In" Type="DateTime" />
+            <Parameter Name="FechaEdicion" Mode="In" Type="DateTime" />
+            <Parameter Name="FechaValidacion" Mode="In" Type="DateTime" />
+            <Parameter Name="FechaImpresion" Mode="In" Type="DateTime" />
+            <Parameter Name="AplicaRemuestreo" Mode="In" Type="Boolean" />
+            <Parameter Name="ResultadoAdverso" Mode="In" Type="String" />
+          </FunctionImport>
+        </EntityContainer>
+        <ComplexType Name="SIGESU_PlanificacionSel_Result">
+          <Property Type="Int32" Name="IdPlanificacion" Nullable="false" />
+          <Property Type="String" Name="NumeroPlanificacion" Nullable="false" MaxLength="20" />
+          <Property Type="Int32" Name="IdProducto" Nullable="false" />
+          <Property Type="DateTime" Name="FechaInicio" Nullable="false" Precision="23" />
+          <Property Type="DateTime" Name="FechaFin" Nullable="false" Precision="23" />
+          <Property Type="Boolean" Name="Remuestreo" Nullable="true" />
+          <Property Type="String" Name="Observacion" Nullable="true" MaxLength="400" />
+          <Property Type="String" Name="Estado" Nullable="true" MaxLength="11" />
+          <Property Type="Int32" Name="IdEspecialista" Nullable="true" />
+          <Property Type="Int32" Name="IdLaboratorio" Nullable="true" />
+          <Property Type="Int32" Name="IdPlanificacionOrigen" Nullable="true" />
+          <Property Type="DateTime" Name="FechaCreacion" Nullable="true" Precision="23" />
+          <Property Type="String" Name="NombreProducto" Nullable="true" MaxLength="150" />
+          <Property Type="String" Name="Fabricante" Nullable="true" MaxLength="150" />
+          <Property Type="String" Name="DescripcionFamilia" Nullable="false" MaxLength="150" />
+          <Property Type="String" Name="NombreEspecialista" Nullable="true" MaxLength="150" />
+          <Property Type="String" Name="NombreLaboratorio" Nullable="true" MaxLength="150" />
+        </ComplexType>
+        <ComplexType Name="SIGESU_ProductoSelTodo_Result">
+          <Property Type="Int32" Name="IdProducto" Nullable="false" />
+          <Property Type="String" Name="NombreProducto" Nullable="true" MaxLength="150" />
+          <Property Type="String" Name="Familia" Nullable="true" MaxLength="150" />
+          <Property Type="String" Name="Fabricante" Nullable="true" MaxLength="150" />
+          <Property Type="Int32" Name="IdProductoFamilia" Nullable="true" />
+          <Property Type="Int32" Name="Estado" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="SIGESU_EspecialistaSelTodo_Result">
+          <Property Type="Int32" Name="IdEspecialista" Nullable="false" />
+          <Property Type="String" Name="NombreEspecialista" Nullable="true" MaxLength="150" />
+        </ComplexType>
+        <ComplexType Name="SIGESU_LaboratorioSelTodo_Result">
+          <Property Type="Int32" Name="IdLaboratorio" Nullable="false" />
+          <Property Type="String" Name="NombreLaboratorio" Nullable="false" MaxLength="150" />
+          <Property Type="String" Name="Estado" Nullable="false" MaxLength="1" />
+        </ComplexType>
+        <ComplexType Name="SIGESU_ProductoSelAtributosxIdProducto_Result">
+          <Property Type="Int32" Name="IdProducto" Nullable="false" />
+          <Property Type="String" Name="NombreProducto" Nullable="true" MaxLength="150" />
+          <Property Type="String" Name="Familia" Nullable="true" MaxLength="150" />
+          <Property Type="String" Name="Fabricante" Nullable="true" MaxLength="150" />
+          <Property Type="Int32" Name="IdProductoFamilia" Nullable="true" />
+          <Property Type="Int32" Name="Estado" Nullable="true" />
+          <Property Type="String" Name="NombreCertificado" Nullable="true" MaxLength="150" />
+          <Property Type="String" Name="NombreComposicion" Nullable="true" />
+          <Property Type="String" Name="DescripcionFamilia" Nullable="false" MaxLength="150" />
+        </ComplexType>
+        <ComplexType Name="SIGESU_SucursalAlmacenSelTodo_Result">
+          <Property Type="Int32" Name="IdSucursalAlmacen" Nullable="false" />
+          <Property Type="String" Name="Nombre" Nullable="true" MaxLength="150" />
+          <Property Type="String" Name="Estado" Nullable="true" MaxLength="1" />
+        </ComplexType>
+        <ComplexType Name="SIGESU_PlanificacionIns_Result">
+          <Property Type="Int32" Name="Estado" Nullable="false" />
+          <Property Type="String" Name="Mensaje" Nullable="false" MaxLength="39" />
+        </ComplexType>
+        <ComplexType Name="SIGESU_PlanificacionSelUltimoGenerado_Result">
+          <Property Type="Int32" Name="IdPlanificacion" Nullable="false" />
+          <Property Type="String" Name="NumeroPlanificacion" Nullable="false" MaxLength="20" />
+          <Property Type="Int32" Name="IdProducto" Nullable="false" />
+          <Property Type="DateTime" Name="FechaInicio" Nullable="false" Precision="23" />
+          <Property Type="DateTime" Name="FechaFin" Nullable="false" Precision="23" />
+          <Property Type="Boolean" Name="Remuestreo" Nullable="true" />
+          <Property Type="String" Name="Observacion" Nullable="true" MaxLength="400" />
+          <Property Type="String" Name="Estado" Nullable="true" MaxLength="11" />
+          <Property Type="Int32" Name="IdEspecialista" Nullable="true" />
+          <Property Type="Int32" Name="IdLaboratorio" Nullable="true" />
+          <Property Type="Int32" Name="IdPlanificacionOrigen" Nullable="true" />
+          <Property Type="DateTime" Name="FechaCreacion" Nullable="true" Precision="23" />
+        </ComplexType>
+        <ComplexType Name="SIGESU_ServidorSel_Result">
+          <Property Type="DateTime" Name="FechaHoraActual" Nullable="false" Precision="23" />
+          <Property Type="String" Name="NombreServidor" Nullable="true" MaxLength="128" />
+        </ComplexType>
+        <ComplexType Name="SIGESU_PlanificacionSelxIdPlanificacion_Result">
+          <Property Type="Int32" Name="IdPlanificacion" Nullable="false" />
+          <Property Type="String" Name="NumeroPlanificacion" Nullable="false" MaxLength="20" />
+          <Property Type="Int32" Name="IdProducto" Nullable="false" />
+          <Property Type="DateTime" Name="FechaInicio" Nullable="false" Precision="23" />
+          <Property Type="DateTime" Name="FechaFin" Nullable="false" Precision="23" />
+          <Property Type="Boolean" Name="Remuestreo" Nullable="true" />
+          <Property Type="String" Name="Observacion" Nullable="true" MaxLength="400" />
+          <Property Type="String" Name="Estado" Nullable="true" MaxLength="11" />
+          <Property Type="Int32" Name="IdEspecialista" Nullable="true" />
+          <Property Type="Int32" Name="IdLaboratorio" Nullable="true" />
+          <Property Type="Int32" Name="IdPlanificacionOrigen" Nullable="true" />
+          <Property Type="DateTime" Name="FechaCreacion" Nullable="true" Precision="23" />
+          <Property Type="String" Name="IdSucursalAlmacen" Nullable="true" />
+          <Property Type="String" Name="NombreComposicion" Nullable="true" />
+          <Property Type="String" Name="Fabricante" Nullable="true" MaxLength="150" />
+          <Property Type="String" Name="DescripcionFamilia" Nullable="false" MaxLength="150" />
+          <Property Type="String" Name="NombreCertificado" Nullable="true" MaxLength="150" />
+        </ComplexType>
+        <ComplexType Name="SIGESU_PlanificacionAct_Result">
+          <Property Type="Int32" Name="Estado" Nullable="false" />
+          <Property Type="String" Name="Mensaje" Nullable="false" MaxLength="44" />
+        </ComplexType>
+        <ComplexType Name="SIGESU_PlanificacionLaboratorioAct_Result">
+          <Property Type="Int32" Name="Estado" Nullable="false" />
+          <Property Type="String" Name="Mensaje" Nullable="false" MaxLength="39" />
+        </ComplexType>
+        <ComplexType Name="SIGESU_PlanificacionLaboratorioSelxIdPlanificacionLaboratorio_Result">
+          <Property Type="Int32" Name="IdPlanificacionLaboratorio" Nullable="false" />
+          <Property Type="Int32" Name="IdPrueba" Nullable="false" />
+          <Property Type="Int32" Name="IdEstudio" Nullable="false" />
+          <Property Type="Int32" Name="NumeroVeces" Nullable="true" />
+          <Property Type="String" Name="Resultado" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="ResultadoAdverso" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="RangoInferior" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="RangoSuperior" Nullable="true" MaxLength="20" />
+          <Property Type="DateTime" Name="FechaCheckin" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="FechaeEdicion" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="FechaIngreso" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="FechaValidacion" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="FechaImpresion" Nullable="true" Precision="23" />
+          <Property Type="Boolean" Name="AplicaRemuestreo" Nullable="true" />
+          <Property Type="Int32" Name="IdPlanificacion" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="SIGESU_PlanificacionLaboratorioActxIdPlanificacion_Result">
+          <Property Type="Int32" Name="Estado" Nullable="false" />
+          <Property Type="String" Name="Mensaje" Nullable="false" MaxLength="39" />
+        </ComplexType>
+        <ComplexType Name="SIGESU_PlanificacionLaboratorioIns_Result">
+          <Property Type="Int32" Name="Estado" Nullable="false" />
+          <Property Type="String" Name="Mensaje" Nullable="false" MaxLength="39" />
+        </ComplexType>
+        <ComplexType Name="SIGESU_PlanificacionLaboratorioSel_Result">
+          <Property Type="Int32" Name="IdPlanificacionLaboratorio" Nullable="false" />
+          <Property Type="Int32" Name="IdPrueba" Nullable="false" />
+          <Property Type="Int32" Name="IdEstudio" Nullable="false" />
+          <Property Type="Int32" Name="NumeroVeces" Nullable="true" />
+          <Property Type="String" Name="Resultado" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="ResultadoAdverso" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="RangoInferior" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="RangoSuperior" Nullable="true" MaxLength="20" />
+          <Property Type="DateTime" Name="FechaCheckin" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="FechaeEdicion" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="FechaIngreso" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="FechaValidacion" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="FechaImpresion" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="IdPlanificacion" Nullable="false" />
+          <Property Type="String" Name="NumeroPlanificacion" Nullable="false" MaxLength="20" />
+          <Property Type="DateTime" Name="FechaInicio" Nullable="false" Precision="23" />
+          <Property Type="String" Name="NombreProducto" Nullable="true" MaxLength="150" />
+          <Property Type="String" Name="NombrePrueba" Nullable="true" MaxLength="150" />
+          <Property Type="String" Name="NombreLaboratorio" Nullable="false" MaxLength="150" />
+          <Property Type="String" Name="NombreEspecialista" Nullable="true" MaxLength="150" />
+          <Property Type="String" Name="EstadoResultado" Nullable="true" MaxLength="14" />
+        </ComplexType>
+        <ComplexType Name="SIGESU_PlanificacionLaboratorioActxIdPlanificacionxImpresion_Result">
+          <Property Type="Int32" Name="Estado" Nullable="false" />
+          <Property Type="String" Name="Mensaje" Nullable="false" MaxLength="39" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="SIGESUModelStoreContainer" CdmEntityContainer="SIGESUEntities">
+          <FunctionImportMapping FunctionImportName="SIGESU_PlanificacionSel" FunctionName="SIGESUModel.Store.SIGESU_PlanificacionSel">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="SIGESUModel.SIGESU_PlanificacionSel_Result">
+                <ScalarProperty Name="IdPlanificacion" ColumnName="IdPlanificacion" />
+                <ScalarProperty Name="NumeroPlanificacion" ColumnName="NumeroPlanificacion" />
+                <ScalarProperty Name="IdProducto" ColumnName="IdProducto" />
+                <ScalarProperty Name="FechaInicio" ColumnName="FechaInicio" />
+                <ScalarProperty Name="FechaFin" ColumnName="FechaFin" />
+                <ScalarProperty Name="Remuestreo" ColumnName="Remuestreo" />
+                <ScalarProperty Name="Observacion" ColumnName="Observacion" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="IdEspecialista" ColumnName="IdEspecialista" />
+                <ScalarProperty Name="IdLaboratorio" ColumnName="IdLaboratorio" />
+                <ScalarProperty Name="IdPlanificacionOrigen" ColumnName="IdPlanificacionOrigen" />
+                <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+                <ScalarProperty Name="NombreProducto" ColumnName="NombreProducto" />
+                <ScalarProperty Name="Fabricante" ColumnName="Fabricante" />
+                <ScalarProperty Name="DescripcionFamilia" ColumnName="DescripcionFamilia" />
+                <ScalarProperty Name="NombreEspecialista" ColumnName="NombreEspecialista" />
+                <ScalarProperty Name="NombreLaboratorio" ColumnName="NombreLaboratorio" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SIGESU_ProductoSelTodo" FunctionName="SIGESUModel.Store.SIGESU_ProductoSelTodo">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="SIGESUModel.SIGESU_ProductoSelTodo_Result">
+                <ScalarProperty Name="IdProducto" ColumnName="IdProducto" />
+                <ScalarProperty Name="NombreProducto" ColumnName="NombreProducto" />
+                <ScalarProperty Name="Familia" ColumnName="Familia" />
+                <ScalarProperty Name="Fabricante" ColumnName="Fabricante" />
+                <ScalarProperty Name="IdProductoFamilia" ColumnName="IdProductoFamilia" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SIGESU_EspecialistaSelTodo" FunctionName="SIGESUModel.Store.SIGESU_EspecialistaSelTodo">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="SIGESUModel.SIGESU_EspecialistaSelTodo_Result">
+                <ScalarProperty Name="IdEspecialista" ColumnName="IdEspecialista" />
+                <ScalarProperty Name="NombreEspecialista" ColumnName="NombreEspecialista" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SIGESU_LaboratorioSelTodo" FunctionName="SIGESUModel.Store.SIGESU_LaboratorioSelTodo">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="SIGESUModel.SIGESU_LaboratorioSelTodo_Result">
+                <ScalarProperty Name="IdLaboratorio" ColumnName="IdLaboratorio" />
+                <ScalarProperty Name="NombreLaboratorio" ColumnName="NombreLaboratorio" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SIGESU_ProductoSelAtributosxIdProducto" FunctionName="SIGESUModel.Store.SIGESU_ProductoSelAtributosxIdProducto">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="SIGESUModel.SIGESU_ProductoSelAtributosxIdProducto_Result">
+                <ScalarProperty Name="IdProducto" ColumnName="IdProducto" />
+                <ScalarProperty Name="NombreProducto" ColumnName="NombreProducto" />
+                <ScalarProperty Name="Familia" ColumnName="Familia" />
+                <ScalarProperty Name="Fabricante" ColumnName="Fabricante" />
+                <ScalarProperty Name="IdProductoFamilia" ColumnName="IdProductoFamilia" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="NombreCertificado" ColumnName="NombreCertificado" />
+                <ScalarProperty Name="NombreComposicion" ColumnName="NombreComposicion" />
+                <ScalarProperty Name="DescripcionFamilia" ColumnName="DescripcionFamilia" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SIGESU_SucursalAlmacenSelTodo" FunctionName="SIGESUModel.Store.SIGESU_SucursalAlmacenSelTodo">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="SIGESUModel.SIGESU_SucursalAlmacenSelTodo_Result">
+                <ScalarProperty Name="IdSucursalAlmacen" ColumnName="IdSucursalAlmacen" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SIGESU_PlanificacionIns" FunctionName="SIGESUModel.Store.SIGESU_PlanificacionIns">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="SIGESUModel.SIGESU_PlanificacionIns_Result">
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="Mensaje" ColumnName="Mensaje" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SIGESU_PlanificacionSelUltimoGenerado" FunctionName="SIGESUModel.Store.SIGESU_PlanificacionSelUltimoGenerado">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="SIGESUModel.SIGESU_PlanificacionSelUltimoGenerado_Result">
+                <ScalarProperty Name="IdPlanificacion" ColumnName="IdPlanificacion" />
+                <ScalarProperty Name="NumeroPlanificacion" ColumnName="NumeroPlanificacion" />
+                <ScalarProperty Name="IdProducto" ColumnName="IdProducto" />
+                <ScalarProperty Name="FechaInicio" ColumnName="FechaInicio" />
+                <ScalarProperty Name="FechaFin" ColumnName="FechaFin" />
+                <ScalarProperty Name="Remuestreo" ColumnName="Remuestreo" />
+                <ScalarProperty Name="Observacion" ColumnName="Observacion" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="IdEspecialista" ColumnName="IdEspecialista" />
+                <ScalarProperty Name="IdLaboratorio" ColumnName="IdLaboratorio" />
+                <ScalarProperty Name="IdPlanificacionOrigen" ColumnName="IdPlanificacionOrigen" />
+                <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SIGESU_ServidorSel" FunctionName="SIGESUModel.Store.SIGESU_ServidorSel">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="SIGESUModel.SIGESU_ServidorSel_Result">
+                <ScalarProperty Name="FechaHoraActual" ColumnName="FechaHoraActual" />
+                <ScalarProperty Name="NombreServidor" ColumnName="NombreServidor" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SIGESU_PlanificacionSelxIdPlanificacion" FunctionName="SIGESUModel.Store.SIGESU_PlanificacionSelxIdPlanificacion">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="SIGESUModel.SIGESU_PlanificacionSelxIdPlanificacion_Result">
+                <ScalarProperty Name="IdPlanificacion" ColumnName="IdPlanificacion" />
+                <ScalarProperty Name="NumeroPlanificacion" ColumnName="NumeroPlanificacion" />
+                <ScalarProperty Name="IdProducto" ColumnName="IdProducto" />
+                <ScalarProperty Name="FechaInicio" ColumnName="FechaInicio" />
+                <ScalarProperty Name="FechaFin" ColumnName="FechaFin" />
+                <ScalarProperty Name="Remuestreo" ColumnName="Remuestreo" />
+                <ScalarProperty Name="Observacion" ColumnName="Observacion" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="IdEspecialista" ColumnName="IdEspecialista" />
+                <ScalarProperty Name="IdLaboratorio" ColumnName="IdLaboratorio" />
+                <ScalarProperty Name="IdPlanificacionOrigen" ColumnName="IdPlanificacionOrigen" />
+                <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+                <ScalarProperty Name="IdSucursalAlmacen" ColumnName="IdSucursalAlmacen" />
+                <ScalarProperty Name="NombreComposicion" ColumnName="NombreComposicion" />
+                <ScalarProperty Name="Fabricante" ColumnName="Fabricante" />
+                <ScalarProperty Name="DescripcionFamilia" ColumnName="DescripcionFamilia" />
+                <ScalarProperty Name="NombreCertificado" ColumnName="NombreCertificado" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SIGESU_PlanificacionAct" FunctionName="SIGESUModel.Store.SIGESU_PlanificacionAct">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="SIGESUModel.SIGESU_PlanificacionAct_Result">
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="Mensaje" ColumnName="Mensaje" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SIGESU_PlanificacionLaboratorioAct" FunctionName="SIGESUModel.Store.SIGESU_PlanificacionLaboratorioAct">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="SIGESUModel.SIGESU_PlanificacionLaboratorioAct_Result">
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="Mensaje" ColumnName="Mensaje" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SIGESU_PlanificacionLaboratorioSelxIdPlanificacionLaboratorio" FunctionName="SIGESUModel.Store.SIGESU_PlanificacionLaboratorioSelxIdPlanificacionLaboratorio">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="SIGESUModel.SIGESU_PlanificacionLaboratorioSelxIdPlanificacionLaboratorio_Result">
+                <ScalarProperty Name="IdPlanificacionLaboratorio" ColumnName="IdPlanificacionLaboratorio" />
+                <ScalarProperty Name="IdPrueba" ColumnName="IdPrueba" />
+                <ScalarProperty Name="IdEstudio" ColumnName="IdEstudio" />
+                <ScalarProperty Name="NumeroVeces" ColumnName="NumeroVeces" />
+                <ScalarProperty Name="Resultado" ColumnName="Resultado" />
+                <ScalarProperty Name="ResultadoAdverso" ColumnName="ResultadoAdverso" />
+                <ScalarProperty Name="RangoInferior" ColumnName="RangoInferior" />
+                <ScalarProperty Name="RangoSuperior" ColumnName="RangoSuperior" />
+                <ScalarProperty Name="FechaCheckin" ColumnName="FechaCheckin" />
+                <ScalarProperty Name="FechaeEdicion" ColumnName="FechaeEdicion" />
+                <ScalarProperty Name="FechaIngreso" ColumnName="FechaIngreso" />
+                <ScalarProperty Name="FechaValidacion" ColumnName="FechaValidacion" />
+                <ScalarProperty Name="FechaImpresion" ColumnName="FechaImpresion" />
+                <ScalarProperty Name="AplicaRemuestreo" ColumnName="AplicaRemuestreo" />
+                <ScalarProperty Name="IdPlanificacion" ColumnName="IdPlanificacion" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SIGESU_PlanificacionLaboratorioActxIdPlanificacion" FunctionName="SIGESUModel.Store.SIGESU_PlanificacionLaboratorioActxIdPlanificacion">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="SIGESUModel.SIGESU_PlanificacionLaboratorioActxIdPlanificacion_Result">
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="Mensaje" ColumnName="Mensaje" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SIGESU_PlanificacionLaboratorioIns" FunctionName="SIGESUModel.Store.SIGESU_PlanificacionLaboratorioIns">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="SIGESUModel.SIGESU_PlanificacionLaboratorioIns_Result">
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="Mensaje" ColumnName="Mensaje" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SIGESU_PlanificacionLaboratorioSel" FunctionName="SIGESUModel.Store.SIGESU_PlanificacionLaboratorioSel">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="SIGESUModel.SIGESU_PlanificacionLaboratorioSel_Result">
+                <ScalarProperty Name="IdPlanificacionLaboratorio" ColumnName="IdPlanificacionLaboratorio" />
+                <ScalarProperty Name="IdPrueba" ColumnName="IdPrueba" />
+                <ScalarProperty Name="IdEstudio" ColumnName="IdEstudio" />
+                <ScalarProperty Name="NumeroVeces" ColumnName="NumeroVeces" />
+                <ScalarProperty Name="Resultado" ColumnName="Resultado" />
+                <ScalarProperty Name="ResultadoAdverso" ColumnName="ResultadoAdverso" />
+                <ScalarProperty Name="RangoInferior" ColumnName="RangoInferior" />
+                <ScalarProperty Name="RangoSuperior" ColumnName="RangoSuperior" />
+                <ScalarProperty Name="FechaCheckin" ColumnName="FechaCheckin" />
+                <ScalarProperty Name="FechaeEdicion" ColumnName="FechaeEdicion" />
+                <ScalarProperty Name="FechaIngreso" ColumnName="FechaIngreso" />
+                <ScalarProperty Name="FechaValidacion" ColumnName="FechaValidacion" />
+                <ScalarProperty Name="FechaImpresion" ColumnName="FechaImpresion" />
+                <ScalarProperty Name="IdPlanificacion" ColumnName="IdPlanificacion" />
+                <ScalarProperty Name="NumeroPlanificacion" ColumnName="NumeroPlanificacion" />
+                <ScalarProperty Name="FechaInicio" ColumnName="FechaInicio" />
+                <ScalarProperty Name="NombreProducto" ColumnName="NombreProducto" />
+                <ScalarProperty Name="NombrePrueba" ColumnName="NombrePrueba" />
+                <ScalarProperty Name="NombreLaboratorio" ColumnName="NombreLaboratorio" />
+                <ScalarProperty Name="NombreEspecialista" ColumnName="NombreEspecialista" />
+                <ScalarProperty Name="EstadoResultado" ColumnName="EstadoResultado" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SIGESU_PlanificacionLaboratorioActxIdPlanificacionxImpresion" FunctionName="SIGESUModel.Store.SIGESU_PlanificacionLaboratorioActxIdPlanificacionxImpresion">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="SIGESUModel.SIGESU_PlanificacionLaboratorioActxIdPlanificacionxImpresion_Result">
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="Mensaje" ColumnName="Mensaje" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

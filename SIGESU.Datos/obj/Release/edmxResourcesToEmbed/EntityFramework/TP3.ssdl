@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TP3UPCModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="GCPS_PLANIFICACION">
+    <Key>
+      <PropertyRef Name="IdPlanificacion" />
+    </Key>
+    <Property Name="IdPlanificacion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdEspecialista" Type="int" Nullable="false" />
+    <Property Name="IdLaboratorio" Type="int" />
+    <Property Name="IdPlanificacionOrigen" Type="int" />
+    <Property Name="NumeroPlanificacion" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="FechaInicio" Type="datetime" Nullable="false" />
+    <Property Name="FechaFin" Type="datetime" Nullable="false" />
+    <Property Name="TipoPlanificacion" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="TipoUrgencia" Type="varchar" MaxLength="20" />
+    <Property Name="Observacion" Type="varchar" MaxLength="400" Nullable="false" />
+    <Property Name="FechaCreacion" Type="datetime" />
+    <Property Name="Estado" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="EsJustificado" Type="bit" />
+  </EntityType>
+  <Function Name="GCPS_FN_SplitString" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="string" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="delimiter" Type="char" Mode="In" />
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="splitdata" Type="nvarchar(max)" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <Function Name="GCPS_SP_EquipmentSel" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="GCPS_SP_EspecialistaSelTodo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="GCPS_SP_LaboratorioSelTodo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="GCPS_SP_ObservacionesSugerenciasSel" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="GCPS_SP_PlanificacionAct" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdPlanificacion" Type="int" Mode="In" />
+    <Parameter Name="IdEspecialista" Type="int" Mode="In" />
+    <Parameter Name="IdLaboratorio" Type="int" Mode="In" />
+    <Parameter Name="IdPlanificacionOrigen" Type="int" Mode="In" />
+    <Parameter Name="NumeroPlanificacion" Type="varchar" Mode="In" />
+    <Parameter Name="FechaInicio" Type="datetime" Mode="In" />
+    <Parameter Name="FechaFin" Type="datetime" Mode="In" />
+    <Parameter Name="TipoPlanificacion" Type="char" Mode="In" />
+    <Parameter Name="TipoUrgencia" Type="varchar" Mode="In" />
+    <Parameter Name="Observacion" Type="varchar" Mode="In" />
+    <Parameter Name="Estado" Type="char" Mode="In" />
+    <Parameter Name="COD_SUCURSAL" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GCPS_SP_PlanificacionDetalleAct" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdPlanificacionDetalle" Type="int" Mode="In" />
+    <Parameter Name="Resultado" Type="varchar" Mode="In" />
+    <Parameter Name="FechaCheckin" Type="datetime" Mode="In" />
+    <Parameter Name="FechaEdicion" Type="datetime" Mode="In" />
+    <Parameter Name="FechaValidacion" Type="datetime" Mode="In" />
+    <Parameter Name="FechaImpresion" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="GCPS_SP_PlanificacionDetalleActxCheckin" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdPlanificacion" Type="int" Mode="In" />
+    <Parameter Name="COD_PRODUCTO" Type="varchar" Mode="In" />
+    <Parameter Name="FechaCheckin" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="GCPS_SP_PlanificacionDetalleSel" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdPlanificacion" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GCPS_SP_PlanificacionDetalleSelxIdPlanificacionDetalle" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdPlanificacionDetalle" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GCPS_SP_PlanificacionIns" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="xml" Type="xml" Mode="In" />
+  </Function>
+  <Function Name="GCPS_SP_PlanificacionLaboratorioSel" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdPlanificacion" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GCPS_SP_PlanificacionSel" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="FechaInicio" Type="varchar" Mode="In" />
+    <Parameter Name="FechaFin" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GCPS_SP_PlanificacionSelDetalle" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdPlanificacion" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GCPS_SP_PlanificionSelxIdPlanificacion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdPlanificacion" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GCPS_SP_ProductoEnPlanificacionSel" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="GCPS_SP_ProductoSelAtributosxIdProducto" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdProducto" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GCPS_SP_ProductoSelTodo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="GCPS_SP_QC_LEVEY_JENNINGS" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdPrueba" Type="int" Mode="In" />
+    <Parameter Name="IdEquipment" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GCPS_SP_QCEquipmentPruebaSelxIdEquipment" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdEquipment" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GCPS_SP_ReporteCampo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="COD_PRODUCTO" Type="varchar" Mode="In" />
+    <Parameter Name="FECHAINICIO" Type="varchar" Mode="In" />
+    <Parameter Name="FECHAFIN" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GCPS_SP_ServidorSel" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="GCPS_SP_SucursalSelTodo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <EntityContainer Name="TP3UPCModelStoreContainer">
+    <EntitySet Name="GCPS_PLANIFICACION" EntityType="Self.GCPS_PLANIFICACION" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

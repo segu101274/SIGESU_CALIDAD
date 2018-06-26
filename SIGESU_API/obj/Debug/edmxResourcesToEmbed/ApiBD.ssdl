@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DB_A3CA54_segu101274Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <Function Name="GCPS_SP_APIAreaSucursalDistancia" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdPlanificacion" Type="int" Mode="In" />
+    <Parameter Name="IdAreaSucursal" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GCPS_SP_APIAreasxSucursal" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="COD_SUCURSAL" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GCPS_SP_APIESPECIALISTALOGIN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Usuario" Type="varchar" Mode="In" />
+    <Parameter Name="Pwd" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GCPS_SP_APIPlanificacionDetalleIns" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdPlanificacion" Type="int" Mode="In" />
+    <Parameter Name="COD_PRODUCTO" Type="varchar" Mode="In" />
+    <Parameter Name="IdObservacion" Type="int" Mode="In" />
+    <Parameter Name="Resultado" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="GCPS_SP_APIPlanificacionDetallexIdPlanificacion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdPlanificacion" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GCPS_SP_APIPlanificacionxEspecialista" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdEspecialista" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GCPS_SP_APIProductoObservacionxProducto" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="COD_PRODUCTO" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GCPS_SP_APIProductoxCodigoBarra" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CODIGOBARRAS" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GCPS_SP_APISucursalesxPlanificacion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdPlanificacion" Type="int" Mode="In" />
+  </Function>
+  <EntityContainer Name="DB_A3CA54_segu101274ModelStoreContainer" />
+</Schema>

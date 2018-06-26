@@ -1,0 +1,68 @@
+A:\UPC\TP2\SIGESU\SIGESU\SIGESU.Datos\bin\Debug\SIGESU.Datos.dll.config
+A:\UPC\TP2\SIGESU\SIGESU\SIGESU.Datos\bin\Debug\SIGESU.Datos.dll
+A:\UPC\TP2\SIGESU\SIGESU\SIGESU.Datos\bin\Debug\SIGESU.Datos.pdb
+A:\UPC\TP2\SIGESU\SIGESU\SIGESU.Datos\bin\Debug\AutoMapper.dll
+A:\UPC\TP2\SIGESU\SIGESU\SIGESU.Datos\bin\Debug\EntityFramework.dll
+A:\UPC\TP2\SIGESU\SIGESU\SIGESU.Datos\bin\Debug\EntityFramework.SqlServer.dll
+A:\UPC\TP2\SIGESU\SIGESU\SIGESU.Datos\bin\Debug\SIGESU.Entidades.dll
+A:\UPC\TP2\SIGESU\SIGESU\SIGESU.Datos\bin\Debug\SIGESU.Helpers.dll
+A:\UPC\TP2\SIGESU\SIGESU\SIGESU.Datos\bin\Debug\SIGESU.Entidades.pdb
+A:\UPC\TP2\SIGESU\SIGESU\SIGESU.Datos\bin\Debug\SIGESU.Helpers.pdb
+A:\UPC\TP2\SIGESU\SIGESU\SIGESU.Datos\bin\Debug\AutoMapper.xml
+A:\UPC\TP2\SIGESU\SIGESU\SIGESU.Datos\bin\Debug\EntityFramework.xml
+A:\UPC\TP2\SIGESU\SIGESU\SIGESU.Datos\bin\Debug\EntityFramework.SqlServer.xml
+A:\UPC\TP2\SIGESU\SIGESU\SIGESU.Datos\bin\Debug\es\EntityFramework.resources.dll
+A:\UPC\TP2\SIGESU\SIGESU\SIGESU.Datos\bin\Debug\es\EntityFramework.SqlServer.resources.dll
+A:\UPC\TP2\SIGESU\SIGESU\SIGESU.Datos\obj\Debug\SIGESU.Datos.csprojResolveAssemblyReference.cache
+A:\UPC\TP2\SIGESU\SIGESU\SIGESU.Datos\obj\Debug\SIGESU.Datos.dll
+A:\UPC\TP2\SIGESU\SIGESU\SIGESU.Datos\obj\Debug\SIGESU.Datos.pdb
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU.Datos\bin\Debug\SIGESU.Datos.dll.config
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU.Datos\bin\Debug\SIGESU.Datos.dll
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU.Datos\bin\Debug\SIGESU.Datos.pdb
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU.Datos\bin\Debug\EntityFramework.dll
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU.Datos\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU.Datos\bin\Debug\SIGESU.Entidades.dll
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU.Datos\bin\Debug\SIGESU.Helpers.dll
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU.Datos\bin\Debug\SIGESU.Entidades.pdb
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU.Datos\bin\Debug\SIGESU.Helpers.pdb
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU.Datos\bin\Debug\EntityFramework.xml
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU.Datos\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU.Datos\bin\Debug\es\EntityFramework.resources.dll
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU.Datos\bin\Debug\es\EntityFramework.SqlServer.resources.dll
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU.Datos\obj\Debug\SIGESU.Datos.csprojResolveAssemblyReference.cache
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU.Datos\obj\Debug\SIGESU.Datos.dll
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU.Datos\obj\Debug\SIGESU.Datos.pdb
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU.Datos\bin\Debug\SIGESU.Datos.dll.config
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU.Datos\bin\Debug\SIGESU.Datos.dll
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU.Datos\bin\Debug\SIGESU.Datos.pdb
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU.Datos\bin\Debug\EntityFramework.dll
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU.Datos\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU.Datos\bin\Debug\SIGESU.Entidades.dll
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU.Datos\bin\Debug\SIGESU.Helpers.dll
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU.Datos\bin\Debug\SIGESU.Entidades.pdb
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU.Datos\bin\Debug\SIGESU.Helpers.pdb
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU.Datos\bin\Debug\EntityFramework.xml
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU.Datos\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU.Datos\bin\Debug\es\EntityFramework.resources.dll
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU.Datos\bin\Debug\es\EntityFramework.SqlServer.resources.dll
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU.Datos\obj\Debug\SIGESU.Datos.csprojResolveAssemblyReference.cache
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU.Datos\obj\Debug\SIGESU.Datos.csproj.CoreCompileInputs.cache
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU.Datos\obj\Debug\SIGESU.Datos.csproj.CopyComplete
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU.Datos\obj\Debug\SIGESU.Datos.dll
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU.Datos\obj\Debug\SIGESU.Datos.pdb
+D:\Git\SIGESU\SIGESU.Datos\bin\Debug\SIGESU.Datos.dll.config
+D:\Git\SIGESU\SIGESU.Datos\bin\Debug\SIGESU.Datos.dll
+D:\Git\SIGESU\SIGESU.Datos\bin\Debug\SIGESU.Datos.pdb
+D:\Git\SIGESU\SIGESU.Datos\bin\Debug\EntityFramework.dll
+D:\Git\SIGESU\SIGESU.Datos\bin\Debug\EntityFramework.SqlServer.dll
+D:\Git\SIGESU\SIGESU.Datos\bin\Debug\SIGESU.Entidades.dll
+D:\Git\SIGESU\SIGESU.Datos\bin\Debug\SIGESU.Helpers.dll
+D:\Git\SIGESU\SIGESU.Datos\bin\Debug\SIGESU.Entidades.pdb
+D:\Git\SIGESU\SIGESU.Datos\bin\Debug\SIGESU.Helpers.pdb
+D:\Git\SIGESU\SIGESU.Datos\bin\Debug\EntityFramework.xml
+D:\Git\SIGESU\SIGESU.Datos\bin\Debug\EntityFramework.SqlServer.xml
+D:\Git\SIGESU\SIGESU.Datos\bin\Debug\es\EntityFramework.resources.dll
+D:\Git\SIGESU\SIGESU.Datos\bin\Debug\es\EntityFramework.SqlServer.resources.dll
+D:\Git\SIGESU\SIGESU.Datos\obj\Debug\SIGESU.Datos.csprojResolveAssemblyReference.cache
+D:\Git\SIGESU\SIGESU.Datos\obj\Debug\SIGESU.Datos.dll
+D:\Git\SIGESU\SIGESU.Datos\obj\Debug\SIGESU.Datos.pdb

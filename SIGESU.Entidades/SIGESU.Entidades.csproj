@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A8A4B130-DECD-4994-ABA4-55EFC2E64A66}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SIGESU.Entidades</RootNamespace>
+    <AssemblyName>SIGESU.Entidades</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DTO\EEspecialista.cs" />
+    <Compile Include="DTO\ELaboratorio.cs" />
+    <Compile Include="DTO\EPlanificacion.cs" />
+    <Compile Include="DTO\EPlanificacionLaboratorio.cs" />
+    <Compile Include="DTO\EPlanificacionSucursalAlmacen.cs" />
+    <Compile Include="DTO\EProducto.cs" />
+    <Compile Include="DTO\ERespuesta.cs" />
+    <Compile Include="DTO\EServidor.cs" />
+    <Compile Include="DTO\ESurcursalAlmacen.cs" />
+    <Compile Include="DTO_TP3\EEquipment.cs" />
+    <Compile Include="DTO_TP3\EEquipmentPrueba.cs" />
+    <Compile Include="DTO_TP3\EEspecialista.cs" />
+    <Compile Include="DTO_TP3\ELaboratorio.cs" />
+    <Compile Include="DTO_TP3\ELeveyJennings.cs" />
+    <Compile Include="DTO_TP3\EObservacionSugerencia.cs" />
+    <Compile Include="DTO_TP3\EPlanificacion.cs" />
+    <Compile Include="DTO_TP3\EPlanificacionDetalle.cs" />
+    <Compile Include="DTO_TP3\EPlanificacionSucursal.cs" />
+    <Compile Include="DTO_TP3\EProducto.cs" />
+    <Compile Include="DTO_TP3\EReporte.cs" />
+    <Compile Include="DTO_TP3\ERespuesta.cs" />
+    <Compile Include="DTO_TP3\EServidor.cs" />
+    <Compile Include="DTO_TP3\ESucursal.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SIGESU.Helpers\SIGESU.Helpers.csproj">
+      <Project>{5009d507-cabc-478b-ae3a-cef4f5482779}</Project>
+      <Name>SIGESU.Helpers</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

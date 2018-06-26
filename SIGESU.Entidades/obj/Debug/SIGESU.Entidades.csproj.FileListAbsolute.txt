@@ -1,0 +1,30 @@
+A:\UPC\TP2\SIGESU\SIGESU\SIGESU.Entidades\bin\Debug\SIGESU.Entidades.dll
+A:\UPC\TP2\SIGESU\SIGESU\SIGESU.Entidades\bin\Debug\SIGESU.Entidades.pdb
+A:\UPC\TP2\SIGESU\SIGESU\SIGESU.Entidades\bin\Debug\SIGESU.Helpers.dll
+A:\UPC\TP2\SIGESU\SIGESU\SIGESU.Entidades\bin\Debug\SIGESU.Helpers.pdb
+A:\UPC\TP2\SIGESU\SIGESU\SIGESU.Entidades\obj\Debug\SIGESU.Entidades.csprojResolveAssemblyReference.cache
+A:\UPC\TP2\SIGESU\SIGESU\SIGESU.Entidades\obj\Debug\SIGESU.Entidades.dll
+A:\UPC\TP2\SIGESU\SIGESU\SIGESU.Entidades\obj\Debug\SIGESU.Entidades.pdb
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU.Entidades\bin\Debug\SIGESU.Entidades.dll
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU.Entidades\bin\Debug\SIGESU.Entidades.pdb
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU.Entidades\bin\Debug\SIGESU.Helpers.dll
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU.Entidades\bin\Debug\SIGESU.Helpers.pdb
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU.Entidades\obj\Debug\SIGESU.Entidades.csprojResolveAssemblyReference.cache
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU.Entidades\obj\Debug\SIGESU.Entidades.dll
+C:\Users\josuepcorzo\Desktop\UPC\TP3\Fuentes\SIGESU\SIGESU\SIGESU.Entidades\obj\Debug\SIGESU.Entidades.pdb
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU.Entidades\bin\Debug\SIGESU.Entidades.dll
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU.Entidades\bin\Debug\SIGESU.Entidades.pdb
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU.Entidades\bin\Debug\SIGESU.Helpers.dll
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU.Entidades\bin\Debug\SIGESU.Helpers.pdb
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU.Entidades\obj\Debug\SIGESU.Entidades.csprojResolveAssemblyReference.cache
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU.Entidades\obj\Debug\SIGESU.Entidades.csproj.CoreCompileInputs.cache
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU.Entidades\obj\Debug\SIGESU.Entidades.csproj.CopyComplete
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU.Entidades\obj\Debug\SIGESU.Entidades.dll
+C:\Users\porcorjo\Desktop\PeruFarma\05. Personal\UPC\TP3\SIGESU\SIGESU\SIGESU\SIGESU.Entidades\obj\Debug\SIGESU.Entidades.pdb
+D:\Git\SIGESU\SIGESU.Entidades\bin\Debug\SIGESU.Entidades.dll
+D:\Git\SIGESU\SIGESU.Entidades\bin\Debug\SIGESU.Entidades.pdb
+D:\Git\SIGESU\SIGESU.Entidades\bin\Debug\SIGESU.Helpers.dll
+D:\Git\SIGESU\SIGESU.Entidades\bin\Debug\SIGESU.Helpers.pdb
+D:\Git\SIGESU\SIGESU.Entidades\obj\Debug\SIGESU.Entidades.csprojResolveAssemblyReference.cache
+D:\Git\SIGESU\SIGESU.Entidades\obj\Debug\SIGESU.Entidades.dll
+D:\Git\SIGESU\SIGESU.Entidades\obj\Debug\SIGESU.Entidades.pdb

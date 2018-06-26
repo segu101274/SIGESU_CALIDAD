@@ -1,0 +1,704 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="TP3UPCModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="GCPS_PLANIFICACION">
+          <Key>
+            <PropertyRef Name="IdPlanificacion" />
+          </Key>
+          <Property Name="IdPlanificacion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdEspecialista" Type="int" Nullable="false" />
+          <Property Name="IdLaboratorio" Type="int" />
+          <Property Name="IdPlanificacionOrigen" Type="int" />
+          <Property Name="NumeroPlanificacion" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="FechaInicio" Type="datetime" Nullable="false" />
+          <Property Name="FechaFin" Type="datetime" Nullable="false" />
+          <Property Name="TipoPlanificacion" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="TipoUrgencia" Type="varchar" MaxLength="20" />
+          <Property Name="Observacion" Type="varchar" MaxLength="400" Nullable="false" />
+          <Property Name="FechaCreacion" Type="datetime" />
+          <Property Name="Estado" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="EsJustificado" Type="bit" />
+        </EntityType>
+        <Function Name="GCPS_FN_SplitString" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="string" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="delimiter" Type="char" Mode="In" />
+          <ReturnType>
+            <CollectionType>
+              <RowType>
+                <Property Name="splitdata" Type="nvarchar(max)" />
+              </RowType>
+            </CollectionType>
+          </ReturnType>
+        </Function>
+        <Function Name="GCPS_SP_EquipmentSel" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="GCPS_SP_EspecialistaSelTodo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="GCPS_SP_LaboratorioSelTodo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="GCPS_SP_ObservacionesSugerenciasSel" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="GCPS_SP_PlanificacionAct" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IdPlanificacion" Type="int" Mode="In" />
+          <Parameter Name="IdEspecialista" Type="int" Mode="In" />
+          <Parameter Name="IdLaboratorio" Type="int" Mode="In" />
+          <Parameter Name="IdPlanificacionOrigen" Type="int" Mode="In" />
+          <Parameter Name="NumeroPlanificacion" Type="varchar" Mode="In" />
+          <Parameter Name="FechaInicio" Type="datetime" Mode="In" />
+          <Parameter Name="FechaFin" Type="datetime" Mode="In" />
+          <Parameter Name="TipoPlanificacion" Type="char" Mode="In" />
+          <Parameter Name="TipoUrgencia" Type="varchar" Mode="In" />
+          <Parameter Name="Observacion" Type="varchar" Mode="In" />
+          <Parameter Name="Estado" Type="char" Mode="In" />
+          <Parameter Name="COD_SUCURSAL" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="GCPS_SP_PlanificacionDetalleAct" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IdPlanificacionDetalle" Type="int" Mode="In" />
+          <Parameter Name="Resultado" Type="varchar" Mode="In" />
+          <Parameter Name="FechaCheckin" Type="datetime" Mode="In" />
+          <Parameter Name="FechaEdicion" Type="datetime" Mode="In" />
+          <Parameter Name="FechaValidacion" Type="datetime" Mode="In" />
+          <Parameter Name="FechaImpresion" Type="datetime" Mode="In" />
+        </Function>
+        <Function Name="GCPS_SP_PlanificacionDetalleActxCheckin" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IdPlanificacion" Type="int" Mode="In" />
+          <Parameter Name="COD_PRODUCTO" Type="varchar" Mode="In" />
+          <Parameter Name="FechaCheckin" Type="datetime" Mode="In" />
+        </Function>
+        <Function Name="GCPS_SP_PlanificacionDetalleSel" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IdPlanificacion" Type="int" Mode="In" />
+        </Function>
+        <Function Name="GCPS_SP_PlanificacionDetalleSelxIdPlanificacionDetalle" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IdPlanificacionDetalle" Type="int" Mode="In" />
+        </Function>
+        <Function Name="GCPS_SP_PlanificacionIns" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="xml" Type="xml" Mode="In" />
+        </Function>
+        <Function Name="GCPS_SP_PlanificacionLaboratorioSel" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IdPlanificacion" Type="int" Mode="In" />
+        </Function>
+        <Function Name="GCPS_SP_PlanificacionSel" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="FechaInicio" Type="varchar" Mode="In" />
+          <Parameter Name="FechaFin" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="GCPS_SP_PlanificacionSelDetalle" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IdPlanificacion" Type="int" Mode="In" />
+        </Function>
+        <Function Name="GCPS_SP_PlanificionSelxIdPlanificacion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IdPlanificacion" Type="int" Mode="In" />
+        </Function>
+        <Function Name="GCPS_SP_ProductoEnPlanificacionSel" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="GCPS_SP_ProductoSelAtributosxIdProducto" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IdProducto" Type="int" Mode="In" />
+        </Function>
+        <Function Name="GCPS_SP_ProductoSelTodo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="GCPS_SP_QC_LEVEY_JENNINGS" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IdPrueba" Type="int" Mode="In" />
+          <Parameter Name="IdEquipment" Type="int" Mode="In" />
+        </Function>
+        <Function Name="GCPS_SP_QCEquipmentPruebaSelxIdEquipment" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IdEquipment" Type="int" Mode="In" />
+        </Function>
+        <Function Name="GCPS_SP_ReporteCampo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="COD_PRODUCTO" Type="varchar" Mode="In" />
+          <Parameter Name="FECHAINICIO" Type="varchar" Mode="In" />
+          <Parameter Name="FECHAFIN" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="GCPS_SP_ServidorSel" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="GCPS_SP_SucursalSelTodo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <EntityContainer Name="TP3UPCModelStoreContainer">
+          <EntitySet Name="GCPS_PLANIFICACION" EntityType="Self.GCPS_PLANIFICACION" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="TP3UPCModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="TP3UPCEntities" annotation:LazyLoadingEnabled="true">
+          <FunctionImport Name="GCPS_FN_SplitString" IsComposable="true" ReturnType="Collection(String)">
+            <Parameter Name="string" Mode="In" Type="String" />
+            <Parameter Name="delimiter" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="GCPS_SP_EspecialistaSelTodo" ReturnType="Collection(TP3UPCModel.GCPS_SP_EspecialistaSelTodo_Result)" />
+          <FunctionImport Name="GCPS_SP_LaboratorioSelTodo" ReturnType="Collection(TP3UPCModel.GCPS_SP_LaboratorioSelTodo_Result)" />
+          <FunctionImport Name="GCPS_SP_PlanificacionDetalleAct" ReturnType="Collection(TP3UPCModel.GCPS_SP_PlanificacionDetalleAct_Result)">
+            <Parameter Name="IdPlanificacionDetalle" Mode="In" Type="Int32" />
+            <Parameter Name="Resultado" Mode="In" Type="String" />
+            <Parameter Name="FechaCheckin" Mode="In" Type="DateTime" />
+            <Parameter Name="FechaEdicion" Mode="In" Type="DateTime" />
+            <Parameter Name="FechaValidacion" Mode="In" Type="DateTime" />
+            <Parameter Name="FechaImpresion" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="GCPS_SP_PlanificacionDetalleSel" ReturnType="Collection(TP3UPCModel.GCPS_SP_PlanificacionDetalleSel_Result)">
+          <Parameter Name="IdPlanificacion" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="GCPS_SP_ProductoSelAtributosxIdProducto" ReturnType="Collection(TP3UPCModel.GCPS_SP_ProductoSelAtributosxIdProducto_Result)">
+          <Parameter Name="IdProducto" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="GCPS_SP_ServidorSel" ReturnType="Collection(TP3UPCModel.GCPS_SP_ServidorSel_Result)" />
+          <FunctionImport Name="GCPS_SP_ProductoSelTodo" ReturnType="Collection(TP3UPCModel.GCPS_SP_ProductoSelTodo_Result)" />
+          <FunctionImport Name="GCPS_SP_SucursalSelTodo" ReturnType="Collection(TP3UPCModel.GCPS_SP_SucursalSelTodo_Result)" />
+          <FunctionImport Name="GCPS_SP_ProductoEnPlanificacionSel" ReturnType="Collection(TP3UPCModel.GCPS_SP_ProductoEnPlanificacionSel_Result)" />
+          <EntitySet Name="GCPS_PLANIFICACION" EntityType="TP3UPCModel.GCPS_PLANIFICACION" />
+          <FunctionImport Name="GCPS_SP_PlanificacionIns" ReturnType="Collection(TP3UPCModel.GCPS_SP_PlanificacionIns_Result)">
+          <Parameter Name="xml" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="GCPS_SP_PlanificacionSel" ReturnType="Collection(TP3UPCModel.GCPS_SP_PlanificacionSel_Result)">
+            <Parameter Name="FechaInicio" Mode="In" Type="String" />
+            <Parameter Name="FechaFin" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="GCPS_SP_PlanificacionSelDetalle" ReturnType="Collection(TP3UPCModel.GCPS_SP_PlanificacionSelDetalle_Result)">
+          <Parameter Name="IdPlanificacion" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="GCPS_SP_PlanificionSelxIdPlanificacion" ReturnType="Collection(TP3UPCModel.GCPS_SP_PlanificionSelxIdPlanificacion_Result)">
+          <Parameter Name="IdPlanificacion" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="GCPS_SP_PlanificacionAct" ReturnType="Collection(TP3UPCModel.GCPS_SP_PlanificacionAct_Result)">
+            <Parameter Name="IdPlanificacion" Mode="In" Type="Int32" />
+            <Parameter Name="IdEspecialista" Mode="In" Type="Int32" />
+            <Parameter Name="IdLaboratorio" Mode="In" Type="Int32" />
+            <Parameter Name="IdPlanificacionOrigen" Mode="In" Type="Int32" />
+            <Parameter Name="NumeroPlanificacion" Mode="In" Type="String" />
+            <Parameter Name="FechaInicio" Mode="In" Type="DateTime" />
+            <Parameter Name="FechaFin" Mode="In" Type="DateTime" />
+            <Parameter Name="TipoPlanificacion" Mode="In" Type="String" />
+            <Parameter Name="TipoUrgencia" Mode="In" Type="String" />
+            <Parameter Name="Observacion" Mode="In" Type="String" />
+            <Parameter Name="Estado" Mode="In" Type="String" />
+            <Parameter Name="COD_SUCURSAL" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="GCPS_SP_PlanificacionLaboratorioSel" ReturnType="Collection(TP3UPCModel.GCPS_SP_PlanificacionLaboratorioSel_Result)">
+          <Parameter Name="IdPlanificacion" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="GCPS_SP_PlanificacionDetalleSelxIdPlanificacionDetalle" ReturnType="Collection(TP3UPCModel.GCPS_SP_PlanificacionDetalleSelxIdPlanificacionDetalle_Result)">
+          <Parameter Name="IdPlanificacionDetalle" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="GCPS_SP_PlanificacionDetalleActxCheckin" ReturnType="Collection(TP3UPCModel.GCPS_SP_PlanificacionDetalleActxCheckin_Result)">
+            <Parameter Name="IdPlanificacion" Mode="In" Type="Int32" />
+            <Parameter Name="COD_PRODUCTO" Mode="In" Type="String" />
+            <Parameter Name="FechaCheckin" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="GCPS_SP_EquipmentSel" ReturnType="Collection(TP3UPCModel.GCPS_SP_EquipmentSel_Result)" />
+          <FunctionImport Name="GCPS_SP_QC_LEVEY_JENNINGS" ReturnType="Collection(TP3UPCModel.GCPS_SP_QC_LEVEY_JENNINGS_Result)">
+            <Parameter Name="IdPrueba" Mode="In" Type="Int32" />
+            <Parameter Name="IdEquipment" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="GCPS_SP_QCEquipmentPruebaSelxIdEquipment" ReturnType="Collection(TP3UPCModel.GCPS_SP_QCEquipmentPruebaSelxIdEquipment_Result)">
+          <Parameter Name="IdEquipment" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="GCPS_SP_ReporteCampo" ReturnType="Collection(TP3UPCModel.GCPS_SP_ReporteCampo_Result)">
+            <Parameter Name="COD_PRODUCTO" Mode="In" Type="String" />
+            <Parameter Name="FECHAINICIO" Mode="In" Type="String" />
+            <Parameter Name="FECHAFIN" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="GCPS_SP_ObservacionesSugerenciasSel" ReturnType="Collection(TP3UPCModel.GCPS_SP_ObservacionesSugerenciasSel_Result)" />
+        </EntityContainer>
+        <ComplexType Name="GCPS_SP_EspecialistaSelTodo_Result">
+          <Property Type="Int32" Name="IdEspecialista" Nullable="false" />
+          <Property Type="String" Name="NombreEspecialista" Nullable="false" MaxLength="150" />
+        </ComplexType>
+        <ComplexType Name="GCPS_SP_LaboratorioSelTodo_Result">
+          <Property Type="Int32" Name="IdLaboratorio" Nullable="false" />
+          <Property Type="String" Name="NombreLaboratorio" Nullable="false" MaxLength="150" />
+          <Property Type="String" Name="Estado" Nullable="false" MaxLength="1" />
+        </ComplexType>
+        <ComplexType Name="GCPS_SP_PlanificacionDetalleAct_Result">
+          <Property Type="Int32" Name="Estado" Nullable="false" />
+          <Property Type="String" Name="Mensaje" Nullable="false" MaxLength="39" />
+        </ComplexType>
+        <ComplexType Name="GCPS_SP_PlanificacionDetalleSel_Result">
+          <Property Type="Int32" Name="IdPlanificacionDetalle" Nullable="false" />
+          <Property Type="Int32" Name="IdPrueba" Nullable="true" />
+          <Property Type="String" Name="COD_PRODUCTO" Nullable="false" MaxLength="9" />
+          <Property Type="String" Name="Resultado" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="RangoInferior" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="RangoSuperior" Nullable="true" MaxLength="20" />
+          <Property Type="DateTime" Name="FechaCheckin" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="FechaEdicion" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="FechaIngreso" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="FechaValidacion" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="FechaImpresion" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="IdPlanificacion" Nullable="false" />
+          <Property Type="String" Name="NumeroPlanificacion" Nullable="false" MaxLength="20" />
+          <Property Type="DateTime" Name="FechaInicio" Nullable="false" Precision="23" />
+          <Property Type="String" Name="NOMBRE_PRODUCTO" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="NombrePrueba" Nullable="false" MaxLength="150" />
+          <Property Type="String" Name="NombreLaboratorio" Nullable="false" MaxLength="150" />
+          <Property Type="String" Name="NombreEspecialista" Nullable="false" MaxLength="150" />
+          <Property Type="String" Name="EstadoResultado" Nullable="true" MaxLength="14" />
+        </ComplexType>
+        <ComplexType Name="GCPS_SP_ProductoSelAtributosxIdProducto_Result">
+          <Property Type="String" Name="COD_PRODUCTO" Nullable="false" MaxLength="9" />
+          <Property Type="String" Name="NOMBRE_PRODUCTO" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="NOMBRE_CATEGORIA" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="NOMBRE_MARCA" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="ESTADO" Nullable="false" MaxLength="1" />
+          <Property Type="String" Name="NombreComposicion" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="GCPS_SP_ServidorSel_Result">
+          <Property Type="DateTime" Name="FechaHoraActual" Nullable="false" Precision="23" />
+          <Property Type="String" Name="NombreServidor" Nullable="true" MaxLength="128" />
+        </ComplexType>
+        <ComplexType Name="GCPS_SP_ProductoSelTodo_Result">
+          <Property Type="Int32" Name="PRODUCTOID" Nullable="false" />
+          <Property Type="String" Name="COD_PRODUCTO" Nullable="false" MaxLength="9" />
+          <Property Type="String" Name="NOMBRE_PRODUCTO" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Estado" Nullable="false" MaxLength="1" />
+        </ComplexType>
+        <ComplexType Name="GCPS_SP_SucursalSelTodo_Result">
+          <Property Type="Int32" Name="SUCURSALID" Nullable="false" />
+          <Property Type="String" Name="COD_SUCURSAL" Nullable="false" MaxLength="9" />
+          <Property Type="String" Name="NOMBRE_SUCURSAL" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="ESTADO" Nullable="false" MaxLength="1" />
+        </ComplexType>
+        <ComplexType Name="GCPS_SP_ProductoEnPlanificacionSel_Result">
+          <Property Type="String" Name="COD_PRODUCTO" Nullable="true" MaxLength="9" />
+          <Property Type="Int32" Name="TOTALFALLAS" Nullable="true" />
+          <Property Type="Int32" Name="TOTALPLANES" Nullable="true" />
+          <Property Type="Decimal" Name="PORCENTAJE" Nullable="true" Precision="9" Scale="2" />
+          <Property Type="String" Name="TIPOPLAN" Nullable="true" MaxLength="1" />
+        </ComplexType>
+        <EntityType Name="GCPS_PLANIFICACION">
+          <Key>
+            <PropertyRef Name="IdPlanificacion" />
+          </Key>
+          <Property Name="IdPlanificacion" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdEspecialista" Type="Int32" Nullable="false" />
+          <Property Name="IdLaboratorio" Type="Int32" />
+          <Property Name="IdPlanificacionOrigen" Type="Int32" />
+          <Property Name="NumeroPlanificacion" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="FechaInicio" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="FechaFin" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="TipoPlanificacion" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="TipoUrgencia" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Observacion" Type="String" Nullable="false" MaxLength="400" FixedLength="false" Unicode="false" />
+          <Property Name="FechaCreacion" Type="DateTime" Precision="3" />
+          <Property Name="Estado" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="EsJustificado" Type="Boolean" />
+        </EntityType>
+        <ComplexType Name="GCPS_SP_PlanificacionIns_Result">
+          <Property Type="Int32" Name="Estado" Nullable="false" />
+          <Property Type="String" Name="Mensaje" Nullable="false" MaxLength="39" />
+        </ComplexType>
+        <ComplexType Name="GCPS_SP_PlanificacionSel_Result">
+          <Property Type="Int32" Name="IdPlanificacion" Nullable="false" />
+          <Property Type="String" Name="NumeroPlanificacion" Nullable="false" MaxLength="20" />
+          <Property Type="DateTime" Name="FechaInicio" Nullable="false" Precision="23" />
+          <Property Type="DateTime" Name="FechaFin" Nullable="false" Precision="23" />
+          <Property Type="String" Name="TipoPlanificacion" Nullable="false" MaxLength="1" />
+          <Property Type="String" Name="Observacion" Nullable="false" MaxLength="400" />
+          <Property Type="String" Name="Estado" Nullable="true" MaxLength="13" />
+          <Property Type="Int32" Name="IdEspecialista" Nullable="false" />
+          <Property Type="Int32" Name="IdLaboratorio" Nullable="true" />
+          <Property Type="Int32" Name="IdPlanificacionOrigen" Nullable="true" />
+          <Property Type="DateTime" Name="FechaCreacion" Nullable="true" Precision="23" />
+          <Property Type="String" Name="NombreEspecialista" Nullable="true" MaxLength="150" />
+          <Property Type="String" Name="NombreLaboratorio" Nullable="true" MaxLength="150" />
+        </ComplexType>
+        <ComplexType Name="GCPS_SP_PlanificacionSelDetalle_Result">
+          <Property Type="String" Name="COD_PRODUCTO" Nullable="false" MaxLength="9" />
+          <Property Type="String" Name="NOMBRE_PRODUCTO" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="NOMBRE_CATEGORIA" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="NOMBRE_MARCA" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="NombreComposicion" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="GCPS_SP_PlanificionSelxIdPlanificacion_Result">
+          <Property Type="Int32" Name="IdPlanificacion" Nullable="false" />
+          <Property Type="String" Name="NumeroPlanificacion" Nullable="false" MaxLength="20" />
+          <Property Type="DateTime" Name="FechaInicio" Nullable="false" Precision="23" />
+          <Property Type="DateTime" Name="FechaFin" Nullable="false" Precision="23" />
+          <Property Type="String" Name="TipoPlanificacion" Nullable="false" MaxLength="1" />
+          <Property Type="String" Name="Observacion" Nullable="false" MaxLength="400" />
+          <Property Type="String" Name="Estado" Nullable="true" MaxLength="11" />
+          <Property Type="Int32" Name="IdEspecialista" Nullable="false" />
+          <Property Type="Int32" Name="IdLaboratorio" Nullable="true" />
+          <Property Type="DateTime" Name="FechaCreacion" Nullable="true" Precision="23" />
+          <Property Type="String" Name="COD_SUCURSAL" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="GCPS_SP_PlanificacionAct_Result">
+          <Property Type="Int32" Name="Estado" Nullable="false" />
+          <Property Type="String" Name="Mensaje" Nullable="false" MaxLength="44" />
+        </ComplexType>
+        <ComplexType Name="GCPS_SP_PlanificacionLaboratorioSel_Result">
+          <Property Type="Int32" Name="IdPlanificacionDetalle" Nullable="false" />
+          <Property Type="Int32" Name="IdPrueba" Nullable="true" />
+          <Property Type="String" Name="COD_PRODUCTO" Nullable="false" MaxLength="9" />
+          <Property Type="String" Name="Resultado" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="RangoInferior" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="RangoSuperior" Nullable="true" MaxLength="20" />
+          <Property Type="DateTime" Name="FechaCheckin" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="FechaEdicion" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="FechaIngreso" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="FechaValidacion" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="FechaImpresion" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="IdPlanificacion" Nullable="false" />
+          <Property Type="String" Name="NumeroPlanificacion" Nullable="false" MaxLength="20" />
+          <Property Type="DateTime" Name="FechaInicio" Nullable="false" Precision="23" />
+          <Property Type="String" Name="NOMBRE_PRODUCTO" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="NombrePrueba" Nullable="false" MaxLength="150" />
+          <Property Type="String" Name="NombreLaboratorio" Nullable="false" MaxLength="150" />
+          <Property Type="String" Name="NombreEspecialista" Nullable="false" MaxLength="150" />
+          <Property Type="String" Name="EstadoResultado" Nullable="true" MaxLength="14" />
+        </ComplexType>
+        <ComplexType Name="GCPS_SP_PlanificacionDetalleSelxIdPlanificacionDetalle_Result">
+          <Property Type="Int32" Name="IdPlanificacionDetalle" Nullable="false" />
+          <Property Type="Int32" Name="IdPrueba" Nullable="true" />
+          <Property Type="String" Name="COD_PRODUCTO" Nullable="false" MaxLength="9" />
+          <Property Type="String" Name="Resultado" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="RangoInferior" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="RangoSuperior" Nullable="true" MaxLength="20" />
+          <Property Type="DateTime" Name="FechaCheckin" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="FechaEdicion" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="FechaIngreso" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="FechaValidacion" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="FechaImpresion" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="IdPlanificacion" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="GCPS_SP_PlanificacionDetalleActxCheckin_Result">
+          <Property Type="Int32" Name="Estado" Nullable="false" />
+          <Property Type="String" Name="Mensaje" Nullable="false" MaxLength="39" />
+        </ComplexType>
+        <ComplexType Name="GCPS_SP_EquipmentSel_Result">
+          <Property Type="Int32" Name="IdEquipment" Nullable="false" />
+          <Property Type="String" Name="Descripcion" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="DescripcionLaboratorio" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="Estado" Nullable="false" MaxLength="1" />
+          <Property Type="String" Name="TIPO" Nullable="true" MaxLength="2" />
+        </ComplexType>
+        <ComplexType Name="GCPS_SP_QC_LEVEY_JENNINGS_Result">
+          <Property Type="String" Name="FechaResultado" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Resultado" Nullable="true" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="GCPS_SP_QCEquipmentPruebaSelxIdEquipment_Result">
+          <Property Type="Int32" Name="IdEqPru" Nullable="false" />
+          <Property Type="Int32" Name="IdEquipment" Nullable="false" />
+          <Property Type="Int32" Name="IdPrueba" Nullable="false" />
+          <Property Type="String" Name="Estado" Nullable="false" MaxLength="1" />
+          <Property Type="String" Name="NombrePrueba" Nullable="false" MaxLength="150" />
+        </ComplexType>
+        <ComplexType Name="GCPS_SP_ReporteCampo_Result">
+          <Property Type="String" Name="name" Nullable="false" MaxLength="100" />
+          <Property Type="Decimal" Name="y" Nullable="false" Precision="38" Scale="12" />
+        </ComplexType>
+        <ComplexType Name="GCPS_SP_ObservacionesSugerenciasSel_Result">
+          <Property Type="Int32" Name="IdObservacionSugerencia" Nullable="false" />
+          <Property Type="Int32" Name="IdObservacion" Nullable="false" />
+          <Property Type="Decimal" Name="PorcentajeMin" Nullable="true" Precision="9" Scale="2" />
+          <Property Type="Decimal" Name="PorcentajeMax" Nullable="true" Precision="9" Scale="2" />
+          <Property Type="String" Name="Sugerencia" Nullable="true" />
+          <Property Type="String" Name="Descripcion" Nullable="false" MaxLength="100" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="TP3UPCModelStoreContainer" CdmEntityContainer="TP3UPCEntities">
+          <FunctionImportMapping FunctionImportName="GCPS_FN_SplitString" FunctionName="TP3UPCModel.Store.GCPS_FN_SplitString" />
+          <FunctionImportMapping FunctionImportName="GCPS_SP_EspecialistaSelTodo" FunctionName="TP3UPCModel.Store.GCPS_SP_EspecialistaSelTodo">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="TP3UPCModel.GCPS_SP_EspecialistaSelTodo_Result">
+                <ScalarProperty Name="IdEspecialista" ColumnName="IdEspecialista" />
+                <ScalarProperty Name="NombreEspecialista" ColumnName="NombreEspecialista" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GCPS_SP_LaboratorioSelTodo" FunctionName="TP3UPCModel.Store.GCPS_SP_LaboratorioSelTodo">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="TP3UPCModel.GCPS_SP_LaboratorioSelTodo_Result">
+                <ScalarProperty Name="IdLaboratorio" ColumnName="IdLaboratorio" />
+                <ScalarProperty Name="NombreLaboratorio" ColumnName="NombreLaboratorio" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GCPS_SP_PlanificacionDetalleAct" FunctionName="TP3UPCModel.Store.GCPS_SP_PlanificacionDetalleAct">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="TP3UPCModel.GCPS_SP_PlanificacionDetalleAct_Result">
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="Mensaje" ColumnName="Mensaje" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GCPS_SP_PlanificacionDetalleSel" FunctionName="TP3UPCModel.Store.GCPS_SP_PlanificacionDetalleSel">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="TP3UPCModel.GCPS_SP_PlanificacionDetalleSel_Result">
+                <ScalarProperty Name="IdPlanificacionDetalle" ColumnName="IdPlanificacionDetalle" />
+                <ScalarProperty Name="IdPrueba" ColumnName="IdPrueba" />
+                <ScalarProperty Name="COD_PRODUCTO" ColumnName="COD_PRODUCTO" />
+                <ScalarProperty Name="Resultado" ColumnName="Resultado" />
+                <ScalarProperty Name="RangoInferior" ColumnName="RangoInferior" />
+                <ScalarProperty Name="RangoSuperior" ColumnName="RangoSuperior" />
+                <ScalarProperty Name="FechaCheckin" ColumnName="FechaCheckin" />
+                <ScalarProperty Name="FechaEdicion" ColumnName="FechaEdicion" />
+                <ScalarProperty Name="FechaIngreso" ColumnName="FechaIngreso" />
+                <ScalarProperty Name="FechaValidacion" ColumnName="FechaValidacion" />
+                <ScalarProperty Name="FechaImpresion" ColumnName="FechaImpresion" />
+                <ScalarProperty Name="IdPlanificacion" ColumnName="IdPlanificacion" />
+                <ScalarProperty Name="NumeroPlanificacion" ColumnName="NumeroPlanificacion" />
+                <ScalarProperty Name="FechaInicio" ColumnName="FechaInicio" />
+                <ScalarProperty Name="NOMBRE_PRODUCTO" ColumnName="NOMBRE_PRODUCTO" />
+                <ScalarProperty Name="NombrePrueba" ColumnName="NombrePrueba" />
+                <ScalarProperty Name="NombreLaboratorio" ColumnName="NombreLaboratorio" />
+                <ScalarProperty Name="NombreEspecialista" ColumnName="NombreEspecialista" />
+                <ScalarProperty Name="EstadoResultado" ColumnName="EstadoResultado" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GCPS_SP_ProductoSelAtributosxIdProducto" FunctionName="TP3UPCModel.Store.GCPS_SP_ProductoSelAtributosxIdProducto">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="TP3UPCModel.GCPS_SP_ProductoSelAtributosxIdProducto_Result">
+                <ScalarProperty Name="COD_PRODUCTO" ColumnName="COD_PRODUCTO" />
+                <ScalarProperty Name="NOMBRE_PRODUCTO" ColumnName="NOMBRE_PRODUCTO" />
+                <ScalarProperty Name="NOMBRE_CATEGORIA" ColumnName="NOMBRE_CATEGORIA" />
+                <ScalarProperty Name="NOMBRE_MARCA" ColumnName="NOMBRE_MARCA" />
+                <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+                <ScalarProperty Name="NombreComposicion" ColumnName="NombreComposicion" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GCPS_SP_ServidorSel" FunctionName="TP3UPCModel.Store.GCPS_SP_ServidorSel">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="TP3UPCModel.GCPS_SP_ServidorSel_Result">
+                <ScalarProperty Name="FechaHoraActual" ColumnName="FechaHoraActual" />
+                <ScalarProperty Name="NombreServidor" ColumnName="NombreServidor" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GCPS_SP_ProductoSelTodo" FunctionName="TP3UPCModel.Store.GCPS_SP_ProductoSelTodo">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="TP3UPCModel.GCPS_SP_ProductoSelTodo_Result">
+                <ScalarProperty Name="PRODUCTOID" ColumnName="PRODUCTOID" />
+                <ScalarProperty Name="COD_PRODUCTO" ColumnName="COD_PRODUCTO" />
+                <ScalarProperty Name="NOMBRE_PRODUCTO" ColumnName="NOMBRE_PRODUCTO" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GCPS_SP_SucursalSelTodo" FunctionName="TP3UPCModel.Store.GCPS_SP_SucursalSelTodo">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="TP3UPCModel.GCPS_SP_SucursalSelTodo_Result">
+                <ScalarProperty Name="SUCURSALID" ColumnName="SUCURSALID" />
+                <ScalarProperty Name="COD_SUCURSAL" ColumnName="COD_SUCURSAL" />
+                <ScalarProperty Name="NOMBRE_SUCURSAL" ColumnName="NOMBRE_SUCURSAL" />
+                <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GCPS_SP_ProductoEnPlanificacionSel" FunctionName="TP3UPCModel.Store.GCPS_SP_ProductoEnPlanificacionSel">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="TP3UPCModel.GCPS_SP_ProductoEnPlanificacionSel_Result">
+                <ScalarProperty Name="COD_PRODUCTO" ColumnName="COD_PRODUCTO" />
+                <ScalarProperty Name="TOTALFALLAS" ColumnName="TOTALFALLAS" />
+                <ScalarProperty Name="TOTALPLANES" ColumnName="TOTALPLANES" />
+                <ScalarProperty Name="PORCENTAJE" ColumnName="PORCENTAJE" />
+                <ScalarProperty Name="TIPOPLAN" ColumnName="TIPOPLAN" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <EntitySetMapping Name="GCPS_PLANIFICACION">
+            <EntityTypeMapping TypeName="TP3UPCModel.GCPS_PLANIFICACION">
+              <MappingFragment StoreEntitySet="GCPS_PLANIFICACION">
+                <ScalarProperty Name="EsJustificado" ColumnName="EsJustificado" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+                <ScalarProperty Name="Observacion" ColumnName="Observacion" />
+                <ScalarProperty Name="TipoUrgencia" ColumnName="TipoUrgencia" />
+                <ScalarProperty Name="TipoPlanificacion" ColumnName="TipoPlanificacion" />
+                <ScalarProperty Name="FechaFin" ColumnName="FechaFin" />
+                <ScalarProperty Name="FechaInicio" ColumnName="FechaInicio" />
+                <ScalarProperty Name="NumeroPlanificacion" ColumnName="NumeroPlanificacion" />
+                <ScalarProperty Name="IdPlanificacionOrigen" ColumnName="IdPlanificacionOrigen" />
+                <ScalarProperty Name="IdLaboratorio" ColumnName="IdLaboratorio" />
+                <ScalarProperty Name="IdEspecialista" ColumnName="IdEspecialista" />
+                <ScalarProperty Name="IdPlanificacion" ColumnName="IdPlanificacion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="GCPS_SP_PlanificacionIns" FunctionName="TP3UPCModel.Store.GCPS_SP_PlanificacionIns">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="TP3UPCModel.GCPS_SP_PlanificacionIns_Result">
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="Mensaje" ColumnName="Mensaje" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GCPS_SP_PlanificacionSel" FunctionName="TP3UPCModel.Store.GCPS_SP_PlanificacionSel">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="TP3UPCModel.GCPS_SP_PlanificacionSel_Result">
+                <ScalarProperty Name="IdPlanificacion" ColumnName="IdPlanificacion" />
+                <ScalarProperty Name="NumeroPlanificacion" ColumnName="NumeroPlanificacion" />
+                <ScalarProperty Name="FechaInicio" ColumnName="FechaInicio" />
+                <ScalarProperty Name="FechaFin" ColumnName="FechaFin" />
+                <ScalarProperty Name="TipoPlanificacion" ColumnName="TipoPlanificacion" />
+                <ScalarProperty Name="Observacion" ColumnName="Observacion" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="IdEspecialista" ColumnName="IdEspecialista" />
+                <ScalarProperty Name="IdLaboratorio" ColumnName="IdLaboratorio" />
+                <ScalarProperty Name="IdPlanificacionOrigen" ColumnName="IdPlanificacionOrigen" />
+                <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+                <ScalarProperty Name="NombreEspecialista" ColumnName="NombreEspecialista" />
+                <ScalarProperty Name="NombreLaboratorio" ColumnName="NombreLaboratorio" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GCPS_SP_PlanificacionSelDetalle" FunctionName="TP3UPCModel.Store.GCPS_SP_PlanificacionSelDetalle">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="TP3UPCModel.GCPS_SP_PlanificacionSelDetalle_Result">
+                <ScalarProperty Name="COD_PRODUCTO" ColumnName="COD_PRODUCTO" />
+                <ScalarProperty Name="NOMBRE_PRODUCTO" ColumnName="NOMBRE_PRODUCTO" />
+                <ScalarProperty Name="NOMBRE_CATEGORIA" ColumnName="NOMBRE_CATEGORIA" />
+                <ScalarProperty Name="NOMBRE_MARCA" ColumnName="NOMBRE_MARCA" />
+                <ScalarProperty Name="NombreComposicion" ColumnName="NombreComposicion" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GCPS_SP_PlanificionSelxIdPlanificacion" FunctionName="TP3UPCModel.Store.GCPS_SP_PlanificionSelxIdPlanificacion">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="TP3UPCModel.GCPS_SP_PlanificionSelxIdPlanificacion_Result">
+                <ScalarProperty Name="IdPlanificacion" ColumnName="IdPlanificacion" />
+                <ScalarProperty Name="NumeroPlanificacion" ColumnName="NumeroPlanificacion" />
+                <ScalarProperty Name="FechaInicio" ColumnName="FechaInicio" />
+                <ScalarProperty Name="FechaFin" ColumnName="FechaFin" />
+                <ScalarProperty Name="TipoPlanificacion" ColumnName="TipoPlanificacion" />
+                <ScalarProperty Name="Observacion" ColumnName="Observacion" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="IdEspecialista" ColumnName="IdEspecialista" />
+                <ScalarProperty Name="IdLaboratorio" ColumnName="IdLaboratorio" />
+                <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+                <ScalarProperty Name="COD_SUCURSAL" ColumnName="COD_SUCURSAL" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GCPS_SP_PlanificacionAct" FunctionName="TP3UPCModel.Store.GCPS_SP_PlanificacionAct">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="TP3UPCModel.GCPS_SP_PlanificacionAct_Result">
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="Mensaje" ColumnName="Mensaje" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GCPS_SP_PlanificacionLaboratorioSel" FunctionName="TP3UPCModel.Store.GCPS_SP_PlanificacionLaboratorioSel">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="TP3UPCModel.GCPS_SP_PlanificacionLaboratorioSel_Result">
+                <ScalarProperty Name="IdPlanificacionDetalle" ColumnName="IdPlanificacionDetalle" />
+                <ScalarProperty Name="IdPrueba" ColumnName="IdPrueba" />
+                <ScalarProperty Name="COD_PRODUCTO" ColumnName="COD_PRODUCTO" />
+                <ScalarProperty Name="Resultado" ColumnName="Resultado" />
+                <ScalarProperty Name="RangoInferior" ColumnName="RangoInferior" />
+                <ScalarProperty Name="RangoSuperior" ColumnName="RangoSuperior" />
+                <ScalarProperty Name="FechaCheckin" ColumnName="FechaCheckin" />
+                <ScalarProperty Name="FechaEdicion" ColumnName="FechaEdicion" />
+                <ScalarProperty Name="FechaIngreso" ColumnName="FechaIngreso" />
+                <ScalarProperty Name="FechaValidacion" ColumnName="FechaValidacion" />
+                <ScalarProperty Name="FechaImpresion" ColumnName="FechaImpresion" />
+                <ScalarProperty Name="IdPlanificacion" ColumnName="IdPlanificacion" />
+                <ScalarProperty Name="NumeroPlanificacion" ColumnName="NumeroPlanificacion" />
+                <ScalarProperty Name="FechaInicio" ColumnName="FechaInicio" />
+                <ScalarProperty Name="NOMBRE_PRODUCTO" ColumnName="NOMBRE_PRODUCTO" />
+                <ScalarProperty Name="NombrePrueba" ColumnName="NombrePrueba" />
+                <ScalarProperty Name="NombreLaboratorio" ColumnName="NombreLaboratorio" />
+                <ScalarProperty Name="NombreEspecialista" ColumnName="NombreEspecialista" />
+                <ScalarProperty Name="EstadoResultado" ColumnName="EstadoResultado" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GCPS_SP_PlanificacionDetalleSelxIdPlanificacionDetalle" FunctionName="TP3UPCModel.Store.GCPS_SP_PlanificacionDetalleSelxIdPlanificacionDetalle">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="TP3UPCModel.GCPS_SP_PlanificacionDetalleSelxIdPlanificacionDetalle_Result">
+                <ScalarProperty Name="IdPlanificacionDetalle" ColumnName="IdPlanificacionDetalle" />
+                <ScalarProperty Name="IdPrueba" ColumnName="IdPrueba" />
+                <ScalarProperty Name="COD_PRODUCTO" ColumnName="COD_PRODUCTO" />
+                <ScalarProperty Name="Resultado" ColumnName="Resultado" />
+                <ScalarProperty Name="RangoInferior" ColumnName="RangoInferior" />
+                <ScalarProperty Name="RangoSuperior" ColumnName="RangoSuperior" />
+                <ScalarProperty Name="FechaCheckin" ColumnName="FechaCheckin" />
+                <ScalarProperty Name="FechaEdicion" ColumnName="FechaEdicion" />
+                <ScalarProperty Name="FechaIngreso" ColumnName="FechaIngreso" />
+                <ScalarProperty Name="FechaValidacion" ColumnName="FechaValidacion" />
+                <ScalarProperty Name="FechaImpresion" ColumnName="FechaImpresion" />
+                <ScalarProperty Name="IdPlanificacion" ColumnName="IdPlanificacion" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GCPS_SP_PlanificacionDetalleActxCheckin" FunctionName="TP3UPCModel.Store.GCPS_SP_PlanificacionDetalleActxCheckin">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="TP3UPCModel.GCPS_SP_PlanificacionDetalleActxCheckin_Result">
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="Mensaje" ColumnName="Mensaje" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GCPS_SP_EquipmentSel" FunctionName="TP3UPCModel.Store.GCPS_SP_EquipmentSel">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="TP3UPCModel.GCPS_SP_EquipmentSel_Result">
+                <ScalarProperty Name="IdEquipment" ColumnName="IdEquipment" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="DescripcionLaboratorio" ColumnName="DescripcionLaboratorio" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="TIPO" ColumnName="TIPO" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GCPS_SP_QC_LEVEY_JENNINGS" FunctionName="TP3UPCModel.Store.GCPS_SP_QC_LEVEY_JENNINGS">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="TP3UPCModel.GCPS_SP_QC_LEVEY_JENNINGS_Result">
+                <ScalarProperty Name="FechaResultado" ColumnName="FechaResultado" />
+                <ScalarProperty Name="Resultado" ColumnName="Resultado" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GCPS_SP_QCEquipmentPruebaSelxIdEquipment" FunctionName="TP3UPCModel.Store.GCPS_SP_QCEquipmentPruebaSelxIdEquipment">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="TP3UPCModel.GCPS_SP_QCEquipmentPruebaSelxIdEquipment_Result">
+                <ScalarProperty Name="IdEqPru" ColumnName="IdEqPru" />
+                <ScalarProperty Name="IdEquipment" ColumnName="IdEquipment" />
+                <ScalarProperty Name="IdPrueba" ColumnName="IdPrueba" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="NombrePrueba" ColumnName="NombrePrueba" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GCPS_SP_ReporteCampo" FunctionName="TP3UPCModel.Store.GCPS_SP_ReporteCampo">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="TP3UPCModel.GCPS_SP_ReporteCampo_Result">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="y" ColumnName="y" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GCPS_SP_ObservacionesSugerenciasSel" FunctionName="TP3UPCModel.Store.GCPS_SP_ObservacionesSugerenciasSel">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="TP3UPCModel.GCPS_SP_ObservacionesSugerenciasSel_Result">
+                <ScalarProperty Name="IdObservacionSugerencia" ColumnName="IdObservacionSugerencia" />
+                <ScalarProperty Name="IdObservacion" ColumnName="IdObservacion" />
+                <ScalarProperty Name="PorcentajeMin" ColumnName="PorcentajeMin" />
+                <ScalarProperty Name="PorcentajeMax" ColumnName="PorcentajeMax" />
+                <ScalarProperty Name="Sugerencia" ColumnName="Sugerencia" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,673 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Dashboard">
+    <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
+
+    <title>DASHGUM - Bootstrap Admin Template</title>
+
+    <style>
+        .context-menu-abc {
+            border: 1px solid gray;
+            padding: 5px;
+        }
+
+        /* used for all items */
+        .context-menu-item {
+            min-height: 18px;
+            background-repeat: no-repeat;
+            background-position: 4px 4px;
+        }
+            /* all custom icons */
+            .context-menu-item.context-menu-icon-edit {
+                background-image: url("/assets/img/edit.png");
+            }
+
+            .context-menu-item.context-menu-icon-delete {
+                background-image: url("/assets/img/delete.png");
+            }
+    </style>
+
+
+    <script type="text/javascript">
+        var editor;
+        var row, column;
+
+        $(function () {
+
+            editor = new $.fn.dataTable.Editor({
+                ajax: "/Ejecucion/listarPlanificacionLaboratorioUltimo",
+                table: "#dtEjecucion",
+                idSrc:  'IdPlanificacionDetalle',
+                fields: [{
+                    label: "",
+                    name: "Resultado"
+                }, {
+                    label: "",
+                    name: "ResultadoAdverso"
+                }
+                ]
+            });
+
+            $('#dtEjecucion').on('click', 'tbody td.editable', function (e) {
+                row = oPlanificacionLaboratorio.cell(this).index().row;
+                column = oPlanificacionLaboratorio.cell(this).index().column;
+                editor.inline(this);
+            });
+
+            $('#dtEjecucion').on('blur', 'tbody td.editable input', function (e) {
+                debugger;
+                var aData = oPlanificacionLaboratorio.data(this);
+                var IdPlanificacionDetalle = aData[row].IdPlanificacionDetalle;
+                var EstadoResultado = aData[row].EstadoResultado;
+                var Resultado = $(this).val();
+
+                 $.ajax(
+                       {
+                           type: "POST",
+                           url: "/Ejecucion/PlanificacionLaboratorioAct",
+                           contentType: "application/json; charset=utf-8",
+                           dataType: "json",
+                           data: JSON.stringify({ 'IdPlanificacionDetalle': IdPlanificacionDetalle, 'Resultado': Resultado }),
+                           success: function (respuesta) {
+                               if (respuesta.Estado == 1) {
+                                   RefreshTable('#dtEjecucion');
+                               } else {
+                                   sweetAlert("Oops...", respuesta.Mensaje, "error");
+                               }
+                           },
+                           error: function () {
+                               sweetAlert("Oops...", "Ocurrió un error interno, comunicarse con el administrador de sistema", "error");
+                           }
+                 });
+            });
+
+            var oPlanificacionLaboratorio = $("#dtEjecucion").DataTable(
+            {
+                "ajax":
+                {
+                    "url": "/Ejecucion/listarPlanificacionLaboratorioUltimo",
+                    "type": "get",
+                    "datatype": "json",
+                    //"data": {FechaInicio: "20171210" , FechaFin: "20171230"},
+                    "dataSrc": ""
+                },
+                "language":
+                {
+                    "url": "/assets/languages/español.js"
+                },
+                "aaSorting": [],
+                "bFilter": false,
+                "bPaginate": false,
+                "columns": [
+                       { "data": "NOMBRE_PRODUCTO", "autoWidth": true },
+                       { "data": "FechaInicioWithFormat", "autoWidth": true },
+                       { "data": "NombrePrueba", "autoWidth": true },
+                       { "data": "RangoInferior", "autoWidth": true },
+                       { "data": "RangoSuperior", "autoWidth": true },
+                       { "data": "Resultado", "autoWidth": true, className: 'editable' },
+                       { "data": "FechaCheckinWithFormat", "autoWidth": true },
+                       { "data": "FechaValidacionWithFormat", "autoWidth": true },
+                       { "data": "FechaImpresionWithFormat", "autoWidth": true },
+                       { "data": "IdPlanificacionDetalle", "autoWidth": true },
+                       { "data": "IdPrueba", "autoWidth": true },
+                       { "data": "COD_PRODUCTO", "autoWidth": true },
+                       { "data": "FechaEdicion", "autoWidth": true },
+                       { "data": "FechaIngreso", "autoWidth": true },
+                       { "data": "IdPlanificacion", "autoWidth": true },
+                       { "data": "NumeroPlanificacion", "autoWidth": true },
+                       { "data": "NombreLaboratorio", "autoWidth": true },
+                       { "data": "NombreEspecialista", "autoWidth": true },
+                       { "data": "EstadoResultado", "autoWidth": true }
+                ],
+                "columnDefs": [
+                             { "targets": [1], "visible": false, "searchable": false },
+                             { "targets": [9], "visible": false, "searchable": false },
+                             { "targets": [10], "visible": false, "searchable": false },
+                             { "targets": [11], "visible": false, "searchable": false },
+                             { "targets": [12], "visible": false, "searchable": false },
+                             { "targets": [13], "visible": false, "searchable": false },
+                             { "targets": [14], "visible": false, "searchable": false },
+                             { "targets": [15], "visible": false, "searchable": false },
+                             { "targets": [16], "visible": false, "searchable": false },
+                             { "targets": [17], "visible": false, "searchable": false },
+                             { "targets": [18], "visible": true, "searchable": false }
+                ],
+                "rowCallback": function (row, data, index) {
+                    if ( data["EstadoResultado"] == "INCONSISTENCIA" )
+                    {
+                        $(row).find('td:eq(4').css('background-color', 'orange');
+                    }
+                    else if (data["EstadoResultado"] == "ALERTA")
+                    {
+                        $(row).find('td:eq(4)').css('background-color', 'red');
+                    }
+                }
+            });
+
+            var oPlanificacion = $("#dtPlanificacion").DataTable(
+            {
+                "destroy": true,
+                "language":
+                {
+                    "url": "/assets/languages/español.js"
+                },
+                //"bFilter": false,
+                "columnDefs": [
+                             { "targets": [6], "visible": false, "searchable": false },
+                             { "targets": [7], "visible": false, "searchable": false },
+                             { "targets": [8], "visible": false, "searchable": false },
+                             { "targets": [9], "visible": false, "searchable": false },
+                             { "targets": [10], "visible": false, "searchable": false },
+                             { "targets": [11], "visible": false, "searchable": false },
+                             { "targets": [12], "visible": false, "searchable": false }
+                ]
+            });
+
+            //oPlanificacionLaboratorio.MakeCellsEditable({
+            //    "onUpdate": updateResultado,
+            //    "columns": [5, 6]
+            //});
+
+            //function updateResultado(updatedCell, updatedRow, oldValue)
+            //{
+
+
+
+            //    console.log("The new value for the cell is: " + updatedCell.data());
+            //    console.log("The values for each cell in that row are: " + updatedRow.data());
+            //}
+
+            $("#dtEjecucion").contextMenu({
+                selector: 'tr',
+                callback: function (key, options) {
+                    debugger;
+                    var index = $(this).index();
+                    var aData = oPlanificacionLaboratorio.data(this);
+                    var id = aData[index].IdPlanificacionDetalle;
+                    var resultado = aData[index].Resultado;
+
+                    if (key == "validar") {
+                        RealizarValidacion(id, resultado);
+                    }
+
+                    if (key == "checkin")
+                    {
+                        RealizarCheckin(id);
+                    }
+
+                    if (key == "impresion")
+                    {
+                        RealizarImpresion(id);
+                    }
+                },
+                items:
+                {
+                    "validar": { name: "Validar Resultado", icon: "aprobar" },
+                    "checkin": { name: "Realizar Checkin", icon: "checkin" },
+                    "impresion": { name: "Imprimir Resultado", icon: "imprimir" }
+                }
+
+            });
+
+            $("#dtPlanificacion").contextMenu({
+                selector: 'tr',
+                callback: function (key, options) {
+                    debugger;
+                    var index = $(this).index();
+                    var aData = oPlanificacion.data(this);
+                    var id = aData[index][6];
+
+                    if (key == "reg") {
+                        ReloadLaboratorio(id);
+                        $("#myModal").modal('hide');
+                    }
+                },
+                items:
+                {
+                    "reg": { name: "Seleccionar", icon: "aprobar" }
+                }
+
+            });
+
+            $('#dtEjecucion tbody').on('click', 'tr', function () {
+                if ($(this).hasClass('selected')) {
+                    $(this).removeClass('selected');
+                }
+                else {
+                    oPlanificacionLaboratorio.$('tr.selected').removeClass('selected');
+                    $(this).addClass('selected');
+                }
+            });
+
+            $('#dtPlanificacion tbody').on('click', 'tr', function () {
+                if ($(this).hasClass('selected')) {
+                    $(this).removeClass('selected');
+                }
+                else {
+                    oPlanificacion.$('tr.selected').removeClass('selected');
+                    $(this).addClass('selected');
+                }
+            });
+            
+            $("#btnAgregar").click(function () {
+                //Limpiar Datos
+                $("#FechaInicioBusqueda").val("");
+                $("#FechaFinBusqueda").val("");
+                oPlanificacion.clear().draw();
+                BuscarPlanificacion();
+            });
+
+            $("#btnHistoricoBuscar").click(function () {
+                BuscarPlanificacion();
+            });
+
+            //ListarPlanificacionLaboratorioUltimo();
+            MostrarCabecera();
+
+            function MostrarCabecera()
+            {
+                $.ajax(
+                  {
+                      type: "POST",
+                      url: "/Ejecucion/listarPlanificacionLaboratorioUltimo",
+                      contentType: "application/json; charset=utf-8",
+                      dataType: "json",
+                      success: function (response) {
+                          $("#NumeroPlanificacion").val(response[0].NumeroPlanificacion);
+                          $("#FechaInicio").val(response[0].FechaInicioWithFormat);
+                          $("#Especialista").val(response[0].NombreEspecialista);
+                      },
+                      error: function () {
+                          sweetAlert("Oops...", "Ocurrió un error interno, comunicarse con el administrador de sistema", "error");
+                      }
+                  });
+            }
+
+            function ListarPlanificacionLaboratorioUltimo()
+            {
+                oPlanificacionLaboratorio.clear();
+                $.ajax(
+                  {
+                      type: "POST",
+                      url: "/Ejecucion/listarPlanificacionLaboratorioUltimo",
+                      contentType: "application/json; charset=utf-8",
+                      dataType: "json",
+                      //data: JSON.stringify({ 'FechaInicio': $("#FechaInicioBusqueda").val(), 'FechaFin': $("#FechaFinBusqueda").val() }),
+                      success: function (response) {
+                          for (i in response) {
+                              oPlanificacionLaboratorio.row.add([
+                               response[i].NOMBRE_PRODUCTO,
+                               response[i].FechaInicioWithFormat,
+                               response[i].NombrePrueba,
+                               response[i].RangoInferior,
+                               response[i].RangoSuperior,
+                               response[i].Resultado,
+                               response[i].FechaCheckinWithFormat,
+                               response[i].FechaValidacionWithFormat,
+                               response[i].FechaImpresionWithFormat,
+                               response[i].IdPlanificacionDetalle,
+                               response[i].IdPrueba,
+                               response[i].COD_PRODUCTO,
+                               response[i].FechaEdicion,
+                               response[i].FechaIngreso,
+                               response[i].IdPlanificacion,
+                               response[i].NumeroPlanificacion,
+                               response[i].NombreLaboratorio,
+                               response[i].NombreEspecialista,
+                               response[i].EstadoResultado
+                              ]).draw(false);
+                          }
+                      },
+                      error: function () {
+                          sweetAlert("Oops...", "Ocurrió un error interno, comunicarse con el administrador de sistema", "error");
+                      }
+                  });
+            }
+
+            function RealizarCheckin(IdPlanificacionDetalle)
+            {
+                $.ajax(
+                {
+                    type: "POST",
+                    url: "/Ejecucion/PlanificacionCheckin",
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    data: JSON.stringify({ 'IdPlanificacionDetalle': IdPlanificacionDetalle }),
+                    success: function (respuesta) {
+                        if (respuesta.Estado == 1) {
+                            RefreshTable('#dtEjecucion');
+                        } else {
+                            sweetAlert("Oops...", respuesta.Mensaje, "error");
+                        }
+                    },
+                    error: function () {
+                        sweetAlert("Oops...", "Ocurrió un error interno, comunicarse con el administrador de sistema", "error");
+                    }
+                });
+            }
+
+            function RealizarImpresion(IdPlanificacionLaboratorio) {
+                $.ajax(
+                {
+                    type: "POST",
+                    url: "/Ejecucion/PlanificacionImprimir",
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    data: JSON.stringify({ 'IdPlanificacionLaboratorio': IdPlanificacionLaboratorio }),
+                    success: function (respuesta) {
+                        if (respuesta.Estado == 1) {
+                            RefreshTable('#dtEjecucion');
+                        } else {
+                            sweetAlert("Oops...", respuesta.Mensaje, "error");
+                        }
+                    },
+                    error: function () {
+                        sweetAlert("Oops...", "Ocurrió un error interno, comunicarse con el administrador de sistema", "error");
+                    }
+                });
+            }
+
+            function RealizarValidacion(IdPlanificacionDetalle, Resultado)
+            {
+                if(Resultado == "")
+                {
+                    sweetAlert("Oops...", "No se puede validar sin resultados" ,"error");
+                    return;
+                }
+
+                $.ajax(
+                {
+                    type: "POST",
+                    url: "/Ejecucion/PlanificacionValidacion",
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    data: JSON.stringify({ 'IdPlanificacionDetalle': IdPlanificacionDetalle }),
+                    success: function (respuesta) {
+                        if (respuesta.Estado == 1) {
+                            RefreshTable('#dtEjecucion');
+                        } else {
+                            sweetAlert("Oops...", respuesta.Mensaje, "error");
+                        }
+                    },
+                    error: function () {
+                        sweetAlert("Oops...", "Ocurrió un error interno, comunicarse con el administrador de sistema", "error");
+                    }
+                });
+            }
+
+            function RefreshTable(tableId) {
+                $(tableId).DataTable().ajax.reload();
+            }
+
+            function BuscarPlanificacion()
+            {
+                oPlanificacion.clear();
+
+                $.ajax(
+                  {
+                      type: "POST",
+                      url: "/Ejecucion/listarPlanificacionHistorico",
+                      contentType: "application/json; charset=utf-8",
+                      dataType: "json",
+                      data: JSON.stringify({ 'FechaInicio': $("#FechaInicioBusqueda").val(), 'FechaFin': $("#FechaFinBusqueda").val() }),
+                      success: function (response) {
+                          for (i in response) {
+                              oPlanificacion.row.add([
+                               response[i].NumeroPlanificacion,
+                               response[i].FechaInicioWithFormat,
+                               response[i].FechaFinWithFormat,
+                               response[i].NombreEspecialista,
+                               response[i].NombreLaboratorio,
+                               response[i].Estado,
+                               response[i].IdPlanificacion,
+                               response[i].FechaInicio,
+                               response[i].FechaFin,
+                               response[i].Observacion,
+                               response[i].IdEspecialista,
+                               response[i].IdLaboratorio,
+                               response[i].IdPlanificacionOrigen,
+
+                              ]).draw(false);
+                          }
+                      },
+                      error: function () {
+                          sweetAlert("Oops...", "Ocurrió un error interno, comunicarse con el administrador de sistema", "error");
+                      }
+                  });
+            }
+
+            function InsertarPlanificacionLaboratorio(IdPlanificacion)
+            {
+                $('#myModal').modal('hide');
+                $.ajax(
+                {
+                    type: "POST",
+                    url: "/Ejecucion/PlanificacionLaboratorioIns",
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    data: JSON.stringify({ 'IdPlanificacion': IdPlanificacion }),
+                    success: function (respuesta) {
+                        if (respuesta.Estado == 1) {
+                            ReloadLaboratorio(IdPlanificacion);
+                        } else {
+                            sweetAlert("Oops...", respuesta.Mensaje, "error");
+                        }
+                    },
+                    error: function () {
+                        sweetAlert("Oops...", "Ocurrió un error interno, comunicarse con el administrador de sistema", "error");
+                    }
+                });
+
+            }
+
+            function ReloadLaboratorio(IdPlanificacion)
+            {
+                debugger;
+                oPlanificacionLaboratorio.clear().draw();
+                //oPlanificacionLaboratorio.destroy();
+                $.ajax(
+                  {
+                      type: "POST",
+                      url: "/Ejecucion/listarPlanificacionLaboratorioxIdPlanificacion",
+                      data: JSON.stringify({ 'IdPlanificacion': IdPlanificacion }),
+                      contentType: "application/json; charset=utf-8",
+                      dataType: "json",
+                      success: function (response) {
+                          $.each(response, function (i) {
+                              $('#dtEjecucion').DataTable().row.add(
+                              $('<tr>' +
+                                '<td>' + response[i].NOMBRE_PRODUCTO + '</td>' +
+                                '<td>' + response[i].FechaInicioWithFormat + '</td>' +
+                                '<td>' + response[i].NombrePrueba + '</td>' +
+                                '<td>' + response[i].RangoInferior + '</td>' +
+                                '<td>' + response[i].RangoSuperior + '</td>' +
+                                '<td>' + response[i].Resultado + '</td>' +
+                                '<td>' + response[i].FechaCheckinWithFormat + '</td>' +
+                                '<td>' + response[i].FechaValidacionWithFormat + '</td>' +
+                                '<td>' + response[i].FechaImpresionWithFormat + '</td>' +
+                                '<td>' + response[i].IdPlanificacionDetalle + '</td>' +
+                                '<td>' + response[i].IdPrueba + '</td>' +
+                                '<td>' + response[i].COD_PRODUCTO + '</td>' +
+                                '<td>' + response[i].FechaeEdicion + '</td>' +
+                                '<td>' + response[i].FechaIngreso + '</td>' +
+                                '<td>' + response[i].IdPlanificacion + '</td>' +
+                                '<td>' + response[i].NumeroPlanificacion + '</td>' +
+                                '<td>' + response[i].NombreLaboratorio + '</td>' +
+                                '<td>' + response[i].NombreEspecialista + '</td>' +
+                                '<td>' + response[i].EstadoResultado + '</td>' +
+                              '</tr>')[0]
+			                ).draw(false);
+                            //alert(response[i].NombreProducto);
+                            //alert(response[i].FechaInicioWithFormat);
+                          });
+                          //for (i in response) {
+                              //alert(response[i][0]);
+                              //oPlanificacionLaboratorio.row.add([
+                              // response[i].NombreProducto,
+                              // response[i].FechaInicioWithFormat,
+                              // response[i].NombrePrueba,
+                              // response[i].RangoInferior,
+                              // response[i].RangoSuperior,
+                              // response[i].Resultado,
+                              // response[i].ResultadoAdverso,
+                              // response[i].FechaCheckin,
+                              // response[i].FechaValidacion,
+                              // response[i].FechaImpresion,
+                              // response[i].IdPlanificacionLaboratorio,
+                              // response[i].IdPrueba,
+                              // response[i].IdEstudio,
+                              // response[i].NumeroVeces,
+                              // response[i].FechaeEdicion,
+                              // response[i].FechaIngreso,
+                              // response[i].IdPlanificacion,
+                              // response[i].NumeroPlanificacion,
+                              // response[i].NombreLaboratorio,
+                              // response[i].NombreEspecialista
+                              //]).draw(false);
+                          //}
+                          $("#NumeroPlanificacion").val(response[0].NumeroPlanificacion);
+                          $("#NombreProducto").val(response[0].NombreProducto);
+                          $("#FechaInicio").val(response[0].FechaInicioWithFormat);
+                          $("#Especialista").val(response[0].NombreEspecialista);
+                      },
+                      error: function () {
+                          sweetAlert("Oops...", "Ocurrió un error interno, comunicarse con el administrador de sistema", "error");
+                      }
+                  });
+
+                $('#dtEjecucion').DataTable().draw();
+            }
+
+            $("#FechaInicioBusqueda").datepicker({
+                format: 'dd/mm/yyyy'
+            });
+
+            $("#FechaFinBusqueda").datepicker({
+                format: 'dd/mm/yyyy'
+            });
+
+            $('#FechaInicioBusqueda').on('changeDate', function (ev) {
+                $(this).datepicker('hide');
+            });
+
+            $('#FechaFinBusqueda').on('changeDate', function (ev) {
+                $(this).datepicker('hide');
+            });
+        });
+        
+
+    </script>
+
+</head>
+
+<body>
+
+    <section id="container">
+        <!-- **********************************************************************************************************************************************************
+        TOP BAR CONTENT & NOTIFICATIONS
+        *********************************************************************************************************************************************************** -->
+        <!--header start-->
+        @Html.Partial("~/Views/Shared/Header.cshtml")
+        <!--header end-->
+        <!-- **********************************************************************************************************************************************************
+        MAIN SIDEBAR MENU
+        *********************************************************************************************************************************************************** -->
+        <!--sidebar start-->
+        @Html.Partial("~/Views/Shared/Menu.cshtml")
+        <!--sidebar end-->
+        <!-- **********************************************************************************************************************************************************
+        MAIN CONTENT
+        *********************************************************************************************************************************************************** -->
+        <!--main content start-->
+        <section id="main-content">
+            <section class="wrapper">
+                <h3><i class="fa fa-angle-right"></i>Planificación de Producto</h3>
+
+                <!-- BASIC FORM ELELEMNTS -->
+                <div class="row mt">
+                    <div class="col-lg-12">
+                        <div class="form-panel">
+                            <h4 class="mb"><i class="fa fa-angle-right"></i> Planificaciones</h4>
+                            <form class="form-horizontal style-form" method="get">
+                                <div class="form-group">
+                                    <div class="col-sm-10">
+                                        <button id="btnAgregar" type="button" class="btn btn-theme" data-toggle="modal" data-target="#myModal">Buscar Planificación</button>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-6"><label>Numero Planificación</label><input id="NumeroPlanificacion" type="text" class="form-control" readonly></div>
+                                    <div class="col-sm-6"><label>Fecha Ejecución</label><input id="FechaInicio" type="text" class="form-control" readonly></div>
+                                 </div>
+                                <div class="form-group">
+                                    <div class="col-sm-6"><label>Especialista</label><input id="Especialista" type="text" class="form-control" readonly></div>
+                                </div>
+                                <table id="dtEjecucion" class="display" width="100%">
+                                    <thead>
+                                        <tr>
+                                            <th>Estudio</th>
+                                            <th>Fecha Ejecución</th>
+                                            <th>Prueba</th>
+                                            <th>Rango Inf.</th>
+                                            <th>Rango Sup.</th>
+                                            <th>Resultado</th>
+                                            <th>Fecha Checkin</th>
+                                            <th>Fecha Validación</th>
+                                            <th>Fecha Impresión</th>
+                                            <th>IdPlanificacionLaboratorio</th>
+                                            <th>IdPrueba</th>
+                                            <th>IdEstudio</th>
+                                            <th>FechaeEdicion</th>
+                                            <th>FechaIngreso</th>
+                                            <th>IdPlanificacion</th>
+                                            <th>NumeroPlanificacion</th>
+                                            <th>NombreLaboratorio</th>
+                                            <th>NombreEspecialista</th>
+                                            <th>EstadoResultado</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody></tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <th>Estudio</th>
+                                            <th>Fecha Ejecución</th>
+                                            <th>Prueba</th>
+                                            <th>Rango Inf.</th>
+                                            <th>Rango Sup.</th>
+                                            <th>Resultado</th>
+                                            <th>Fecha Checkin</th>
+                                            <th>Fecha Validación</th>
+                                            <th>Fecha Impresión</th>
+                                            <th>IdPlanificacionLaboratorio</th>
+                                            <th>IdPrueba</th>
+                                            <th>IdEstudio</th>
+                                            <th>FechaeEdicion</th>
+                                            <th>FechaIngreso</th>
+                                            <th>IdPlanificacion</th>
+                                            <th> NumeroPlanificacion</th>
+                                            <th>NombreLaboratorio</th>
+                                            <th>NombreEspecialista</th>
+                                            <th>EstadoResultado</th>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                                @Html.Partial("~/Views/Ejecucion/ModalBuscarPlanificacion.cshtml")
+                            </form>
+                        </div>
+                    </div><!-- col-lg-12-->
+                </div><!-- /row -->
+
+            </section><! --/wrapper -->
+        </section><!-- /MAIN CONTENT -->
+        <!--main content end-->
+
+    </section>
+</body>
+</html>

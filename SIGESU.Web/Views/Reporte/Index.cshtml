@@ -1,0 +1,240 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Dashboard">
+    <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
+
+    <title>DASHGUM - Bootstrap Admin Template</title>
+
+    <style>
+        .context-menu-abc {
+            border: 1px solid gray;
+            padding: 5px;
+        }
+
+        /* used for all items */
+        .context-menu-item {
+            min-height: 18px;
+            background-repeat: no-repeat;
+            background-position: 4px 4px;
+        }
+            /* all custom icons */
+            .context-menu-item.context-menu-icon-edit {
+                background-image: url("/assets/img/edit.png");
+            }
+
+            .context-menu-item.context-menu-icon-delete {
+                background-image: url("/assets/img/delete.png");
+            }
+    </style>
+
+
+    <!--LIBRERIAS HIGHCHARTS-->
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/data.js"></script>
+    <script src="https://code.highcharts.com/modules/series-label.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+
+    <script src="https://www.highcharts.com/media/com_demo/js/highslide-full.min.js"></script>
+    <script src="https://www.highcharts.com/media/com_demo/js/highslide.config.js" charset="utf-8"></script>
+    <link rel="stylesheet" type="text/css" href="https://www.highcharts.com/media/com_demo/css/highslide.css" />
+
+
+    <script type="text/javascript">
+
+        $(function () {
+
+            $("#FechaInicio").datepicker({
+                format: 'dd/mm/yyyy'
+            });
+
+            $('#FechaInicio').on('changeDate', function (ev) {
+                $(this).datepicker('hide');
+            });
+
+            $("#FechaFin").datepicker({
+                format: 'dd/mm/yyyy'
+            });
+
+            $('#FechaFin').on('changeDate', function (ev) {
+                $(this).datepicker('hide');
+            });
+
+            $("#btnGenerar").click(function () {
+
+                var fecini = $("#FechaInicio").val();
+                var fecfin = $("#FechaFin").val();
+
+                if (fecini == "")
+                {
+                    sweetAlert("Oops...", "Por favor seleccionar la fecha inicio", "error");
+                    return false;
+                }
+
+                if (fecfin == "")
+                {
+                    sweetAlert("Oops...", "Por favor seleccionar la fecha fin", "error");
+                    return false;
+                }
+
+                $.getJSON('/Reporte/ObtenerReporte',
+                    {
+                        cod_producto: $("#Productos").val(),
+                        fecini: fecini,
+                        fecfin, fecfin
+                    }, function (data) {
+
+
+                        if (data.mensaje != "")
+                        {
+                            sweetAlert("EN HORA BUENA!", data.mensaje + " " + $("#Productos option:selected").text(), "success");
+                        }
+
+                        $("#sugerencia").html(data.rpta);
+
+                        var chart = Highcharts.chart('chart1', {
+                            chart: {
+                                plotBackgroundColor: null,
+                                plotBorderWidth: null,
+                                plotShadow: false,
+                                type: 'pie'
+                            },
+                            title: {
+                                text: 'Reporte de Observaciones de Producto ' + $("#Productos option:selected").text()
+                            },
+                            tooltip: {
+                                pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                            },
+                            plotOptions: {
+                                pie: {
+                                    allowPointSelect: true,
+                                    cursor: 'pointer',
+                                    dataLabels: {
+                                        enabled: false
+                                    },
+                                    showInLegend: true
+                                }
+                            },
+                            series: [
+                                {
+                                    name: $("#Productos option:selected").text(), data: data.lista
+                                }]
+                            //series: [{
+                            //    name: 'Brands',
+                            //    colorByPoint: true,
+                            //    data: [{
+                            //        Descripcion: 'Chrome',
+                            //        Porcentaje: 61.41,
+                            //        sliced: true,
+                            //        selected: true
+                            //    }, {
+                            //        Descripcion: 'Internet Explorer',
+                            //        Porcentaje: 11.84
+                            //    }, {
+                            //        Descripcion: 'Firefox',
+                            //        Porcentaje: 10.85
+                            //    }, {
+                            //        Descripcion: 'Edge',
+                            //        Porcentaje: 4.67
+                            //    }, {
+                            //        Descripcion: 'Safari',
+                            //        Porcentaje: 4.18
+                            //    }, {
+                            //        Descripcion: 'Other',
+                            //        Porcentaje: 7.05
+                            //    }]
+                            //}]
+                        });
+
+                    chart.reflow();
+                    });
+
+            });
+
+        });
+    </script>
+
+</head>
+
+<body>
+
+    <section id="container">
+        <!-- **********************************************************************************************************************************************************
+        TOP BAR CONTENT & NOTIFICATIONS
+        *********************************************************************************************************************************************************** -->
+        <!--header start-->
+        @Html.Partial("~/Views/Shared/Header.cshtml")
+        <!--header end-->
+        <!-- **********************************************************************************************************************************************************
+        MAIN SIDEBAR MENU
+        *********************************************************************************************************************************************************** -->
+        <!--sidebar start-->
+        @Html.Partial("~/Views/Shared/Menu.cshtml")
+        <!--sidebar end-->
+        <!-- **********************************************************************************************************************************************************
+        MAIN CONTENT
+        *********************************************************************************************************************************************************** -->
+        <!--main content start-->
+        <section id="main-content">
+            <section class="wrapper">
+                <h3><i class="fa fa-angle-right"></i>Generar Reporte Observaciones</h3>
+
+                <!-- BASIC FORM ELELEMNTS -->
+                <div class="row mt">
+                    <div class="col-lg-12">
+                        <div class="form-panel">
+                            <h4 class="mb"><i class="fa fa-angle-right"></i> Reporte en Campo</h4>
+                            <form class="form-horizontal style-form" method="get">
+                                <div class="form-group">
+                                    <div class="col-sm-6">
+                                        <label class="col-sm-2 col-sm-2 control-label">Producto</label>
+                                        @Html.DropDownList("Productos", new SelectList(ViewBag.listaProductos, "COD_PRODUCTO", "NOMBRE_PRODUCTO"), new { @class = "form-control" })
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-2 col-sm-2 control-label">Fecha Inicio</label>
+                                    <div class="col-sm-6 datepicker">
+                                        <input id="FechaInicio" type="text" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-2 col-sm-2 control-label">Fecha Fin</label>
+                                    <div class="col-sm-6 datepicker">
+                                        <input id="FechaFin" type="text" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-10">
+                                        <button id="btnGenerar" type="button" class="btn btn-theme" data-toggle="modal" data-target="#myModal">Generar Reporte</button>
+                                    </div>
+                                </div>
+                                <div class="chart-container" id="container" style="min-width: 310px; height: 400px; margin: 0 auto">
+                                    <div id="chart1" class="chart"></div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-10">
+                                        <label id="sugerencia" style="white-space: pre-line"></label>
+                                    </div>
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+        </section><!-- /MAIN CONTENT -->
+        <!--main content end-->
+
+    </section>
+</body>
+</html>
